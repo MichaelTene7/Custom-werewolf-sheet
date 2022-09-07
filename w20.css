@@ -10,7 +10,7 @@ input.sheet-spec{
     font-weight: bold; 
     font-size:14px; 
     color:black;
-    padding: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px; 
 	line-height:15px;
 	border:none;
 }
@@ -30,7 +30,10 @@ select.sheet-dots
     padding: 0px 0px 0px 0px;
 	line-height:15px;
 	border:none;
+	appearance:none;
 }
+
+
 
 /*============= TABS =============*/
 /*----------- Tabs Setup -------------*/
