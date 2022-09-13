@@ -23,8 +23,8 @@
 <!--TAB 1 Basic -->
 <div class="sheet-section-1">
     <div style="text-align: center;width:840px; height:100px; background-image: url(http://imgsrv.roll20.net/?src=raw.githubusercontent.com/Roll20/roll20-character-sheets/master/CWOD-W20/WerewolfApocalypseRevisedLogo.png);background-size: auto 100px;background-repeat: no-repeat;background-position: center;">
-    </div>
-    
+   </div>
+	<div class="sheet-line-behind" ></div>    
     <div class="sheet-col" style="width:12%">
         <h4 style="line-height:28px">Name:</h4>
         <h4 style="line-height:28px">Player:</h4>
@@ -141,8 +141,213 @@
 <div class="sheet-section-2">
     <br>
     <!--Attributes-->
-    <h1 style="text-align: center">Attributes</h1>
-    <table style="width:100%" >
+    <h1 style="text-align: center">Attributes</h1> 
+	<div class="sheet-line-behind" ></div>
+    <div class="sheet-3colrow" style="width:100%">
+        <div class="sheet-col" style="width:30%">
+            <h3 style="text-align: center">Physical</h3>
+            <table>
+				<tr>
+					<td>Strength</td>
+					<td>
+						<select class="sheet-dots" name="attr_Strength">
+							<option value="0" selected>&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+							<option value="1">&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+							<option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+							<option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+							<option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+							<option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+							<option value="6">&#9899; 6</option>
+							<option value="7">&#9899; 7</option>
+							<option value="8">&#9899; 8</option>
+							<option value="9">&#9899; 9</option>
+						</select>
+					</td>
+					<td>
+						<input type="text" name="attr_Strength_Spec" class="sheet-spec"/>
+					</td>
+				</tr>
+                <tr>
+                    <td>Dexterity</td>
+					<td>
+						<select class="sheet-dots" name="attr_Dexterity">
+							<option value="0" selected>&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+							<option value="1">&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+							<option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+							<option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+							<option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+							<option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+							<option value="6">&#9899; 6</option>
+							<option value="7">&#9899; 7</option>
+							<option value="8">&#9899; 8</option>
+							<option value="9">&#9899; 9</option>
+						</select>
+					</td>
+					<td>
+						<input type="text" name="attr_Dexterity_Spec" class="sheet-spec"/>
+					</td>
+                </tr>
+                <tr>
+                    <td>Stamina</td>
+                    <td>
+    				<select class="sheet-dots" name="attr_Stamina">
+                        <option value="0" selected>&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="1">&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                        <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                        <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                        <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                        <option value="6">&#9899; 6</option>
+                        <option value="7">&#9899; 7</option>
+                        <option value="8">&#9899; 8</option>
+                        <option value="9">&#9899; 9</option>
+					</select>
+					</td>
+					<td style="width:40%">
+                <input type="text" name="attr_Stamina_Spec" class="sheet-spec"/>
+					</td>
+                </tr>
+            </table>
+        </div>
+        <div class="sheet-col" style="width:30%">
+            <h3 style="text-align: center">Social</h3>
+            <table>
+                <tr>
+                    <td>Charisma</td>
+					<td>
+					<select class="sheet-dots" name="attr_Charisma">
+                        <option value="0" selected>&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="1">&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                        <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                        <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                        <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                        <option value="6">&#9899; 6</option>
+                        <option value="7">&#9899; 7</option>
+                        <option value="8">&#9899; 8</option>
+                        <option value="9">&#9899; 9</option>
+					</select>
+					</td>
+					<td style="width:40%">
+                <input type="text" name="attr_Charisma_Spec" class="sheet-spec"/>
+					</td>
+                </tr>
+                <tr>
+                    <td>Manipulation</td>
+ 					<td>
+					<select class="sheet-dots" name="attr_Manipulation">
+                        <option value="0" selected>&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="1">&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                        <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                        <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                        <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                        <option value="6">&#9899; 6</option>
+                        <option value="7">&#9899; 7</option>
+                        <option value="8">&#9899; 8</option>
+                        <option value="9">&#9899; 9</option>
+					</select>
+					</td>
+					<td style="width:40%">
+                <input type="text" name="attr_Manipulation_Spec" class="sheet-spec"/>
+					</td>
+                </tr>
+                <tr>
+                    <td>Appearance</td>
+ 					<td>
+					<select class="sheet-dots" name="attr_Appearance">
+                        <option value="0" selected>&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="1">&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                        <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                        <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                        <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                        <option value="6">&#9899; 6</option>
+                        <option value="7">&#9899; 7</option>
+                        <option value="8">&#9899; 8</option>
+                        <option value="9">&#9899; 9</option>
+					</select>
+					</td>
+					<td style="width:40%">
+                <input type="text" name="attr_Appearance_Spec" class="sheet-spec"/>
+					</td>
+                </tr>
+            </table>
+        </div>
+        <div class="sheet-col" style="width:30%">
+            <h3 style="text-align: center">Mental</h3>
+            <table>
+                <tr>
+                    <td>Perception</td>
+ 					<td>
+					<select class="sheet-dots" name="attr_Perception">
+                        <option value="0" selected>&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="1">&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                        <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                        <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                        <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                        <option value="6">&#9899; 6</option>
+                        <option value="7">&#9899; 7</option>
+                        <option value="8">&#9899; 8</option>
+                        <option value="9">&#9899; 9</option>
+					</select>
+					</td>
+					<td style="width:40%">
+                <input type="text" name="attr_Perception_Spec" class="sheet-spec"/>
+					</td>
+                </tr>
+                <tr>
+                    <td>Intelligence</td>
+ 					<td>
+					<select class="sheet-dots" name="attr_Intelligence">
+                        <option value="0" selected>&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="1">&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                        <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                        <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                        <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                        <option value="6">&#9899; 6</option>
+                        <option value="7">&#9899; 7</option>
+                        <option value="8">&#9899; 8</option>
+                        <option value="9">&#9899; 9</option>
+					</select>
+					</td>
+					<td style="width:40%">
+                <input type="text" name="attr_Intelligence_Spec" class="sheet-spec"/>
+					</td>
+                </tr>
+				<tr>
+                    <td>Wits</td>
+ 					<td>
+					<select class="sheet-dots" name="attr_Wits">
+                        <option value="0" selected>&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="1">&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                        <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                        <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                        <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                        <option value="6">&#9899; 6</option>
+                        <option value="7">&#9899; 7</option>
+                        <option value="8">&#9899; 8</option>
+                        <option value="9">&#9899; 9</option>
+					</select>
+					</td>
+					<td style="width:40%">
+                <input type="text" name="attr_Wits_Spec" class="sheet-spec"/>
+					</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+	
+	
+	
+	
+	
+	
+	<!-- Old Attirbutes setup -->
+	<!-- <table style="width:100%" >
         <tr>
             <th colspan="3"><h3>Physical</h3></th>
             <th colspan="3"><h3>Social</h3></th>
@@ -151,7 +356,7 @@
         <tr>
             <td>Strength</td>
             <td></td>
-					<td style="width:30%">
+					<td style="width:10%">
                     <select class="sheet-dots" name="attr_Strength">
                         <option value="0">0&#9898;&#9898;&#9898;&#9898;&#9898;</option>
                         <option value="1" selected>1&#9899;&#9898;&#9898;&#9898;&#9898;</option>
@@ -165,7 +370,7 @@
                         <option value="9">9&#9899; </option>
             		</select>
 					</td>
-					<td style="width:40%">
+					<td style="width:13%">
                 <input type="text" name="attr_Strength_Spec" class="sheet-spec"/>
 					</td>
             <td>Charisma</td>
@@ -270,7 +475,7 @@
             </td>
         </tr>
     </table>
-    <hr/>
+    <hr/> -->
     <!--Abilities-->
     <h1 style="text-align: center">Abilities</h1>
     <div class="sheet-3colrow" style="width:100%">
