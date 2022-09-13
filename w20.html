@@ -151,16 +151,23 @@
         <tr>
             <td>Strength</td>
             <td></td>
-            <td><input type="radio" class="sheet-normal" name="attr_Strength-base" value="1" checked="checked" /><span></span>
-                <input type="radio" class="sheet-normal" name="attr_Strength-base" value="2" /><span></span>
-                <input type="radio" class="sheet-normal" name="attr_Strength-base" value="3" /><span></span>
-                <input type="radio" class="sheet-normal" name="attr_Strength-base" value="4" /><span></span>
-                <input type="radio" class="sheet-normal" name="attr_Strength-base" value="5" /><span></span>&nbsp;
-                <input type="radio" class="sheet-normal" name="attr_Strength-base" value="6" /><span></span>
-                <input type="radio" class="sheet-normal" name="attr_Strength-base" value="7" /><span></span>
-                <input type="radio" class="sheet-normal" name="attr_Strength-base" value="8" /><span></span>
-                <input type="radio" class="sheet-normal" name="attr_Strength-base" value="9" /><span></span>
-            </td>
+					<td style="width:30%">
+                    <select class="sheet-dots" name="attr_Strength">
+                        <option value="0">0&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="1" selected>1&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="2">2&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                        <option value="3">3&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                        <option value="4">4&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                        <option value="5">5&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                        <option value="6">6&#9899; </option>
+                        <option value="7">7&#9899; </option>
+                        <option value="8">8&#9899; </option>
+                        <option value="9">9&#9899; </option>
+            		</select>
+					</td>
+					<td style="width:40%">
+                <input type="text" name="attr_Strength_Spec" class="sheet-spec"/>
+					</td>
             <td>Charisma</td>
             <td></td>
             <td><input type="radio" class="sheet-normal" name="attr_Charisma" value="1" checked="checked" /><span></span>
