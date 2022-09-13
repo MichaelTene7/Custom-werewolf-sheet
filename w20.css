@@ -40,7 +40,7 @@ select.sheet-dots
 
 div.sheet-core-content { 
     display: none; 
-    width:840px;
+    /* width:840px; */
 }
 
 .charsheet div[class^="sheet-section"] {     
@@ -51,7 +51,7 @@ div.sheet-core-content {
 	display: none;
 }
 .charsheet {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/CWOD-W20/character_sheet_background.jpg');
+    background: url('https://raw.githubusercontent.com/MichaelTene7/Custom-werewolf-sheet/ExpandHelathBoxes/werweolf%20background%20crop.jpg?token=GHSAT0AAAAAABXHS52AYVTWX6VMJTNT4D64YY75POQ');
     background-size:100%;
     background-repeat: repeat-y;
     width:840px;
