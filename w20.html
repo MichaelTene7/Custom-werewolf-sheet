@@ -14,7 +14,9 @@
     <span class="sheet-tab sheet-tab6" style='line-height: 40px;'>Combat</span>
 <input type="radio" class="sheet-tab sheet-tab7" name="attr_core-tab" value="7" title="Pack" />
     <span class="sheet-tab sheet-tab7" style='line-height: 40px;'>Pack</span>
-<input type="radio" class="sheet-tab sheet-tab8" name="attr_core-tab" value="8" title="Notes" />
+	<input type="radio" class="sheet-tab sheet-tab8" name="attr_core-tab" value="8" title="Dice" />
+    <span class="sheet-tab sheet-tab7" style='line-height: 40px;'>Dice</span>
+<input type="radio" class="sheet-tab sheet-tab8" name="attr_core-tab" value="9" title="Notes" />
     <span class="sheet-tab sheet-tab7" style='line-height: 40px;'>Notes</span>
 <input type="radio" class="sheet-tab sheet-tab99" name="attr_core-tab" value="99" title="All" checked="checked"/>
     <span class="sheet-tab sheet-tab99" style='line-height: 40px;'>All</span>
@@ -1274,638 +1276,13 @@
         </div>
     </div>
     <hr/>
-    <!--Dice Pools-->
-    <div class="sheet-center">
-        <h1>Dice Pools</h1>
-        <table class="sheet-table" style="width:820px">
-            <tr>
-                <td style="width:60px">Roll</td>
-                <td style="width:150px">Name</td>
-                <td style="width:80px">Specialization</td>
-                <td style="width:110px">Attribute</td>
-                <td style="width:110px">Ability</td>
-                <td style="width:60px">Mod</td>
-                <td style="width:60px">Difficulty</td>
-                <td style="width:80px">Query?</td>
-                <td style="width:80px">Specialization</td>
-            </tr>
-            <tr>
-                <td style="width:60px"><button type='roll' name='roll_DP1roll' value="@{DicePoolroll-1}"></button></td>
-                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_DicePoolname-1" value=""/></td>
-                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_Specname-1" value=""/></td>
-                <td style="width:110px">
-                    <select name="attr_DPAtt1" style="width:110px"> 
-                        <option value="0" selected></option> 
-                        <option value="@{Strength}">Strength</option> 
-                        <option value="@{Dexterity}">Dexterity</option> 
-                        <option value="@{Stamina}">Stamina</option> 
-                        <option value="@{Charisma}">Charisma</option> 
-                        <option value="@{Manipulation}">Manipulation</option> 
-                        <option value="@{Appearance}">Appearance</option> 
-                        <option value="@{Intelligence}">Intelligence</option> 
-                        <option value="@{Wits}">Wits</option> 
-                        <option value="@{Perception}">Perception</option>
-                    </select>
-                </td>
-                <td style="width:110px">
-                    <select name="attr_DPAbi1" style="width:110px"> 
-                        <option value="0" selected></option> 
-                        <option value="@{Academics}">Academics</option> 
-                        <option value="@{Alertness}">Alertness</option> 
-                        <option value="@{Animal_Ken}">Animal Ken</option> 
-                        <option value="@{Athletics}">Athletics</option> 
-                        <option value="@{Brawl}">Brawl</option> 
-                        <option value="@{Craft}">Craft</option> 
-                        <option value="@{Computer}">Computer</option> 
-                        <option value="@{Drive}">Drive</option> 
-                        <option value="@{Empathy}">Empathy</option> 
-                        <option value="@{Enigmas}">Enigmas</option> 
-                        <option value="@{Etiquette}">Etiquette</option> 
-                        <option value="@{Expression}">Expression</option> 
-                        <option value="@{Firearms}">Firearms</option> 
-                        <option value="@{Intimidation}">Intimidation</option> 
-                        <option value="@{Investigation}">Investigation</option> 
-                        <option value="@{Larceny}">Larceny</option> 
-                        <option value="@{Law}">Law</option> 
-                        <option value="@{Leadership}">Leadership</option> 
-                        <option value="@{Melee}">Melee</option> 
-                        <option value="@{Medicine}">Medicine</option> 
-                        <option value="@{Occult}">Occult</option> 
-                        <option value="@{Performance}">Performance</option> 
-                        <option value="@{Politics}">Politics</option> 
-                        <option value="@{Primal-Urge}">Primal-Urge</option> 
-                        <option value="@{Rituals}">Rituals</option> 
-                        <option value="@{Science}">Science</option> 
-                        <option value="@{Stealth}">Stealth</option> 
-                        <option value="@{Streetwise}">Streetwise</option> 
-                        <option value="@{Subterfuge}">Subterfuge</option> 
-                        <option value="@{Survival}">Survival</option> 
-                        <option value="@{Technology}">Technology</option>
-						<option value="@{GarouLore}">Garou Lore</option>
-						<option value="@{OtherLore}">Other Lore</option>
-						<option value="@{Tal1}">Hobby Talent 1</option>
-						<option value="@{Tal2}">Hobby Talent 2</option>
-						<option value="@{Tal3}">Hobby Talent 3</option>
-						<option value="@{Ski1}">Prof Skill 1</option>
-						<option value="@{Ski2}">Prof Skill 2</option>
-						<option value="@{Ski3}">Prof Skill 3</option>
-						<option value="@{Kno1}">Expert Knowledge 1</option>
-                        <option value="@{Other1}">OtherTrait1</option> 
-                        <option value="@{Other2}">Other2</option> 
-                        <option value="@{Other3}">Other3</option> 
-                        <option value="@{Other4}">Other4</option> 
-                        <option value="@{Other5}">Other5</option> 
-                        <option value="@{Other6}">Other6</option> 
-                        <option value="@{Other7}">Other7</option> 
-                        <option value="@{Other8}">Other8</option> 
-                    </select>
-                </td>
-                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolMod-1' value='0'/></td>
-                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff-1' value='6'/></td>
-                <th style="width:80px">
-                    <div class="sheet-Query">
-                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-1" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-1} }} {{spec= : @{Specname-1} }} {{attr= Attribute @{DPAtt1} }} {{skill= Ability @{DPAbi1} }} {{mod= Modifier @{DicePoolMod-1} }} {{wound= Wound @{injury}}} {{result= [[{(@{DPAtt1}+@{DPAbi1}+@{DicePoolMod-1} + @{injury})d10@{DicePoolspec-1}s}>@{DicePoolDiff-1}f1]] }}" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-1" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-1} }} {{spec= : @{Specname-1} }} {{attr= Attribute @{DPAtt1} }} {{skill= Ability @{DPAbi1} }} {{mod= Modifier @{DicePoolMod-1} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt1}+@{DPAbi1}+@{DicePoolMod-1} + @{injury})d10@{DicePoolspec-1}s}>?{Difficulty|6}f1]] }}"/> 
-                        <span class="sheet-Query sheet-no">No</span>
-                        <span class="sheet-Query sheet-yes">Yes</span>
-                    </div>
-                </th>
-                <th style="width:80px">
-                    <div class="sheet-Query">
-                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolspec-1" value="" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolspec-1" value="!"/> 
-                        <span class="sheet-Query sheet-no">No</span>
-                        <span class="sheet-Query sheet-yes">Yes</span>
-                    </div>
-                </th>
-            </tr>
-
-            <tr>
-                <td style="width:60px"><button type='roll' name='roll_DP2roll' value="@{DicePoolroll-2}"></button></td>
-                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_DicePoolname-2" value=""/></td>
-                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_Specname-2" value=""/></td>
-                <td style="width:110px">
-                    <select name="attr_DPAtt2" style="width:110px"> 
-                        <option value="0" selected></option> 
-                        <option value="@{Strength}">Strength</option> 
-                        <option value="@{Dexterity}">Dexterity</option> 
-                        <option value="@{Stamina}">Stamina</option> 
-                        <option value="@{Charisma}">Charisma</option> 
-                        <option value="@{Manipulation}">Manipulation</option> 
-                        <option value="@{Appearance}">Appearance</option> 
-                        <option value="@{Intelligence}">Intelligence</option> 
-                        <option value="@{Wits}">Wits</option> 
-                        <option value="@{Perception}">Perception</option>
-                    </select>
-                </td>
-                <td style="width:110px">
-                    <select name="attr_DPAbi2" style="width:110px">  
-                        <option value="0" selected></option> 
-                        <option value="@{Academics}">Academics</option> 
-                        <option value="@{Alertness}">Alertness</option> 
-                        <option value="@{Animal_Ken}">Animal Ken</option> 
-                        <option value="@{Athletics}">Athletics</option> 
-                        <option value="@{Brawl}">Brawl</option> 
-                        <option value="@{Craft}">Craft</option> 
-                        <option value="@{Computer}">Computer</option> 
-                        <option value="@{Drive}">Drive</option> 
-                        <option value="@{Empathy}">Empathy</option> 
-                        <option value="@{Enigmas}">Enigmas</option> 
-                        <option value="@{Etiquette}">Etiquette</option> 
-                        <option value="@{Expression}">Expression</option> 
-                        <option value="@{Firearms}">Firearms</option> 
-                        <option value="@{Intimidation}">Intimidation</option> 
-                        <option value="@{Investigation}">Investigation</option> 
-                        <option value="@{Larceny}">Larceny</option> 
-                        <option value="@{Law}">Law</option> 
-                        <option value="@{Leadership}">Leadership</option> 
-                        <option value="@{Melee}">Melee</option> 
-                        <option value="@{Medicine}">Medicine</option> 
-                        <option value="@{Occult}">Occult</option> 
-                        <option value="@{Performance}">Performance</option> 
-                        <option value="@{Politics}">Politics</option> 
-                        <option value="@{Primal-Urge}">Primal-Urge</option> 
-                        <option value="@{Rituals}">Rituals</option> 
-                        <option value="@{Science}">Science</option> 
-                        <option value="@{Stealth}">Stealth</option> 
-                        <option value="@{Streetwise}">Streetwise</option> 
-                        <option value="@{Subterfuge}">Subterfuge</option> 
-                        <option value="@{Survival}">Survival</option> 
-                        <option value="@{Technology}">Technology</option>
-						<option value="@{GarouLore}">Garou Lore</option>
-						<option value="@{OtherLore}">Other Lore</option>
-						<option value="@{Tal1}">Hobby Talent 1</option>
-						<option value="@{Tal2}">Hobby Talent 2</option>
-						<option value="@{Tal3}">Hobby Talent 3</option>
-						<option value="@{Ski1}">Prof Skill 1</option>
-						<option value="@{Ski2}">Prof Skill 2</option>
-						<option value="@{Ski3}">Prof Skill 3</option>
-						<option value="@{Kno1}">Expert Knowledge 1</option>
-                        <option value="@{Other1}">OtherTrait1</option> 
-                        <option value="@{Other2}">Other2</option> 
-                        <option value="@{Other3}">Other3</option> 
-                        <option value="@{Other4}">Other4</option> 
-                        <option value="@{Other5}">Other5</option> 
-                        <option value="@{Other6}">Other6</option> 
-                        <option value="@{Other7}">Other7</option> 
-                        <option value="@{Other8}">Other8</option> 
-                    </select>
-                </td>
-                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolMod-2' value='0'/></td>
-                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff-2' value='6'/></td>
-                <th style="width:80px">
-                    <div class="sheet-Query">
-                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-2" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-2} }} {{attr= Attribute @{DPAtt2} }} {{skill= Ability @{DPAbi2} }} {{mod= Modifier @{DicePoolMod-2} }} {{wound= Wound @{injury}}} {{result= [[{(@{DPAtt2}+@{DPAbi2}+@{DicePoolMod-2} + @{injury})d10@{DicePoolspec-2}s}>@{DicePoolDiff-2}f1]] }}" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-2" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-2} }} {{spec= : @{Specname-2} }} {{attr= Attribute @{DPAtt2} }} {{skill= Ability @{DPAbi2} }} {{mod= Modifier @{DicePoolMod-2} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt2}+@{DPAbi2}+@{DicePoolMod-2} + @{injury})d10@{DicePoolspec-2}s}>?{Difficulty|6}f1]] }}"/> 
-                        <span class="sheet-Query sheet-no">No</span>
-                        <span class="sheet-Query sheet-yes">Yes</span>
-                    </div>
-                </th>
-                <th style="width:80px">
-                    <div class="sheet-Query">
-                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolspec-2" value="" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolspec-2" value="!"/> 
-                        <span class="sheet-Query sheet-no">No</span>
-                        <span class="sheet-Query sheet-yes">Yes</span>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <td style="width:60px"><button type='roll' name='roll_DP3roll' value="@{DicePoolroll-3}"></button></td>
-                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_DicePoolname-3" value=""/></td>
-                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_Specname-3" value=""/></td>
-                <td style="width:110px">
-                    <select name="attr_DPAtt3" style="width:110px"> 
-                        <option value="0" selected></option> 
-                        <option value="@{Strength}">Strength</option> 
-                        <option value="@{Dexterity}">Dexterity</option> 
-                        <option value="@{Stamina}">Stamina</option> 
-                        <option value="@{Charisma}">Charisma</option> 
-                        <option value="@{Manipulation}">Manipulation</option> 
-                        <option value="@{Appearance}">Appearance</option> 
-                        <option value="@{Intelligence}">Intelligence</option> 
-                        <option value="@{Wits}">Wits</option> 
-                        <option value="@{Perception}">Perception</option>
-                    </select>
-                </td>
-                <td style="width:110px">
-                    <select name="attr_DPAbi3" style="width:110px"> 
-                        <option value="0" selected></option> 
-                        <option value="@{Academics}">Academics</option> 
-                        <option value="@{Alertness}">Alertness</option> 
-                        <option value="@{Animal_Ken}">Animal Ken</option> 
-                        <option value="@{Athletics}">Athletics</option> 
-                        <option value="@{Brawl}">Brawl</option> 
-                        <option value="@{Craft}">Craft</option> 
-                        <option value="@{Computer}">Computer</option> 
-                        <option value="@{Drive}">Drive</option> 
-                        <option value="@{Empathy}">Empathy</option> 
-                        <option value="@{Enigmas}">Enigmas</option> 
-                        <option value="@{Etiquette}">Etiquette</option> 
-                        <option value="@{Expression}">Expression</option> 
-                        <option value="@{Firearms}">Firearms</option> 
-                        <option value="@{Intimidation}">Intimidation</option> 
-                        <option value="@{Investigation}">Investigation</option> 
-                        <option value="@{Larceny}">Larceny</option> 
-                        <option value="@{Law}">Law</option> 
-                        <option value="@{Leadership}">Leadership</option> 
-                        <option value="@{Melee}">Melee</option> 
-                        <option value="@{Medicine}">Medicine</option> 
-                        <option value="@{Occult}">Occult</option> 
-                        <option value="@{Performance}">Performance</option> 
-                        <option value="@{Politics}">Politics</option> 
-                        <option value="@{Primal-Urge}">Primal-Urge</option> 
-                        <option value="@{Rituals}">Rituals</option> 
-                        <option value="@{Science}">Science</option> 
-                        <option value="@{Stealth}">Stealth</option> 
-                        <option value="@{Streetwise}">Streetwise</option> 
-                        <option value="@{Subterfuge}">Subterfuge</option> 
-                        <option value="@{Survival}">Survival</option> 
-                        <option value="@{Technology}">Technology</option>
-						<option value="@{GarouLore}">Garou Lore</option>
-						<option value="@{OtherLore}">Other Lore</option>
-						<option value="@{Tal1}">Hobby Talent 1</option>
-						<option value="@{Tal2}">Hobby Talent 2</option>
-						<option value="@{Tal3}">Hobby Talent 3</option>
-						<option value="@{Ski1}">Prof Skill 1</option>
-						<option value="@{Ski2}">Prof Skill 2</option>
-						<option value="@{Ski3}">Prof Skill 3</option>
-						<option value="@{Kno1}">Expert Knowledge 1</option>
-                        <option value="@{Other1}">OtherTrait1</option> 
-                        <option value="@{Other2}">Other2</option> 
-                        <option value="@{Other3}">Other3</option> 
-                        <option value="@{Other4}">Other4</option> 
-                        <option value="@{Other5}">Other5</option> 
-                        <option value="@{Other6}">Other6</option> 
-                        <option value="@{Other7}">Other7</option> 
-                        <option value="@{Other8}">Other8</option> 
-                    </select>
-                </td>
-                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolMod-3' value='0'/></td>
-                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff-3' value='6'/></td>
-                <th style="width:80px">
-                    <div class="sheet-Query">
-                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-3" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-3} }} {{attr= Attribute @{DPAtt3} }} {{skill= Ability @{DPAbi3} }} {{mod= Modifier @{DicePoolMod-3} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt3}+@{DPAbi3}+@{DicePoolMod-3} + @{injury})d10@{DicePoolspec-3}s}>@{DicePoolDiff-3}f1]] }}" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-3" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-3} }} {{spec= : @{Specname-3} }} {{attr= Attribute @{DPAtt3} }} {{skill= Ability @{DPAbi3} }} {{mod= Modifier @{DicePoolMod-3} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt3}+@{DPAbi3}+@{DicePoolMod-3} + @{injury})d10@{DicePoolspec-3}s}>?{Difficulty|6}f1]] }}"/> 
-                        <span class="sheet-Query sheet-no">No</span>
-                        <span class="sheet-Query sheet-yes">Yes</span>
-                    </div>
-                </th>
-                <th style="width:80px">
-                    <div class="sheet-Query">
-                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolspec-3" value="" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolspec-3" value="!"/> 
-                        <span class="sheet-Query sheet-no">No</span>
-                        <span class="sheet-Query sheet-yes">Yes</span>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <td style="width:60px"><button type='roll' name='roll_DP4roll' value="@{DicePoolroll-4}"></button></td>
-                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_DicePoolname-4" value=""/></td>
-                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_Specname-4" value=""/></td>
-                <td style="width:110px">
-                    <select name="attr_DPAtt4" style="width:110px"> 
-                        <option value="0" selected></option> 
-                        <option value="@{Strength}">Strength</option> 
-                        <option value="@{Dexterity}">Dexterity</option> 
-                        <option value="@{Stamina}">Stamina</option> 
-                        <option value="@{Charisma}">Charisma</option> 
-                        <option value="@{Manipulation}">Manipulation</option> 
-                        <option value="@{Appearance}">Appearance</option> 
-                        <option value="@{Intelligence}">Intelligence</option> 
-                        <option value="@{Wits}">Wits</option> 
-                        <option value="@{Perception}">Perception</option>
-                    </select>
-                </td>
-                <td style="width:110px">
-                    <select name="attr_DPAbi4" style="width:110px"> 
-                        <option value="0" selected></option> 
-                        <option value="@{Academics}">Academics</option> 
-                        <option value="@{Alertness}">Alertness</option> 
-                        <option value="@{Animal_Ken}">Animal Ken</option> 
-                        <option value="@{Athletics}">Athletics</option> 
-                        <option value="@{Brawl}">Brawl</option> 
-                        <option value="@{Craft}">Craft</option> 
-                        <option value="@{Computer}">Computer</option> 
-                        <option value="@{Drive}">Drive</option> 
-                        <option value="@{Empathy}">Empathy</option> 
-                        <option value="@{Enigmas}">Enigmas</option> 
-                        <option value="@{Etiquette}">Etiquette</option> 
-                        <option value="@{Expression}">Expression</option> 
-                        <option value="@{Firearms}">Firearms</option> 
-                        <option value="@{Intimidation}">Intimidation</option> 
-                        <option value="@{Investigation}">Investigation</option> 
-                        <option value="@{Larceny}">Larceny</option> 
-                        <option value="@{Law}">Law</option> 
-                        <option value="@{Leadership}">Leadership</option> 
-                        <option value="@{Melee}">Melee</option> 
-                        <option value="@{Medicine}">Medicine</option> 
-                        <option value="@{Occult}">Occult</option> 
-                        <option value="@{Performance}">Performance</option> 
-                        <option value="@{Politics}">Politics</option> 
-                        <option value="@{Primal-Urge}">Primal-Urge</option> 
-                        <option value="@{Rituals}">Rituals</option> 
-                        <option value="@{Science}">Science</option> 
-                        <option value="@{Stealth}">Stealth</option> 
-                        <option value="@{Streetwise}">Streetwise</option> 
-                        <option value="@{Subterfuge}">Subterfuge</option> 
-                        <option value="@{Survival}">Survival</option> 
-                        <option value="@{Technology}">Technology</option>
-						<option value="@{GarouLore}">Garou Lore</option>
-						<option value="@{OtherLore}">Other Lore</option>
-						<option value="@{Tal1}">Hobby Talent 1</option>
-						<option value="@{Tal2}">Hobby Talent 2</option>
-						<option value="@{Tal3}">Hobby Talent 3</option>
-						<option value="@{Ski1}">Prof Skill 1</option>
-						<option value="@{Ski2}">Prof Skill 2</option>
-						<option value="@{Ski3}">Prof Skill 3</option>
-						<option value="@{Kno1}">Expert Knowledge 1</option>
-                        <option value="@{Other1}">OtherTrait1</option> 
-                        <option value="@{Other2}">Other2</option> 
-                        <option value="@{Other3}">Other3</option> 
-                        <option value="@{Other4}">Other4</option> 
-                        <option value="@{Other5}">Other5</option> 
-                        <option value="@{Other6}">Other6</option> 
-                        <option value="@{Other7}">Other7</option> 
-                        <option value="@{Other8}">Other8</option> 
-                    </select>
-                </td>
-                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolMod-4' value='0'/></td>
-                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff-4' value='6'/></td>
-                <th style="width:80px">
-                    <div class="sheet-Query">
-                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-4" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-4} }} {{attr= Attribute @{DPAtt4} }} {{skill= Ability @{DPAbi4} }} {{mod= Modifier @{DicePoolMod-4} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt4}+@{DPAbi4}+@{DicePoolMod-4} + @{injury})d10@{DicePoolspec-4}s}>@{DicePoolDiff-4}f1]] }}" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-4" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-4} }} {{spec= : @{Specname-4} }} {{attr= Attribute @{DPAtt4} }} {{skill= Ability @{DPAbi4} }} {{mod= Modifier @{DicePoolMod-4} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt4}+@{DPAbi4}+@{DicePoolMod-4} + @{injury})d10@{DicePoolspec-4}s}>?{Difficulty|6}f1]] }}"/> 
-                        <span class="sheet-Query sheet-no">No</span>
-                        <span class="sheet-Query sheet-yes">Yes</span>
-                    </div>
-                </th>
-                <th style="width:80px">
-                    <div class="sheet-Query">
-                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolspec-4" value="" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolspec-4" value="!"/> 
-                        <span class="sheet-Query sheet-no">No</span>
-                        <span class="sheet-Query sheet-yes">Yes</span>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <td style="width:60px"><button type='roll' name='roll_DP5roll' value="@{DicePoolroll-5}"></button></td>
-                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_DicePoolname-5" value=""/></td>
-                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_Specname-5" value=""/></td>
-                <td style="width:110px">
-                    <select name="attr_DPAtt5" style="width:110px"> 
-                        <option value="0" selected></option> 
-                        <option value="@{Strength}">Strength</option> 
-                        <option value="@{Dexterity}">Dexterity</option> 
-                        <option value="@{Stamina}">Stamina</option> 
-                        <option value="@{Charisma}">Charisma</option> 
-                        <option value="@{Manipulation}">Manipulation</option> 
-                        <option value="@{Appearance}">Appearance</option> 
-                        <option value="@{Intelligence}">Intelligence</option> 
-                        <option value="@{Wits}">Wits</option> 
-                        <option value="@{Perception}">Perception</option>
-                    </select>
-                </td>
-                <td style="width:110px">
-                    <select name="attr_DPAbi5" style="width:110px"> 
-                        <option value="0" selected></option> 
-                        <option value="@{Academics}">Academics</option> 
-                        <option value="@{Alertness}">Alertness</option> 
-                        <option value="@{Animal_Ken}">Animal Ken</option> 
-                        <option value="@{Athletics}">Athletics</option> 
-                        <option value="@{Brawl}">Brawl</option> 
-                        <option value="@{Craft}">Craft</option> 
-                        <option value="@{Computer}">Computer</option> 
-                        <option value="@{Drive}">Drive</option> 
-                        <option value="@{Empathy}">Empathy</option> 
-                        <option value="@{Enigmas}">Enigmas</option> 
-                        <option value="@{Etiquette}">Etiquette</option> 
-                        <option value="@{Expression}">Expression</option> 
-                        <option value="@{Firearms}">Firearms</option> 
-                        <option value="@{Intimidation}">Intimidation</option> 
-                        <option value="@{Investigation}">Investigation</option> 
-                        <option value="@{Larceny}">Larceny</option> 
-                        <option value="@{Law}">Law</option> 
-                        <option value="@{Leadership}">Leadership</option> 
-                        <option value="@{Melee}">Melee</option> 
-                        <option value="@{Medicine}">Medicine</option> 
-                        <option value="@{Occult}">Occult</option> 
-                        <option value="@{Performance}">Performance</option> 
-                        <option value="@{Politics}">Politics</option> 
-                        <option value="@{Primal-Urge}">Primal-Urge</option> 
-                        <option value="@{Rituals}">Rituals</option> 
-                        <option value="@{Science}">Science</option> 
-                        <option value="@{Stealth}">Stealth</option> 
-                        <option value="@{Streetwise}">Streetwise</option> 
-                        <option value="@{Subterfuge}">Subterfuge</option> 
-                        <option value="@{Survival}">Survival</option> 
-                        <option value="@{Technology}">Technology</option>
-						<option value="@{GarouLore}">Garou Lore</option>
-						<option value="@{OtherLore}">Other Lore</option>
-						<option value="@{Tal1}">Hobby Talent 1</option>
-						<option value="@{Tal2}">Hobby Talent 2</option>
-						<option value="@{Tal3}">Hobby Talent 3</option>
-						<option value="@{Ski1}">Prof Skill 1</option>
-						<option value="@{Ski2}">Prof Skill 2</option>
-						<option value="@{Ski3}">Prof Skill 3</option>
-						<option value="@{Kno1}">Expert Knowledge 1</option>
-                        <option value="@{Other1}">OtherTrait1</option> 
-                        <option value="@{Other2}">Other2</option> 
-                        <option value="@{Other3}">Other3</option> 
-                        <option value="@{Other4}">Other4</option> 
-                        <option value="@{Other5}">Other5</option> 
-                        <option value="@{Other6}">Other6</option> 
-                        <option value="@{Other7}">Other7</option> 
-                        <option value="@{Other8}">Other8</option> 
-                    </select>
-                </td>
-                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolMod-5' value='0'/></td>
-                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff-5' value='6'/></td>
-                <th style="width:80px">
-                    <div class="sheet-Query">
-                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-5" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-5} }} {{attr= Attribute @{DPAtt5} }} {{skill= Ability @{DPAbi5} }} {{mod= Modifier @{DicePoolMod-5} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt5}+@{DPAbi5}+@{DicePoolMod-5} + @{injury})d10@{DicePoolspec-5}s}>@{DicePoolDiff-5}f1]] }}" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-5" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-5} }} {{spec= : @{Specname-5} }} {{attr= Attribute @{DPAtt5} }} {{skill= Ability @{DPAbi5} }} {{mod= Modifier @{DicePoolMod-5} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt5}+@{DPAbi5}+@{DicePoolMod-5} + @{injury})d10@{DicePoolspec-5}s}>?{Difficulty|6}f1]] }}"/> 
-                        <span class="sheet-Query sheet-no">No</span>
-                        <span class="sheet-Query sheet-yes">Yes</span>
-                    </div>
-                </th>
-                <th style="width:80px">
-                    <div class="sheet-Query">
-                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolspec-5" value="" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolspec-5" value="!"/> 
-                        <span class="sheet-Query sheet-no">No</span>
-                        <span class="sheet-Query sheet-yes">Yes</span>
-                    </div>
-                </th>
-            </tr>
-        </table>
-        <hr>
-        <fieldset class="repeating_dicepool">
-            <table style="width:810px">
-                <tr>
-                    <td style="width:60px"><button type='roll' name='roll_DProll' value="@{DicePoolroll}"></button></td>
-                    <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_DicePoolname" value=""/></td>
-                    <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_Specname" value=""/></td>
-                    <td style="width:110px">
-                        <select name="attr_DPAtt" style="width:110px"> 
-                            <option value="0" selected></option> 
-                            <option value="@{Strength}">Strength</option> 
-                            <option value="@{Dexterity}">Dexterity</option> 
-                            <option value="@{Stamina}">Stamina</option> 
-                            <option value="@{Charisma}">Charisma</option> 
-                            <option value="@{Manipulation}">Manipulation</option> 
-                            <option value="@{Appearance}">Appearance</option> 
-                            <option value="@{Intelligence}">Intelligence</option> 
-                            <option value="@{Wits}">Wits</option> 
-                            <option value="@{Perception}">Perception</option>
-                        </select>
-                    </td>
-                    <td style="width:110px">
-                        <select name="attr_DPAbi" style="width:110px"> 
-						<option value="0" selected></option> 
-                        <option value="@{Academics}">Academics</option> 
-                        <option value="@{Alertness}">Alertness</option> 
-                        <option value="@{Animal_Ken}">Animal Ken</option> 
-                        <option value="@{Athletics}">Athletics</option> 
-                        <option value="@{Brawl}">Brawl</option> 
-                        <option value="@{Craft}">Craft</option> 
-                        <option value="@{Computer}">Computer</option> 
-                        <option value="@{Drive}">Drive</option> 
-                        <option value="@{Empathy}">Empathy</option> 
-                        <option value="@{Enigmas}">Enigmas</option> 
-                        <option value="@{Etiquette}">Etiquette</option> 
-                        <option value="@{Expression}">Expression</option> 
-                        <option value="@{Firearms}">Firearms</option> 
-                        <option value="@{Intimidation}">Intimidation</option> 
-                        <option value="@{Investigation}">Investigation</option> 
-                        <option value="@{Larceny}">Larceny</option> 
-                        <option value="@{Law}">Law</option> 
-                        <option value="@{Leadership}">Leadership</option> 
-                        <option value="@{Melee}">Melee</option> 
-                        <option value="@{Medicine}">Medicine</option> 
-                        <option value="@{Occult}">Occult</option> 
-                        <option value="@{Performance}">Performance</option> 
-                        <option value="@{Politics}">Politics</option> 
-                        <option value="@{Primal-Urge}">Primal-Urge</option> 
-                        <option value="@{Rituals}">Rituals</option> 
-                        <option value="@{Science}">Science</option> 
-                        <option value="@{Stealth}">Stealth</option> 
-                        <option value="@{Streetwise}">Streetwise</option> 
-                        <option value="@{Subterfuge}">Subterfuge</option> 
-                        <option value="@{Survival}">Survival</option> 
-                        <option value="@{Technology}">Technology</option>
-						<option value="@{GarouLore}">Garou Lore</option>
-						<option value="@{OtherLore}">Other Lore</option>
-						<option value="@{Tal1}">Hobby Talent 1</option>
-						<option value="@{Tal2}">Hobby Talent 2</option>
-						<option value="@{Tal3}">Hobby Talent 3</option>
-						<option value="@{Ski1}">Prof Skill 1</option>
-						<option value="@{Ski2}">Prof Skill 2</option>
-						<option value="@{Ski3}">Prof Skill 3</option>
-						<option value="@{Kno1}">Expert Knowledge 1</option>
-                        <option value="@{Other1}">OtherTrait1</option> 
-                        <option value="@{Other2}">Other2</option> 
-                        <option value="@{Other3}">Other3</option> 
-                        <option value="@{Other4}">Other4</option> 
-                        <option value="@{Other5}">Other5</option> 
-                        <option value="@{Other6}">Other6</option> 
-                        <option value="@{Other7}">Other7</option> 
-                        <option value="@{Other8}">Other8</option> 
-                        </select>
-                    </td>
-                    <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolMod' value='0'/></td>
-                    <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff' value='6'/></td>
-                    <th style="width:80px">
-                        <div class="sheet-Query">
-                            <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname} }} {{attr= Attribute @{DPAtt} }} {{skill= Ability @{DPAbi} }} {{mod= Modifier @{DicePoolMod} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt}+@{DPAbi}+@{DicePoolMod} + @{injury})d10@{DicePoolspec}s}>@{DicePoolDiff}f1]] }}" checked="checked" />
-                            <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname} }} {{spec= : @{Specname} }} {{attr= Attribute @{DPAtt} }} {{skill= Ability @{DPAbi} }} {{mod= Modifier @{DicePoolMod} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt}+@{DPAbi}+@{DicePoolMod} + @{injury})d10@{DicePoolspec}s}>?{Difficulty|6}f1]] }}"/> 
-                            <span class="sheet-Query sheet-no">No</span>
-                            <span class="sheet-Query sheet-yes">Yes</span>
-                        </div>
-                    </th>
-                    <th style="width:80px">
-                        <div class="sheet-Query">
-                            <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolspec" value="" checked="checked" />
-                            <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolspec" value="!"/> 
-                            <span class="sheet-Query sheet-no">No</span>
-                            <span class="sheet-Query sheet-yes">Yes</span>
-                        </div>
-                    </th>
-                </tr>
-            </table>
-        </fieldset>
-    </div>
-    
-    <div class="sheet-center">
-        <h3>Specialties</h3>
-        <table class="sheet-table">
-            <tr>
-                <td style="width:110px">Attribute/Ability</td>
-                <td style="width:110px">Label</td>
-            </tr>
-        </table>    
-        <fieldset class="repeating_specialties">
-            <table class="sheet-table">
-                <tr>
-                    <td>
-                        <select name="attr_specialty_type" style="width:110px">
-                            <option value="0" selected></option> 
-                            <option value="@{Strength}">Strength</option> 
-                            <option value="@{Dexterity}">Dexterity</option> 
-                            <option value="@{Stamina}">Stamina</option> 
-                            <option value="@{Charisma}">Charisma</option> 
-                            <option value="@{Manipulation}">Manipulation</option> 
-                            <option value="@{Appearance}">Appearance</option> 
-                            <option value="@{Intelligence}">Intelligence</option> 
-                            <option value="@{Wits}">Wits</option> 
-                            <option value="@{Perception}">Perception</option>
-                            <option value="@{Academics}">Academics</option> 
-                            <option value="@{Alertness}">Alertness</option> 
-                            <option value="@{Animal_Ken}">Animal Ken</option> 
-                            <option value="@{Athletics}">Athletics</option> 
-                            <option value="@{Brawl}">Brawl</option> 
-                            <option value="@{Craft}">Craft</option> 
-                            <option value="@{Computer}">Computer</option> 
-                            <option value="@{Drive}">Drive</option> 
-                            <option value="@{Empathy}">Empathy</option> 
-                            <option value="@{Enigmas}">Enigmas</option> 
-                            <option value="@{Etiquette}">Etiquette</option> 
-                            <option value="@{Expression}">Expression</option> 
-                            <option value="@{Firearms}">Firearms</option> 
-                            <option value="@{Intimidation}">Intimidation</option> 
-                            <option value="@{Investigation}">Investigation</option> 
-                            <option value="@{Larceny}">Larceny</option> 
-                            <option value="@{Law}">Law</option> 
-                            <option value="@{Leadership}">Leadership</option> 
-                            <option value="@{Melee}">Melee</option> 
-                            <option value="@{Medicine}">Medicine</option> 
-                            <option value="@{Occult}">Occult</option> 
-                            <option value="@{Performance}">Performance</option> 
-                            <option value="@{Politics}">Politics</option> 
-                            <option value="@{Primal-Urge}">Primal-Urge</option> 
-                            <option value="@{Rituals}">Rituals</option> 
-                            <option value="@{Science}">Science</option> 
-                            <option value="@{Stealth}">Stealth</option> 
-                            <option value="@{Streetwise}">Streetwise</option> 
-                            <option value="@{Subterfuge}">Subterfuge</option> 
-                            <option value="@{Survival}">Survival</option> 
-                            <option value="@{Technology}">Technology</option>
-                        </select>        
-                    </td>
-                    <td><input type="text" name="attr_specialty_label"</td>
-                </tr>
-            </table>
-        </fieldset>
-    </div>
 </div>
 <!--TAB 3 Advantages -->
 <div class="sheet-section-3">
     <br>
     <h1 style="text-align: center">Advantages</h1>
     <div class="sheet-2colrow" style="width:100%">
-        <div class="sheet-col" style="width:40%">
+        <div class="sheet-col" style="width:45%">
             <h3 style="text-align: center">Backgrounds</h3>
             <table style="width:100%; text-align: center;">
                 <tr>
@@ -2086,7 +1463,7 @@
                 </tr>
             </table>
         </div>
-        <div class="sheet-col" style="width:48%">
+        <div class="sheet-col" style="width:45%">
             <h3 style="text-align: center">Other Traits</h3>
             <table style="width:100%">
                 <tr>
@@ -2628,7 +2005,7 @@
                     <td><br></td>
                     <td><br></td>
                     <td class="sheet-red sheet-smallcaps"><br>Incites Delirium<br>in humans</td>
-                    <td>class="sheet-red sheet-smallcaps"><br>Incites Delirium<br>in humans</td>
+                    <td><br></td>
                     <td><br></td>
                 </tr>
                 <tr>
@@ -3953,8 +3330,639 @@
         </div>
     </div>
 </div><!-- end Pack Tactics div -->
-<!-- TAB 8 NOTES -->
+
+
+<!-- TAB 8 DICE -->
 <div class="sheet-section-8">
+    <!--Dice Pools-->
+    <div class="sheet-center">
+        <h1>Dice Pools</h1>
+        <table class="sheet-table" style="width:820px">
+            <tr>
+                <td style="width:60px">Roll</td>
+                <td style="width:150px">Name</td>
+                <td style="width:80px">Specialization</td>
+                <td style="width:110px">Attribute</td>
+                <td style="width:110px">Ability</td>
+                <td style="width:60px">Mod</td>
+                <td style="width:60px">Difficulty</td>
+                <td style="width:80px">Query?</td>
+                <td style="width:80px">Specialization</td>
+            </tr>
+            <tr>
+                <td style="width:60px"><button type='roll' name='roll_DP1roll' value="@{DicePoolroll-1}"></button></td>
+                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_DicePoolname-1" value=""/></td>
+                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_Specname-1" value=""/></td>
+                <td style="width:110px">
+                    <select name="attr_DPAtt1" style="width:110px"> 
+                        <option value="0" selected></option> 
+                        <option value="@{Strength}">Strength</option> 
+                        <option value="@{Dexterity}">Dexterity</option> 
+                        <option value="@{Stamina}">Stamina</option> 
+                        <option value="@{Charisma}">Charisma</option> 
+                        <option value="@{Manipulation}">Manipulation</option> 
+                        <option value="@{Appearance}">Appearance</option> 
+                        <option value="@{Intelligence}">Intelligence</option> 
+                        <option value="@{Wits}">Wits</option> 
+                        <option value="@{Perception}">Perception</option>
+                    </select>
+                </td>
+                <td style="width:110px">
+                    <select name="attr_DPAbi1" style="width:110px"> 
+                        <option value="0" selected></option> 
+                        <option value="@{Academics}">Academics</option> 
+                        <option value="@{Alertness}">Alertness</option> 
+                        <option value="@{Animal_Ken}">Animal Ken</option> 
+                        <option value="@{Athletics}">Athletics</option> 
+                        <option value="@{Brawl}">Brawl</option> 
+                        <option value="@{Craft}">Craft</option> 
+                        <option value="@{Computer}">Computer</option> 
+                        <option value="@{Drive}">Drive</option> 
+                        <option value="@{Empathy}">Empathy</option> 
+                        <option value="@{Enigmas}">Enigmas</option> 
+                        <option value="@{Etiquette}">Etiquette</option> 
+                        <option value="@{Expression}">Expression</option> 
+                        <option value="@{Firearms}">Firearms</option> 
+                        <option value="@{Intimidation}">Intimidation</option> 
+                        <option value="@{Investigation}">Investigation</option> 
+                        <option value="@{Larceny}">Larceny</option> 
+                        <option value="@{Law}">Law</option> 
+                        <option value="@{Leadership}">Leadership</option> 
+                        <option value="@{Melee}">Melee</option> 
+                        <option value="@{Medicine}">Medicine</option> 
+                        <option value="@{Occult}">Occult</option> 
+                        <option value="@{Performance}">Performance</option> 
+                        <option value="@{Politics}">Politics</option> 
+                        <option value="@{Primal-Urge}">Primal-Urge</option> 
+                        <option value="@{Rituals}">Rituals</option> 
+                        <option value="@{Science}">Science</option> 
+                        <option value="@{Stealth}">Stealth</option> 
+                        <option value="@{Streetwise}">Streetwise</option> 
+                        <option value="@{Subterfuge}">Subterfuge</option> 
+                        <option value="@{Survival}">Survival</option> 
+                        <option value="@{Technology}">Technology</option>
+						<option value="@{GarouLore}">Garou Lore</option>
+						<option value="@{OtherLore}">Other Lore</option>
+						<option value="@{Tal1}">Hobby Talent 1</option>
+						<option value="@{Tal2}">Hobby Talent 2</option>
+						<option value="@{Tal3}">Hobby Talent 3</option>
+						<option value="@{Ski1}">Prof Skill 1</option>
+						<option value="@{Ski2}">Prof Skill 2</option>
+						<option value="@{Ski3}">Prof Skill 3</option>
+						<option value="@{Kno1}">Expert Knowledge 1</option>
+                        <option value="@{Other1}">OtherTrait1</option> 
+                        <option value="@{Other2}">Other2</option> 
+                        <option value="@{Other3}">Other3</option> 
+                        <option value="@{Other4}">Other4</option> 
+                        <option value="@{Other5}">Other5</option> 
+                        <option value="@{Other6}">Other6</option> 
+                        <option value="@{Other7}">Other7</option> 
+                        <option value="@{Other8}">Other8</option> 
+                    </select>
+                </td>
+                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolMod-1' value='0'/></td>
+                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff-1' value='6'/></td>
+                <th style="width:80px">
+                    <div class="sheet-Query">
+                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-1" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-1} }} {{spec= : @{Specname-1} }} {{attr= Attribute @{DPAtt1} }} {{skill= Ability @{DPAbi1} }} {{mod= Modifier @{DicePoolMod-1} }} {{wound= Wound @{injury}}} {{result= [[{(@{DPAtt1}+@{DPAbi1}+@{DicePoolMod-1} + @{injury})d10@{DicePoolspec-1}s}>@{DicePoolDiff-1}f1]] }}" checked="checked" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-1" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-1} }} {{spec= : @{Specname-1} }} {{attr= Attribute @{DPAtt1} }} {{skill= Ability @{DPAbi1} }} {{mod= Modifier @{DicePoolMod-1} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt1}+@{DPAbi1}+@{DicePoolMod-1} + @{injury})d10@{DicePoolspec-1}s}>?{Difficulty|6}f1]] }}"/> 
+                        <span class="sheet-Query sheet-no">No</span>
+                        <span class="sheet-Query sheet-yes">Yes</span>
+                    </div>
+                </th>
+                <th style="width:80px">
+                    <div class="sheet-Query">
+                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolspec-1" value="" checked="checked" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolspec-1" value="!"/> 
+                        <span class="sheet-Query sheet-no">No</span>
+                        <span class="sheet-Query sheet-yes">Yes</span>
+                    </div>
+                </th>
+            </tr>
+
+            <tr>
+                <td style="width:60px"><button type='roll' name='roll_DP2roll' value="@{DicePoolroll-2}"></button></td>
+                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_DicePoolname-2" value=""/></td>
+                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_Specname-2" value=""/></td>
+                <td style="width:110px">
+                    <select name="attr_DPAtt2" style="width:110px"> 
+                        <option value="0" selected></option> 
+                        <option value="@{Strength}">Strength</option> 
+                        <option value="@{Dexterity}">Dexterity</option> 
+                        <option value="@{Stamina}">Stamina</option> 
+                        <option value="@{Charisma}">Charisma</option> 
+                        <option value="@{Manipulation}">Manipulation</option> 
+                        <option value="@{Appearance}">Appearance</option> 
+                        <option value="@{Intelligence}">Intelligence</option> 
+                        <option value="@{Wits}">Wits</option> 
+                        <option value="@{Perception}">Perception</option>
+                    </select>
+                </td>
+                <td style="width:110px">
+                    <select name="attr_DPAbi2" style="width:110px">  
+                        <option value="0" selected></option> 
+                        <option value="@{Academics}">Academics</option> 
+                        <option value="@{Alertness}">Alertness</option> 
+                        <option value="@{Animal_Ken}">Animal Ken</option> 
+                        <option value="@{Athletics}">Athletics</option> 
+                        <option value="@{Brawl}">Brawl</option> 
+                        <option value="@{Craft}">Craft</option> 
+                        <option value="@{Computer}">Computer</option> 
+                        <option value="@{Drive}">Drive</option> 
+                        <option value="@{Empathy}">Empathy</option> 
+                        <option value="@{Enigmas}">Enigmas</option> 
+                        <option value="@{Etiquette}">Etiquette</option> 
+                        <option value="@{Expression}">Expression</option> 
+                        <option value="@{Firearms}">Firearms</option> 
+                        <option value="@{Intimidation}">Intimidation</option> 
+                        <option value="@{Investigation}">Investigation</option> 
+                        <option value="@{Larceny}">Larceny</option> 
+                        <option value="@{Law}">Law</option> 
+                        <option value="@{Leadership}">Leadership</option> 
+                        <option value="@{Melee}">Melee</option> 
+                        <option value="@{Medicine}">Medicine</option> 
+                        <option value="@{Occult}">Occult</option> 
+                        <option value="@{Performance}">Performance</option> 
+                        <option value="@{Politics}">Politics</option> 
+                        <option value="@{Primal-Urge}">Primal-Urge</option> 
+                        <option value="@{Rituals}">Rituals</option> 
+                        <option value="@{Science}">Science</option> 
+                        <option value="@{Stealth}">Stealth</option> 
+                        <option value="@{Streetwise}">Streetwise</option> 
+                        <option value="@{Subterfuge}">Subterfuge</option> 
+                        <option value="@{Survival}">Survival</option> 
+                        <option value="@{Technology}">Technology</option>
+						<option value="@{GarouLore}">Garou Lore</option>
+						<option value="@{OtherLore}">Other Lore</option>
+						<option value="@{Tal1}">Hobby Talent 1</option>
+						<option value="@{Tal2}">Hobby Talent 2</option>
+						<option value="@{Tal3}">Hobby Talent 3</option>
+						<option value="@{Ski1}">Prof Skill 1</option>
+						<option value="@{Ski2}">Prof Skill 2</option>
+						<option value="@{Ski3}">Prof Skill 3</option>
+						<option value="@{Kno1}">Expert Knowledge 1</option>
+                        <option value="@{Other1}">OtherTrait1</option> 
+                        <option value="@{Other2}">Other2</option> 
+                        <option value="@{Other3}">Other3</option> 
+                        <option value="@{Other4}">Other4</option> 
+                        <option value="@{Other5}">Other5</option> 
+                        <option value="@{Other6}">Other6</option> 
+                        <option value="@{Other7}">Other7</option> 
+                        <option value="@{Other8}">Other8</option> 
+                    </select>
+                </td>
+                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolMod-2' value='0'/></td>
+                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff-2' value='6'/></td>
+                <th style="width:80px">
+                    <div class="sheet-Query">
+                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-2" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-2} }} {{attr= Attribute @{DPAtt2} }} {{skill= Ability @{DPAbi2} }} {{mod= Modifier @{DicePoolMod-2} }} {{wound= Wound @{injury}}} {{result= [[{(@{DPAtt2}+@{DPAbi2}+@{DicePoolMod-2} + @{injury})d10@{DicePoolspec-2}s}>@{DicePoolDiff-2}f1]] }}" checked="checked" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-2" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-2} }} {{spec= : @{Specname-2} }} {{attr= Attribute @{DPAtt2} }} {{skill= Ability @{DPAbi2} }} {{mod= Modifier @{DicePoolMod-2} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt2}+@{DPAbi2}+@{DicePoolMod-2} + @{injury})d10@{DicePoolspec-2}s}>?{Difficulty|6}f1]] }}"/> 
+                        <span class="sheet-Query sheet-no">No</span>
+                        <span class="sheet-Query sheet-yes">Yes</span>
+                    </div>
+                </th>
+                <th style="width:80px">
+                    <div class="sheet-Query">
+                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolspec-2" value="" checked="checked" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolspec-2" value="!"/> 
+                        <span class="sheet-Query sheet-no">No</span>
+                        <span class="sheet-Query sheet-yes">Yes</span>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td style="width:60px"><button type='roll' name='roll_DP3roll' value="@{DicePoolroll-3}"></button></td>
+                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_DicePoolname-3" value=""/></td>
+                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_Specname-3" value=""/></td>
+                <td style="width:110px">
+                    <select name="attr_DPAtt3" style="width:110px"> 
+                        <option value="0" selected></option> 
+                        <option value="@{Strength}">Strength</option> 
+                        <option value="@{Dexterity}">Dexterity</option> 
+                        <option value="@{Stamina}">Stamina</option> 
+                        <option value="@{Charisma}">Charisma</option> 
+                        <option value="@{Manipulation}">Manipulation</option> 
+                        <option value="@{Appearance}">Appearance</option> 
+                        <option value="@{Intelligence}">Intelligence</option> 
+                        <option value="@{Wits}">Wits</option> 
+                        <option value="@{Perception}">Perception</option>
+                    </select>
+                </td>
+                <td style="width:110px">
+                    <select name="attr_DPAbi3" style="width:110px"> 
+                        <option value="0" selected></option> 
+                        <option value="@{Academics}">Academics</option> 
+                        <option value="@{Alertness}">Alertness</option> 
+                        <option value="@{Animal_Ken}">Animal Ken</option> 
+                        <option value="@{Athletics}">Athletics</option> 
+                        <option value="@{Brawl}">Brawl</option> 
+                        <option value="@{Craft}">Craft</option> 
+                        <option value="@{Computer}">Computer</option> 
+                        <option value="@{Drive}">Drive</option> 
+                        <option value="@{Empathy}">Empathy</option> 
+                        <option value="@{Enigmas}">Enigmas</option> 
+                        <option value="@{Etiquette}">Etiquette</option> 
+                        <option value="@{Expression}">Expression</option> 
+                        <option value="@{Firearms}">Firearms</option> 
+                        <option value="@{Intimidation}">Intimidation</option> 
+                        <option value="@{Investigation}">Investigation</option> 
+                        <option value="@{Larceny}">Larceny</option> 
+                        <option value="@{Law}">Law</option> 
+                        <option value="@{Leadership}">Leadership</option> 
+                        <option value="@{Melee}">Melee</option> 
+                        <option value="@{Medicine}">Medicine</option> 
+                        <option value="@{Occult}">Occult</option> 
+                        <option value="@{Performance}">Performance</option> 
+                        <option value="@{Politics}">Politics</option> 
+                        <option value="@{Primal-Urge}">Primal-Urge</option> 
+                        <option value="@{Rituals}">Rituals</option> 
+                        <option value="@{Science}">Science</option> 
+                        <option value="@{Stealth}">Stealth</option> 
+                        <option value="@{Streetwise}">Streetwise</option> 
+                        <option value="@{Subterfuge}">Subterfuge</option> 
+                        <option value="@{Survival}">Survival</option> 
+                        <option value="@{Technology}">Technology</option>
+						<option value="@{GarouLore}">Garou Lore</option>
+						<option value="@{OtherLore}">Other Lore</option>
+						<option value="@{Tal1}">Hobby Talent 1</option>
+						<option value="@{Tal2}">Hobby Talent 2</option>
+						<option value="@{Tal3}">Hobby Talent 3</option>
+						<option value="@{Ski1}">Prof Skill 1</option>
+						<option value="@{Ski2}">Prof Skill 2</option>
+						<option value="@{Ski3}">Prof Skill 3</option>
+						<option value="@{Kno1}">Expert Knowledge 1</option>
+                        <option value="@{Other1}">OtherTrait1</option> 
+                        <option value="@{Other2}">Other2</option> 
+                        <option value="@{Other3}">Other3</option> 
+                        <option value="@{Other4}">Other4</option> 
+                        <option value="@{Other5}">Other5</option> 
+                        <option value="@{Other6}">Other6</option> 
+                        <option value="@{Other7}">Other7</option> 
+                        <option value="@{Other8}">Other8</option> 
+                    </select>
+                </td>
+                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolMod-3' value='0'/></td>
+                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff-3' value='6'/></td>
+                <th style="width:80px">
+                    <div class="sheet-Query">
+                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-3" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-3} }} {{attr= Attribute @{DPAtt3} }} {{skill= Ability @{DPAbi3} }} {{mod= Modifier @{DicePoolMod-3} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt3}+@{DPAbi3}+@{DicePoolMod-3} + @{injury})d10@{DicePoolspec-3}s}>@{DicePoolDiff-3}f1]] }}" checked="checked" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-3" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-3} }} {{spec= : @{Specname-3} }} {{attr= Attribute @{DPAtt3} }} {{skill= Ability @{DPAbi3} }} {{mod= Modifier @{DicePoolMod-3} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt3}+@{DPAbi3}+@{DicePoolMod-3} + @{injury})d10@{DicePoolspec-3}s}>?{Difficulty|6}f1]] }}"/> 
+                        <span class="sheet-Query sheet-no">No</span>
+                        <span class="sheet-Query sheet-yes">Yes</span>
+                    </div>
+                </th>
+                <th style="width:80px">
+                    <div class="sheet-Query">
+                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolspec-3" value="" checked="checked" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolspec-3" value="!"/> 
+                        <span class="sheet-Query sheet-no">No</span>
+                        <span class="sheet-Query sheet-yes">Yes</span>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td style="width:60px"><button type='roll' name='roll_DP4roll' value="@{DicePoolroll-4}"></button></td>
+                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_DicePoolname-4" value=""/></td>
+                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_Specname-4" value=""/></td>
+                <td style="width:110px">
+                    <select name="attr_DPAtt4" style="width:110px"> 
+                        <option value="0" selected></option> 
+                        <option value="@{Strength}">Strength</option> 
+                        <option value="@{Dexterity}">Dexterity</option> 
+                        <option value="@{Stamina}">Stamina</option> 
+                        <option value="@{Charisma}">Charisma</option> 
+                        <option value="@{Manipulation}">Manipulation</option> 
+                        <option value="@{Appearance}">Appearance</option> 
+                        <option value="@{Intelligence}">Intelligence</option> 
+                        <option value="@{Wits}">Wits</option> 
+                        <option value="@{Perception}">Perception</option>
+                    </select>
+                </td>
+                <td style="width:110px">
+                    <select name="attr_DPAbi4" style="width:110px"> 
+                        <option value="0" selected></option> 
+                        <option value="@{Academics}">Academics</option> 
+                        <option value="@{Alertness}">Alertness</option> 
+                        <option value="@{Animal_Ken}">Animal Ken</option> 
+                        <option value="@{Athletics}">Athletics</option> 
+                        <option value="@{Brawl}">Brawl</option> 
+                        <option value="@{Craft}">Craft</option> 
+                        <option value="@{Computer}">Computer</option> 
+                        <option value="@{Drive}">Drive</option> 
+                        <option value="@{Empathy}">Empathy</option> 
+                        <option value="@{Enigmas}">Enigmas</option> 
+                        <option value="@{Etiquette}">Etiquette</option> 
+                        <option value="@{Expression}">Expression</option> 
+                        <option value="@{Firearms}">Firearms</option> 
+                        <option value="@{Intimidation}">Intimidation</option> 
+                        <option value="@{Investigation}">Investigation</option> 
+                        <option value="@{Larceny}">Larceny</option> 
+                        <option value="@{Law}">Law</option> 
+                        <option value="@{Leadership}">Leadership</option> 
+                        <option value="@{Melee}">Melee</option> 
+                        <option value="@{Medicine}">Medicine</option> 
+                        <option value="@{Occult}">Occult</option> 
+                        <option value="@{Performance}">Performance</option> 
+                        <option value="@{Politics}">Politics</option> 
+                        <option value="@{Primal-Urge}">Primal-Urge</option> 
+                        <option value="@{Rituals}">Rituals</option> 
+                        <option value="@{Science}">Science</option> 
+                        <option value="@{Stealth}">Stealth</option> 
+                        <option value="@{Streetwise}">Streetwise</option> 
+                        <option value="@{Subterfuge}">Subterfuge</option> 
+                        <option value="@{Survival}">Survival</option> 
+                        <option value="@{Technology}">Technology</option>
+						<option value="@{GarouLore}">Garou Lore</option>
+						<option value="@{OtherLore}">Other Lore</option>
+						<option value="@{Tal1}">Hobby Talent 1</option>
+						<option value="@{Tal2}">Hobby Talent 2</option>
+						<option value="@{Tal3}">Hobby Talent 3</option>
+						<option value="@{Ski1}">Prof Skill 1</option>
+						<option value="@{Ski2}">Prof Skill 2</option>
+						<option value="@{Ski3}">Prof Skill 3</option>
+						<option value="@{Kno1}">Expert Knowledge 1</option>
+                        <option value="@{Other1}">OtherTrait1</option> 
+                        <option value="@{Other2}">Other2</option> 
+                        <option value="@{Other3}">Other3</option> 
+                        <option value="@{Other4}">Other4</option> 
+                        <option value="@{Other5}">Other5</option> 
+                        <option value="@{Other6}">Other6</option> 
+                        <option value="@{Other7}">Other7</option> 
+                        <option value="@{Other8}">Other8</option> 
+                    </select>
+                </td>
+                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolMod-4' value='0'/></td>
+                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff-4' value='6'/></td>
+                <th style="width:80px">
+                    <div class="sheet-Query">
+                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-4" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-4} }} {{attr= Attribute @{DPAtt4} }} {{skill= Ability @{DPAbi4} }} {{mod= Modifier @{DicePoolMod-4} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt4}+@{DPAbi4}+@{DicePoolMod-4} + @{injury})d10@{DicePoolspec-4}s}>@{DicePoolDiff-4}f1]] }}" checked="checked" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-4" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-4} }} {{spec= : @{Specname-4} }} {{attr= Attribute @{DPAtt4} }} {{skill= Ability @{DPAbi4} }} {{mod= Modifier @{DicePoolMod-4} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt4}+@{DPAbi4}+@{DicePoolMod-4} + @{injury})d10@{DicePoolspec-4}s}>?{Difficulty|6}f1]] }}"/> 
+                        <span class="sheet-Query sheet-no">No</span>
+                        <span class="sheet-Query sheet-yes">Yes</span>
+                    </div>
+                </th>
+                <th style="width:80px">
+                    <div class="sheet-Query">
+                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolspec-4" value="" checked="checked" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolspec-4" value="!"/> 
+                        <span class="sheet-Query sheet-no">No</span>
+                        <span class="sheet-Query sheet-yes">Yes</span>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td style="width:60px"><button type='roll' name='roll_DP5roll' value="@{DicePoolroll-5}"></button></td>
+                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_DicePoolname-5" value=""/></td>
+                <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_Specname-5" value=""/></td>
+                <td style="width:110px">
+                    <select name="attr_DPAtt5" style="width:110px"> 
+                        <option value="0" selected></option> 
+                        <option value="@{Strength}">Strength</option> 
+                        <option value="@{Dexterity}">Dexterity</option> 
+                        <option value="@{Stamina}">Stamina</option> 
+                        <option value="@{Charisma}">Charisma</option> 
+                        <option value="@{Manipulation}">Manipulation</option> 
+                        <option value="@{Appearance}">Appearance</option> 
+                        <option value="@{Intelligence}">Intelligence</option> 
+                        <option value="@{Wits}">Wits</option> 
+                        <option value="@{Perception}">Perception</option>
+                    </select>
+                </td>
+                <td style="width:110px">
+                    <select name="attr_DPAbi5" style="width:110px"> 
+                        <option value="0" selected></option> 
+                        <option value="@{Academics}">Academics</option> 
+                        <option value="@{Alertness}">Alertness</option> 
+                        <option value="@{Animal_Ken}">Animal Ken</option> 
+                        <option value="@{Athletics}">Athletics</option> 
+                        <option value="@{Brawl}">Brawl</option> 
+                        <option value="@{Craft}">Craft</option> 
+                        <option value="@{Computer}">Computer</option> 
+                        <option value="@{Drive}">Drive</option> 
+                        <option value="@{Empathy}">Empathy</option> 
+                        <option value="@{Enigmas}">Enigmas</option> 
+                        <option value="@{Etiquette}">Etiquette</option> 
+                        <option value="@{Expression}">Expression</option> 
+                        <option value="@{Firearms}">Firearms</option> 
+                        <option value="@{Intimidation}">Intimidation</option> 
+                        <option value="@{Investigation}">Investigation</option> 
+                        <option value="@{Larceny}">Larceny</option> 
+                        <option value="@{Law}">Law</option> 
+                        <option value="@{Leadership}">Leadership</option> 
+                        <option value="@{Melee}">Melee</option> 
+                        <option value="@{Medicine}">Medicine</option> 
+                        <option value="@{Occult}">Occult</option> 
+                        <option value="@{Performance}">Performance</option> 
+                        <option value="@{Politics}">Politics</option> 
+                        <option value="@{Primal-Urge}">Primal-Urge</option> 
+                        <option value="@{Rituals}">Rituals</option> 
+                        <option value="@{Science}">Science</option> 
+                        <option value="@{Stealth}">Stealth</option> 
+                        <option value="@{Streetwise}">Streetwise</option> 
+                        <option value="@{Subterfuge}">Subterfuge</option> 
+                        <option value="@{Survival}">Survival</option> 
+                        <option value="@{Technology}">Technology</option>
+						<option value="@{GarouLore}">Garou Lore</option>
+						<option value="@{OtherLore}">Other Lore</option>
+						<option value="@{Tal1}">Hobby Talent 1</option>
+						<option value="@{Tal2}">Hobby Talent 2</option>
+						<option value="@{Tal3}">Hobby Talent 3</option>
+						<option value="@{Ski1}">Prof Skill 1</option>
+						<option value="@{Ski2}">Prof Skill 2</option>
+						<option value="@{Ski3}">Prof Skill 3</option>
+						<option value="@{Kno1}">Expert Knowledge 1</option>
+                        <option value="@{Other1}">OtherTrait1</option> 
+                        <option value="@{Other2}">Other2</option> 
+                        <option value="@{Other3}">Other3</option> 
+                        <option value="@{Other4}">Other4</option> 
+                        <option value="@{Other5}">Other5</option> 
+                        <option value="@{Other6}">Other6</option> 
+                        <option value="@{Other7}">Other7</option> 
+                        <option value="@{Other8}">Other8</option> 
+                    </select>
+                </td>
+                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolMod-5' value='0'/></td>
+                <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff-5' value='6'/></td>
+                <th style="width:80px">
+                    <div class="sheet-Query">
+                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-5" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-5} }} {{attr= Attribute @{DPAtt5} }} {{skill= Ability @{DPAbi5} }} {{mod= Modifier @{DicePoolMod-5} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt5}+@{DPAbi5}+@{DicePoolMod-5} + @{injury})d10@{DicePoolspec-5}s}>@{DicePoolDiff-5}f1]] }}" checked="checked" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-5" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-5} }} {{spec= : @{Specname-5} }} {{attr= Attribute @{DPAtt5} }} {{skill= Ability @{DPAbi5} }} {{mod= Modifier @{DicePoolMod-5} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt5}+@{DPAbi5}+@{DicePoolMod-5} + @{injury})d10@{DicePoolspec-5}s}>?{Difficulty|6}f1]] }}"/> 
+                        <span class="sheet-Query sheet-no">No</span>
+                        <span class="sheet-Query sheet-yes">Yes</span>
+                    </div>
+                </th>
+                <th style="width:80px">
+                    <div class="sheet-Query">
+                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolspec-5" value="" checked="checked" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolspec-5" value="!"/> 
+                        <span class="sheet-Query sheet-no">No</span>
+                        <span class="sheet-Query sheet-yes">Yes</span>
+                    </div>
+                </th>
+            </tr>
+        </table>
+        <hr>
+        <fieldset class="repeating_dicepool">
+            <table style="width:810px">
+                <tr>
+                    <td style="width:60px"><button type='roll' name='roll_DProll' value="@{DicePoolroll}"></button></td>
+                    <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_DicePoolname" value=""/></td>
+                    <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_Specname" value=""/></td>
+                    <td style="width:110px">
+                        <select name="attr_DPAtt" style="width:110px"> 
+                            <option value="0" selected></option> 
+                            <option value="@{Strength}">Strength</option> 
+                            <option value="@{Dexterity}">Dexterity</option> 
+                            <option value="@{Stamina}">Stamina</option> 
+                            <option value="@{Charisma}">Charisma</option> 
+                            <option value="@{Manipulation}">Manipulation</option> 
+                            <option value="@{Appearance}">Appearance</option> 
+                            <option value="@{Intelligence}">Intelligence</option> 
+                            <option value="@{Wits}">Wits</option> 
+                            <option value="@{Perception}">Perception</option>
+                        </select>
+                    </td>
+                    <td style="width:110px">
+                        <select name="attr_DPAbi" style="width:110px"> 
+						<option value="0" selected></option> 
+                        <option value="@{Academics}">Academics</option> 
+                        <option value="@{Alertness}">Alertness</option> 
+                        <option value="@{Animal_Ken}">Animal Ken</option> 
+                        <option value="@{Athletics}">Athletics</option> 
+                        <option value="@{Brawl}">Brawl</option> 
+                        <option value="@{Craft}">Craft</option> 
+                        <option value="@{Computer}">Computer</option> 
+                        <option value="@{Drive}">Drive</option> 
+                        <option value="@{Empathy}">Empathy</option> 
+                        <option value="@{Enigmas}">Enigmas</option> 
+                        <option value="@{Etiquette}">Etiquette</option> 
+                        <option value="@{Expression}">Expression</option> 
+                        <option value="@{Firearms}">Firearms</option> 
+                        <option value="@{Intimidation}">Intimidation</option> 
+                        <option value="@{Investigation}">Investigation</option> 
+                        <option value="@{Larceny}">Larceny</option> 
+                        <option value="@{Law}">Law</option> 
+                        <option value="@{Leadership}">Leadership</option> 
+                        <option value="@{Melee}">Melee</option> 
+                        <option value="@{Medicine}">Medicine</option> 
+                        <option value="@{Occult}">Occult</option> 
+                        <option value="@{Performance}">Performance</option> 
+                        <option value="@{Politics}">Politics</option> 
+                        <option value="@{Primal-Urge}">Primal-Urge</option> 
+                        <option value="@{Rituals}">Rituals</option> 
+                        <option value="@{Science}">Science</option> 
+                        <option value="@{Stealth}">Stealth</option> 
+                        <option value="@{Streetwise}">Streetwise</option> 
+                        <option value="@{Subterfuge}">Subterfuge</option> 
+                        <option value="@{Survival}">Survival</option> 
+                        <option value="@{Technology}">Technology</option>
+						<option value="@{GarouLore}">Garou Lore</option>
+						<option value="@{OtherLore}">Other Lore</option>
+						<option value="@{Tal1}">Hobby Talent 1</option>
+						<option value="@{Tal2}">Hobby Talent 2</option>
+						<option value="@{Tal3}">Hobby Talent 3</option>
+						<option value="@{Ski1}">Prof Skill 1</option>
+						<option value="@{Ski2}">Prof Skill 2</option>
+						<option value="@{Ski3}">Prof Skill 3</option>
+						<option value="@{Kno1}">Expert Knowledge 1</option>
+                        <option value="@{Other1}">OtherTrait1</option> 
+                        <option value="@{Other2}">Other2</option> 
+                        <option value="@{Other3}">Other3</option> 
+                        <option value="@{Other4}">Other4</option> 
+                        <option value="@{Other5}">Other5</option> 
+                        <option value="@{Other6}">Other6</option> 
+                        <option value="@{Other7}">Other7</option> 
+                        <option value="@{Other8}">Other8</option> 
+                        </select>
+                    </td>
+                    <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolMod' value='0'/></td>
+                    <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff' value='6'/></td>
+                    <th style="width:80px">
+                        <div class="sheet-Query">
+                            <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname} }} {{attr= Attribute @{DPAtt} }} {{skill= Ability @{DPAbi} }} {{mod= Modifier @{DicePoolMod} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt}+@{DPAbi}+@{DicePoolMod} + @{injury})d10@{DicePoolspec}s}>@{DicePoolDiff}f1]] }}" checked="checked" />
+                            <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname} }} {{spec= : @{Specname} }} {{attr= Attribute @{DPAtt} }} {{skill= Ability @{DPAbi} }} {{mod= Modifier @{DicePoolMod} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt}+@{DPAbi}+@{DicePoolMod} + @{injury})d10@{DicePoolspec}s}>?{Difficulty|6}f1]] }}"/> 
+                            <span class="sheet-Query sheet-no">No</span>
+                            <span class="sheet-Query sheet-yes">Yes</span>
+                        </div>
+                    </th>
+                    <th style="width:80px">
+                        <div class="sheet-Query">
+                            <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolspec" value="" checked="checked" />
+                            <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolspec" value="!"/> 
+                            <span class="sheet-Query sheet-no">No</span>
+                            <span class="sheet-Query sheet-yes">Yes</span>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+    
+    <div class="sheet-center">
+        <h3>Specialties</h3>
+        <table class="sheet-table">
+            <tr>
+                <td style="width:110px">Attribute/Ability</td>
+                <td style="width:110px">Label</td>
+            </tr>
+        </table>    
+        <fieldset class="repeating_specialties">
+            <table class="sheet-table">
+                <tr>
+                    <td>
+                        <select name="attr_specialty_type" style="width:110px">
+                            <option value="0" selected></option> 
+                            <option value="@{Strength}">Strength</option> 
+                            <option value="@{Dexterity}">Dexterity</option> 
+                            <option value="@{Stamina}">Stamina</option> 
+                            <option value="@{Charisma}">Charisma</option> 
+                            <option value="@{Manipulation}">Manipulation</option> 
+                            <option value="@{Appearance}">Appearance</option> 
+                            <option value="@{Intelligence}">Intelligence</option> 
+                            <option value="@{Wits}">Wits</option> 
+                            <option value="@{Perception}">Perception</option>
+                            <option value="@{Academics}">Academics</option> 
+                            <option value="@{Alertness}">Alertness</option> 
+                            <option value="@{Animal_Ken}">Animal Ken</option> 
+                            <option value="@{Athletics}">Athletics</option> 
+                            <option value="@{Brawl}">Brawl</option> 
+                            <option value="@{Craft}">Craft</option> 
+                            <option value="@{Computer}">Computer</option> 
+                            <option value="@{Drive}">Drive</option> 
+                            <option value="@{Empathy}">Empathy</option> 
+                            <option value="@{Enigmas}">Enigmas</option> 
+                            <option value="@{Etiquette}">Etiquette</option> 
+                            <option value="@{Expression}">Expression</option> 
+                            <option value="@{Firearms}">Firearms</option> 
+                            <option value="@{Intimidation}">Intimidation</option> 
+                            <option value="@{Investigation}">Investigation</option> 
+                            <option value="@{Larceny}">Larceny</option> 
+                            <option value="@{Law}">Law</option> 
+                            <option value="@{Leadership}">Leadership</option> 
+                            <option value="@{Melee}">Melee</option> 
+                            <option value="@{Medicine}">Medicine</option> 
+                            <option value="@{Occult}">Occult</option> 
+                            <option value="@{Performance}">Performance</option> 
+                            <option value="@{Politics}">Politics</option> 
+                            <option value="@{Primal-Urge}">Primal-Urge</option> 
+                            <option value="@{Rituals}">Rituals</option> 
+                            <option value="@{Science}">Science</option> 
+                            <option value="@{Stealth}">Stealth</option> 
+                            <option value="@{Streetwise}">Streetwise</option> 
+                            <option value="@{Subterfuge}">Subterfuge</option> 
+                            <option value="@{Survival}">Survival</option> 
+                            <option value="@{Technology}">Technology</option>
+                        </select>        
+                    </td>
+                    <td><input type="text" name="attr_specialty_label"</td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+</div>
+
+<!-- TAB 9 NOTES -->
+<div class="sheet-section-9">
     <h1 style="text-align: center">Notes</h1>
     <div class="sheet-col" style="width:100%; text-align:center"></div><div class="sheet-line-behind" ></div>
     
@@ -3963,6 +3971,10 @@
     </div>
 	<br/>
 </div>
+
+
+
+
 <div>
     <rolltemplate class="sheet-rolltemplate-wod">
     <table>
@@ -4017,6 +4029,10 @@
     </table>
 </rolltemplate>
 </div>
+
+
+
+
 
 <script type="text/worker">
 // sets the radio buttons for the chosen form, and ensures user cannot change any individual stats from form.
