@@ -1692,7 +1692,7 @@
         <div class="sheet-col" style="width:30%" align="center">
             <h2 style="text-align: center">Renown</h2>
             <h3 style="text-align: center">Glory</h3>
-            <div class="sheet-row" align="center" style="margin:0px 0px 0px 30px">
+            <div class="sheet-row" align="center" style="margin:0px 0px 0px 0px">
                 <input type="radio" class="sheet-normal sheet-zero" name="attr_Glory" value="0" checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Glory" value="1" /><span></span> 
                 <input type="radio" class="sheet-normal" name="attr_Glory" value="2" /><span></span> 
@@ -1706,7 +1706,7 @@
                 <input type="radio" class="sheet-normal" name="attr_Glory" value="10" /><span></span>
                 <br>
             </div>
-            <div class="sheet-row" align="center" style="margin:0px 0px 0px 30px">
+            <div class="sheet-row" align="center" style="margin:0px 0px 0px 0px">
                 <input type="radio" class="sheet-normal sheet-zero" name="attr_Glory_Temp" value="0" checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Glory_Temp" value="1" class=" used"/><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Glory_Temp" value="2" class=" used"/><span></span>
@@ -1720,7 +1720,7 @@
                 <input type="radio" class="sheet-normal" name="attr_Glory_Temp" value="10" class=" used"/><span></span>
             </div>
             <h3 style="text-align: center">Honor</h3>
-            <div class="sheet-row" align="center" style="margin:0px 0px 0px 30px">
+            <div class="sheet-row" align="center" style="margin:0px 0px 0px 0px">
                 <input type="radio" class="sheet-normal sheet-zero" name="attr_Honor" value="0" checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Honor" value="1" /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Honor" value="2" /><span></span>
@@ -1734,7 +1734,7 @@
                 <input type="radio" class="sheet-normal" name="attr_Honor" value="10" /><span></span>
                 <br>
             </div>
-            <div class="sheet-row" align="center" style="margin:0px 0px 0px 30px">
+            <div class="sheet-row" align="center" style="margin:0px 0px 0px 0px">
                 <input type="radio" class="sheet-normal sheet-zero" name="attr_Honor_Temp" value="0" checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Honor_Temp" value="1" class=" used"/><span></span> 
                 <input type="radio" class="sheet-normal" name="attr_Honor_Temp" value="2" class=" used"/><span></span> 
@@ -1748,7 +1748,7 @@
                 <input type="radio" class="sheet-normal" name="attr_Honor_Temp" value="10" class=" used"/><span></span>
             </div>
             <h3 style="text-align: center">Wisdom</h3>
-            <div class="sheet-row" align="center" style="margin:0px 0px 0px 30px">
+            <div class="sheet-row" align="center" style="margin:0px 0px 0px 3px">
                 <input type="radio" class="sheet-normal sheet-zero" name="attr_Wisdom" value="0" checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Wisdom" value="1" /><span></span>  
                 <input type="radio" class="sheet-normal" name="attr_Wisdom" value="2" /><span></span> 
@@ -1762,7 +1762,7 @@
                 <input type="radio" class="sheet-normal" name="attr_Wisdom" value="10" /><span></span>
                 <br>
             </div>
-            <div class="sheet-row" align="center" style="margin:0px 0px 0px 30px">
+            <div class="sheet-row" align="center" style="margin:0px 0px 0px 0px">
                 <input type="radio" class="sheet-normal sheet-zero" name="attr_Wisdom_Temp" value="0" checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Wisdom_Temp" value="1" class=" used"/><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Wisdom_Temp" value="2" class=" used"/><span></span>
@@ -1781,6 +1781,7 @@
             <div class="sheet-row"  align="center">
                 <input type="text" name="attr_Rank" style="width:245px"/>
             </div>
+			
         </div>
         <div class="sheet-col" style="width:30%" align="center">
             <button type="roll" class="sheet-adv" name="roll_Rage" value="&{template:wod} {{name= @{character_name} }} {{pool= Rage }} {{attr= Dice @{Rage} }} {{result= [[{(@{Rage}+?{Pool Mod|0})d10}>?{Difficulty|6}f1]] }}">Rage</button>
@@ -2368,7 +2369,8 @@
         <input type="number" class="sheet-textbox" name="attr_initiative_mod" value="0"/>
         <button type="roll" class="sheet-initiative" name="roll_initiative_no_token" value="&{template:wod} {{name= @{character_name} }} {{pool= Initiative }} {{attr= Attribute @{initiative_attribute_1} }} {{skill= Attribute @{initiative_attribute_2} }} {{mod= Modifier @{initiative_mod} }} {{initiative= [[ @{initiative_attribute_1} + @{initiative_attribute_2} + @{initiative_mod} + 1d10]] }}"> No Token </button>
     </div>
-    <table style="width:840px">
+	
+    <table align="center" style="width:840px">
         <tr>
             <th>Roll</th>
             <th>Weapon/Attack</th>
@@ -2376,8 +2378,8 @@
             <th>Skill</th>
             <th>Attack<br>Modifier</th>
             <th>Attack<br>Difficulty</th>
-            <th>Query</th>
-            <th>Damage</th>
+            <th>Query   .</th>
+            <th>Damage   .</th>
             <th>Add<br>Strength?</th>
             <th>Range</th>
             <th>Rate</th>
@@ -2387,7 +2389,7 @@
         <tr>
             <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_1" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-1} }} {{attr= Attribute @{weapon_attribute-1} }} {{skill= Skill @{weapon_skill-1}}} {{mod= Weapon @{weapon_Modifier-1} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-1} + @{weapon_skill-1} + @{weapon_Modifier-1} + @{injury})d10}>@{weapon_Diff-1}f1]] }}"></button></th>
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-1" value=""/></th>
-            <th><select class="sheet-select" style="width:110px" name="attr_weapon_attribute-1" value="0" >
+            <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-1" value="0" >
                     <option value="0" selected></option> 
                     <option value="@{Strength}">Strength</option> 
                     <option value="@{Dexterity}">Dexterity</option> 
@@ -2435,7 +2437,7 @@
         <tr>
             <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_2" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-2} }} {{attr= Attribute @{weapon_attribute-2} }} {{skill= Skill @{weapon_skill-2}}} {{mod= Weapon @{weapon_Modifier-2} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-2} + @{weapon_skill-2} + @{weapon_Modifier-2} + @{injury})d10}>@{weapon_Diff-2}f1]] }}"></button></th>
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-2" value=""/></th>
-            <th><select class="sheet-select" style="width:110px" name="attr_weapon_attribute-2" value="0" >
+            <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-2" value="0" >
                     <option value="0" selected></option> 
                     <option value="@{Strength}">Strength</option> 
                     <option value="@{Dexterity}">Dexterity</option> 
@@ -2483,7 +2485,7 @@
         <tr>
             <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_3" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-3} }} {{attr= Attribute @{weapon_attribute-3} }} {{skill= Skill @{weapon_skill-3}}} {{mod= Weapon @{weapon_Modifier-3} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-3} + @{weapon_skill-3} + @{weapon_Modifier-3} + @{injury})d10}>@{weapon_Diff-3}f1]] }}"></button></th>
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-3" value=""/></th>
-            <th><select class="sheet-select" style="width:110px" name="attr_weapon_attribute-3" value="0" >
+            <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-3" value="0" >
                     <option value="0" selected></option> 
                     <option value="@{Strength}">Strength</option> 
                     <option value="@{Dexterity}">Dexterity</option> 
@@ -2531,7 +2533,7 @@
         <tr>
             <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_4" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-4} }} {{attr= Attribute @{weapon_attribute-4} }} {{skill= Skill @{weapon_skill-4}}} {{mod= Weapon @{weapon_Modifier-4} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-4} + @{weapon_skill-4} + @{weapon_Modifier-4} + @{injury})d10}>@{weapon_Diff-4}f1]] }}"></button></th>
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-4" value=""/></th>
-            <th><select class="sheet-select" style="width:110px" name="attr_weapon_attribute-4" value="0" >
+            <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-4" value="0" >
                     <option value="0" selected></option> 
                     <option value="@{Strength}">Strength</option> 
                     <option value="@{Dexterity}">Dexterity</option> 
@@ -2579,7 +2581,7 @@
         <tr>
             <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_5" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-5} }} {{attr= Attribute @{weapon_attribute-5} }} {{skill= Skill @{weapon_skill-5}}} {{mod= Weapon @{weapon_Modifier-5} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-5} + @{weapon_skill-5} + @{weapon_Modifier-5} + @{injury})d10}>@{weapon_Diff-5}f1]] }}"></button></th>
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-5" value=""/></th>
-            <th><select class="sheet-select" style="width:110px" name="attr_weapon_attribute-5" value="0" >
+            <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-5" value="0" >
                     <option value="0" selected></option> 
                     <option value="@{Strength}">Strength</option> 
                     <option value="@{Dexterity}">Dexterity</option> 
@@ -2627,7 +2629,7 @@
         <tr>
             <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_6" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-6} }} {{attr= Attribute @{weapon_attribute-6} }} {{skill= Skill @{weapon_skill-6}}} {{mod= Weapon @{weapon_Modifier-6} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-6} + @{weapon_skill-6} + @{weapon_Modifier-6} + @{injury})d10}>@{weapon_Diff-6}f1]] }}"></button></th>
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-6" value=""/></th>
-            <th><select class="sheet-select" style="width:110px" name="attr_weapon_attribute-6" value="0" >
+            <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-6" value="0" >
                     <option value="0" selected></option> 
                     <option value="@{Strength}">Strength</option> 
                     <option value="@{Dexterity}">Dexterity</option> 
@@ -2675,7 +2677,7 @@
         <tr>
             <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_7" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-7} }} {{attr= Attribute @{weapon_attribute-7} }} {{skill= Skill @{weapon_skill-7}}} {{mod= Weapon @{weapon_Modifier-7} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-7} + @{weapon_skill-7} + @{weapon_Modifier-7} + @{injury})d10}>@{weapon_Diff-7}f1]] }}"></button></th>
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-7" value=""/></th>
-            <th><select class="sheet-select" style="width:110px" name="attr_weapon_attribute-7" value="0" >
+            <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-7" value="0" >
                     <option value="0" selected></option> 
                     <option value="@{Strength}">Strength</option> 
                     <option value="@{Dexterity}">Dexterity</option> 
@@ -2725,7 +2727,7 @@
     <h3 style="text-align:center; display:inline">Brawling & Clawing</h3>
     <input type="checkbox" class="sheet-claw" name="attr_claw-Brawling" checked/><span></span>
     <div class="sheet-body">
-        <table style="width:840px">
+        <table style="width:840px" align="center">
             <tr>
                 <th>Maneuver</th>
                 <th>Dice Pool</th>
@@ -2866,8 +2868,8 @@
         </table>
     </div>
     <hr/>
-    <div class="sheet-3colrow" style="width:840px" <!--style="width:840px" -->>
-	<div class="sheet-col" style="width:20%">
+    <div class="sheet-3colrow" style="width:100%" align="center">
+		<div class="sheet-col" style="width:25%" align="center">
             <h3 style="text-align:center">Health, Extra</h3>
             <table class="sheet-center">
                 <tr>
@@ -3017,7 +3019,7 @@
                 </tr> -->
             </table>
         </div>
-        <div class="sheet-col" style="width:30%">
+        <div class="sheet-col" style="width:20%" align="center">
             <h3 style="text-align:center">Health, Main</h3>
             <table class="sheet-center">
                 <!-- <tr>
@@ -3172,9 +3174,9 @@
                 </tr>
             </table>
         </div>
-        <div class="sheet-col">
+        <div class="sheet-col" style="width:40%" align="center">
         <h3 style="text-align: center">Armor & Soak</h3>
-            <table class="sheet-center" style="width:220px">
+            <table class="sheet-center" >
                 <tr>
                     <th>Armor Type</th>
                     <th>Rating</th>

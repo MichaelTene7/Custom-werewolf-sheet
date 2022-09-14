@@ -731,6 +731,25 @@ input.sheet-normal[type="radio"]:checked ~ input.sheet-normal[type="radio"] + sp
     content: "";
 }
 
+/* ----- Boxes for temp values test ----- */
+input.sheet-used[type="radio"]:checked ~ input.sheet-used[type="radio"] + span::before
+{
+	content: "X";
+    width: 12px;
+    height: 12px;
+    font-size: 12px;
+    
+    -moz-border-radius: 0%;
+    -webkit-border-radius: 0%;
+    border-radius: 0%;
+    
+    background: #f6f6f6;
+    background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -o-radial-gradient(#f6f6f6, #dfdfdf);
+    background: radial-gradient(#f6f6f6, #dfdfdf);
+}
 /*------------empty traits-----------*/
 input.sheet-zero[type="radio"]:checked + span::before
 {
@@ -2192,3 +2211,25 @@ button[type=roll].sheet-weaponroll:active {
     background-size: 100%;
     background-repeat: no-repeat;
 }
+
+
+/* Used as boxes not dots */
+
+input.sheet-used+span::before {
+    content: "X";
+    width: 12px;
+    height: 12px;
+    font-size: 12px;
+    
+    -moz-border-radius: 0%;
+    -webkit-border-radius: 0%;
+    border-radius: 0%;
+    
+    background: #f6f6f6;
+    background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -o-radial-gradient(#f6f6f6, #dfdfdf);
+    background: radial-gradient(#f6f6f6, #dfdfdf);
+}
+
