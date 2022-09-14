@@ -24,7 +24,7 @@
 
 <!--TAB 1 Basic -->
 <div class="sheet-section-1">
-    <div style="text-align: center;width:840px; height:100px; background-image: url(http://imgsrv.roll20.net/?src=raw.githubusercontent.com/Roll20/roll20-character-sheets/master/CWOD-W20/WerewolfApocalypseRevisedLogo.png);background-size: auto 100px;background-repeat: no-repeat;background-position: center;">
+    <div style="text-align: center;  height:100px; background-image: url(http://imgsrv.roll20.net/?src=raw.githubusercontent.com/Roll20/roll20-character-sheets/master/CWOD-W20/WerewolfApocalypseRevisedLogo.png);background-size: auto 100px;background-repeat: no-repeat;background-position: center;">
    </div>
 	<div class="sheet-line-behind" ></div>    
     <div class="sheet-col" style="width:12%">
@@ -1692,7 +1692,7 @@
         <div class="sheet-col" style="width:30%" align="center">
             <h2 style="text-align: center">Renown</h2>
             <h3 style="text-align: center">Glory</h3>
-            <div class="sheet-row" align="left" style="margin:0px 0px 0px 30px">
+            <div class="sheet-row" align="center" style="margin:0px 0px 0px 30px">
                 <input type="radio" class="sheet-normal sheet-zero" name="attr_Glory" value="0" checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Glory" value="1" /><span></span> 
                 <input type="radio" class="sheet-normal" name="attr_Glory" value="2" /><span></span> 
@@ -1706,7 +1706,7 @@
                 <input type="radio" class="sheet-normal" name="attr_Glory" value="10" /><span></span>
                 <br>
             </div>
-            <div class="sheet-row" align="left" style="margin:0px 0px 0px 30px">
+            <div class="sheet-row" align="center" style="margin:0px 0px 0px 30px">
                 <input type="radio" class="sheet-normal sheet-zero" name="attr_Glory_Temp" value="0" checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Glory_Temp" value="1" class=" used"/><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Glory_Temp" value="2" class=" used"/><span></span>
@@ -1720,7 +1720,7 @@
                 <input type="radio" class="sheet-normal" name="attr_Glory_Temp" value="10" class=" used"/><span></span>
             </div>
             <h3 style="text-align: center">Honor</h3>
-            <div class="sheet-row" align="left" style="margin:0px 0px 0px 30px">
+            <div class="sheet-row" align="center" style="margin:0px 0px 0px 30px">
                 <input type="radio" class="sheet-normal sheet-zero" name="attr_Honor" value="0" checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Honor" value="1" /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Honor" value="2" /><span></span>
@@ -1734,7 +1734,7 @@
                 <input type="radio" class="sheet-normal" name="attr_Honor" value="10" /><span></span>
                 <br>
             </div>
-            <div class="sheet-row" align="left" style="margin:0px 0px 0px 30px">
+            <div class="sheet-row" align="center" style="margin:0px 0px 0px 30px">
                 <input type="radio" class="sheet-normal sheet-zero" name="attr_Honor_Temp" value="0" checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Honor_Temp" value="1" class=" used"/><span></span> 
                 <input type="radio" class="sheet-normal" name="attr_Honor_Temp" value="2" class=" used"/><span></span> 
@@ -1748,7 +1748,7 @@
                 <input type="radio" class="sheet-normal" name="attr_Honor_Temp" value="10" class=" used"/><span></span>
             </div>
             <h3 style="text-align: center">Wisdom</h3>
-            <div class="sheet-row" align="left" style="margin:0px 0px 0px 30px">
+            <div class="sheet-row" align="center" style="margin:0px 0px 0px 30px">
                 <input type="radio" class="sheet-normal sheet-zero" name="attr_Wisdom" value="0" checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Wisdom" value="1" /><span></span>  
                 <input type="radio" class="sheet-normal" name="attr_Wisdom" value="2" /><span></span> 
@@ -1762,7 +1762,7 @@
                 <input type="radio" class="sheet-normal" name="attr_Wisdom" value="10" /><span></span>
                 <br>
             </div>
-            <div class="sheet-row" align="left" style="margin:0px 0px 0px 30px">
+            <div class="sheet-row" align="center" style="margin:0px 0px 0px 30px">
                 <input type="radio" class="sheet-normal sheet-zero" name="attr_Wisdom_Temp" value="0" checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Wisdom_Temp" value="1" class=" used"/><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Wisdom_Temp" value="2" class=" used"/><span></span>
@@ -1782,10 +1782,10 @@
                 <input type="text" name="attr_Rank" style="width:245px"/>
             </div>
         </div>
-        <div class="sheet-col" style="width:250px" align="center">
+        <div class="sheet-col" style="width:30%" align="center">
             <button type="roll" class="sheet-adv" name="roll_Rage" value="&{template:wod} {{name= @{character_name} }} {{pool= Rage }} {{attr= Dice @{Rage} }} {{result= [[{(@{Rage}+?{Pool Mod|0})d10}>?{Difficulty|6}f1]] }}">Rage</button>
             <br>
-            <div align="left" style="margin:0px 0px 0px 48px"> 
+            <div align="center" style="margin:0px 0px 0px 9px"> 
                 <input type="radio" class="sheet-normal" name="attr_Rage" value="1" checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Rage" value="2" /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Rage" value="3" /><span></span>
@@ -1798,7 +1798,7 @@
                 <input type="radio" class="sheet-normal" name="attr_Rage" value="10" /><span></span>
                 
             </div>
-            <div align="left" style="margin:0px 0px 0px 30px">
+            <div align="center" style="margin:0px 9px 0px 0px">
                 <input type="radio" class="sheet-normal sheet-zero" name="attr_Rage_Used" value="0" checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Rage_Used" value="1" class=" used" /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Rage_Used" value="2" class=" used" /><span></span>
@@ -1813,7 +1813,7 @@
             </div>
             <br><br>
             <button type="roll" class="sheet-adv" name="roll_Gnosis" value="&{template:wod} {{name= @{character_name} }} {{pool= Gnosis }} {{attr= Dice @{Gnosis} }} {{result= [[{(@{Gnosis}+?{Pool Mod|0})d10}>?{Difficulty|6}f1]] }}">Gnosis</button>
-            <div align="left" style="margin:0px 0px 0px 48px">
+            <div align="center" style="margin:0px 0px 0px 9px">
                 <input type="radio" class="sheet-normal" name="attr_Gnosis" value="1" checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Gnosis" value="2" /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Gnosis" value="3" /><span></span>
@@ -1825,7 +1825,7 @@
                 <input type="radio" class="sheet-normal" name="attr_Gnosis" value="9" /><span></span>  
                 <input type="radio" class="sheet-normal" name="attr_Gnosis" value="10" /><span></span>
             </div>
-            <div align="left" style="margin:0px 0px 0px 30px">
+            <div align="center" style="margin:0px 9px 0px 0px">
                 <input type="radio" class="sheet-normal sheet-zero" name="attr_Gnosis_Used" value="0" checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Gnosis_Used" value="1" class=" used"/><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Gnosis_Used" value="2" class=" used"/><span></span>
@@ -1840,7 +1840,7 @@
             </div>
             <br><br>
             <button type="roll" class="sheet-adv" name="roll_Willpower" value="&{template:wod} {{name= @{character_name} }} {{pool= Willpower }} {{attr= Dice @{Willpower} }} {{result= [[{(@{Willpower}+?{Pool Mod|0})d10}>?{Difficulty|6}f1]] }}">Willpower</button>
-            <div align="left" style="margin:0px 0px 0px 48px">
+            <div align="center" style="margin:0px 0px 0px 9px">
                 <input type="radio" class="sheet-normal" name="attr_Willpower" value="1" checked/><span></span> 
                 <input type="radio" class="sheet-normal" name="attr_Willpower" value="2" /><span></span> 
                 <input type="radio" class="sheet-normal" name="attr_Willpower" value="3" /><span></span>
@@ -1852,7 +1852,7 @@
                 <input type="radio" class="sheet-normal" name="attr_Willpower" value="9" /><span></span> 
                 <input type="radio" class="sheet-normal" name="attr_Willpower" value="10" /><span></span>
             </div>
-            <div align="left" style="margin:0px 0px 0px 30px">
+            <div align="center" style="margin:0px 9px 0px 0px">
                 <input type="radio" class="sheet-normal sheet-zero" name="attr_Willpower_Used" value="0"checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Willpower_Used" value="1" class=" used"/><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Willpower_Used" value="2" class=" used"/><span></span> 
@@ -1866,7 +1866,7 @@
                 <input type="radio" class="sheet-normal" name="attr_Willpower_Used" value="10" class=" used"/><span></span>
             </div>
         </div>
-        <div class="sheet-col" style="width:250px">
+        <div class="sheet-col" style="width:30%">
             <div class="sheet-row">
                 <br><h3 style="text-align: center">Experience</h3>
             </div>
