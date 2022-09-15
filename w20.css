@@ -1759,7 +1759,8 @@ input.sheet-normal[type="radio"]
 
 input.sheet-normal[type="radio"] + span::before
 {
-    margin-right: 0px;
+    
+	margin-right: 0px;
     border: solid 1px #a8a8a8;
     line-height: 14px;
     text-align: center;
@@ -1845,6 +1846,115 @@ input.sheet-zero[type="radio"] + span::before
     opacity: 0.25;
 }
 /*  end of normal radio    */
+
+
+/* start of box radio */
+input.sheet-box[type="radio"]
+{
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+input.sheet-box[type="radio"] + span::before
+{
+    
+	margin-right: 0px;
+    border: solid 1px #a8a8a8;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    
+    -moz-box-shadow: 0 0 2px #ccc;
+    -webkit-box-shadow: 0 0 2px #ccc;
+    box-shadow: 0 0 2px #ccc;
+    
+    background: #f6f6f6;
+    background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -o-radial-gradient(#f6f6f6, #dfdfdf);
+    background: radial-gradient(#f6f6f6, #dfdfdf);
+    
+    font-family: 'New Time Roman'; 
+    color:black;
+    content: "•";
+    width: 12px;
+    height: 12px;
+    font-size: 3em;
+    
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+/*  Hide actual Forms radio    */
+input.sheet-forms[type="radio"]
+{
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Fake Forms radio    */
+input.sheet-forms[type="radio"]
+{
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+/* End of Forms radio    */
+.sheet-center {
+    margin-left:auto; 
+    margin-right:auto;
+    text-align:center;
+ }
+/* -----Remove dot from all radios _after_ selected one----- */
+input.sheet-box[type="radio"]:checked ~ input.sheet-normal[type="radio"] + span::before
+{    
+    content: "";
+}
+
+/*------------empty traits-----------*/
+input.sheet-zero[type="radio"]:checked + span::before
+{
+    opacity: 0;
+}
+
+input.sheet-zero[type="radio"]:hover + span::before
+{
+    opacity: 1;
+}
+
+input.sheet-zero[type="radio"] + span::before
+{
+    font-size: 12px;
+    content: "✖";
+    opacity: 0.25;
+}
+/*  end of box radio    */
+
+
+
+
     /* Fake radio */
 input.sheet-forms[type="radio"] + span::before {
     margin-right: 4px;
