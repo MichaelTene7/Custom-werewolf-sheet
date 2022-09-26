@@ -2356,27 +2356,28 @@
         <button type="roll" class="sheet-initiative" name="roll_initiative_token" value="&{template:wod} {{name= @{character_name} }} {{pool= Initiative }} {{attr= Attribute @{initiative_attribute_1} }} {{skill= Attribute @{initiative_attribute_2} }} {{mod= Modifier @{initiative_mod} }} {{initiative= [[ @{initiative_attribute_1} + @{initiative_attribute_2} + @{initiative_mod} + 1d10 &{tracker} ]] }}"> Initiative </button> 
         <select class="sheet-select" style="width:110px" name="attr_initiative_attribute_1" value="0" >
                     <option value="0"></option> 
-                    <option value="@{Strength}">Strength</option> 
-                    <option value="@{Dexterity}" selected>Dexterity</option> 
-                    <option value="@{Stamina}">Stamina</option> 
-                    <option value="@{Charisma}">Charisma</option> 
-                    <option value="@{Manipulation}">Manipulation</option> 
-                    <option value="@{Appearance}">Appearance</option> 
-                    <option value="@{Intelligence}">Intelligence</option> 
-                    <option value="@{Wits}">Wits</option> 
-                    <option value="@{Perception}">Perception</option>
+                    <option value="@{Strength}+@{StrengthBoost}">Strength</option> 
+                    <option value="@{Dexterity}+@{DexterityBoost}" selected>Dexterity</option> 
+                    <option value="@{Stamina}+@{StaminaBoost}">Stamina</option> 
+                    <option value="@{Charisma}+@{CharismaBoost}">Charisma</option> 
+                    <option value="@{Manipulation}+@{ManipulationBoost}">Manipulation</option> 
+                    <option value="@{Appearance}+@{AppearanceBoost}">Appearance</option> 
+					<option value="@{Perception}+@{PerceptionBoost}">Perception</option>
+                    <option value="@{Intelligence}+@{IntelligenceBoost}">Intelligence</option> 
+                    <option value="@{Wits}+@{WitsBoost}">Wits</option> 
                 </select>
         <select class="sheet-select" style="width:110px" name="attr_initiative_attribute_2" value="0" >
                     <option value="0"></option> 
-                    <option value="@{Strength}">Strength</option> 
-                    <option value="@{Dexterity}">Dexterity</option> 
-                    <option value="@{Stamina}">Stamina</option> 
-                    <option value="@{Charisma}">Charisma</option> 
-                    <option value="@{Manipulation}">Manipulation</option> 
-                    <option value="@{Appearance}">Appearance</option> 
-                    <option value="@{Intelligence}">Intelligence</option> 
-                    <option value="@{Wits}" selected>Wits</option> 
-                    <option value="@{Perception}">Perception</option>
+                    <option value="@{Strength}+@{StrengthBoost}">Strength</option> 
+                    <option value="@{Dexterity}+@{DexterityBoost}">Dexterity</option> 
+                    <option value="@{Stamina}+@{StaminaBoost}">Stamina</option> 
+                    <option value="@{Charisma}+@{CharismaBoost}">Charisma</option> 
+                    <option value="@{Manipulation}+@{ManipulationBoost}">Manipulation</option> 
+                    <option value="@{Appearance}+@{AppearanceBoost}">Appearance</option> 
+					<option value="@{Perception}+@{PerceptionBoost}">Perception</option>
+                    <option value="@{Intelligence}+@{IntelligenceBoost}">Intelligence</option> 
+                    <option value="@{Wits}+@{WitsBoost}" selected>Wits</option> 
+                    
                 </select>
         <input type="number" class="sheet-textbox" name="attr_initiative_mod" value="0"/>
         <button type="roll" class="sheet-initiative" name="roll_initiative_no_token" value="&{template:wod} {{name= @{character_name} }} {{pool= Initiative }} {{attr= Attribute @{initiative_attribute_1} }} {{skill= Attribute @{initiative_attribute_2} }} {{mod= Modifier @{initiative_mod} }} {{initiative= [[ @{initiative_attribute_1} + @{initiative_attribute_2} + @{initiative_mod} + 1d10]] }}"> No Token </button>
@@ -2403,15 +2404,16 @@
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-1" value=""/></th>
             <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-1" value="0" >
                     <option value="0" selected></option> 
-                    <option value="@{Strength}">Strength</option> 
-                    <option value="@{Dexterity}">Dexterity</option> 
-                    <option value="@{Stamina}">Stamina</option> 
-                    <option value="@{Charisma}">Charisma</option> 
-                    <option value="@{Manipulation}">Manipulation</option> 
-                    <option value="@{Appearance}">Appearance</option> 
-                    <option value="@{Intelligence}">Intelligence</option> 
-                    <option value="@{Wits}">Wits</option> 
-                    <option value="@{Perception}">Perception</option>
+                    <option value="@{Strength}+@{StrengthBoost}">Strength</option> 
+                    <option value="@{Dexterity}+@{DexterityBoost}">Dexterity</option> 
+                    <option value="@{Stamina}+@{StaminaBoost}">Stamina</option> 
+                    <option value="@{Charisma}+@{CharismaBoost}">Charisma</option> 
+                    <option value="@{Manipulation}+@{ManipulationBoost}">Manipulation</option> 
+                    <option value="@{Appearance}+@{AppearanceBoost}">Appearance</option> 
+					<option value="@{Perception}+@{PerceptionBoost}">Perception</option>
+                    <option value="@{Intelligence}+@{IntelligenceBoost}">Intelligence</option> 
+                    <option value="@{Wits}+@{WitsBoost}">Wits</option> 
+                    
                 </select></td>
             </th>
             <th><select class="sheet-select" style="width:90px" name="attr_weapon_skill-1" value="0" >
@@ -2440,7 +2442,7 @@
                 </div>
             </th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Damage-1" value="0"/></th>
-            <th><input type="checkbox" class="sheet-soakbox" name="attr_weapon_StrengthDamage-1" value="@{Strength}"/><span></span></th>
+            <th><input type="checkbox" class="sheet-soakbox" name="attr_weapon_StrengthDamage-1" value="@{Strength}+@{StrengthBoost}"/><span></span></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-1" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-1" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-1" value="0"/></th>>
@@ -2451,15 +2453,16 @@
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-2" value=""/></th>
             <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-2" value="0" >
                     <option value="0" selected></option> 
-                    <option value="@{Strength}">Strength</option> 
-                    <option value="@{Dexterity}">Dexterity</option> 
-                    <option value="@{Stamina}">Stamina</option> 
-                    <option value="@{Charisma}">Charisma</option> 
-                    <option value="@{Manipulation}">Manipulation</option> 
-                    <option value="@{Appearance}">Appearance</option> 
-                    <option value="@{Intelligence}">Intelligence</option> 
-                    <option value="@{Wits}">Wits</option> 
-                    <option value="@{Perception}">Perception</option>
+                    <option value="@{Strength}+@{StrengthBoost}">Strength</option> 
+                    <option value="@{Dexterity}+@{DexterityBoost}">Dexterity</option> 
+                    <option value="@{Stamina}+@{StaminaBoost}">Stamina</option> 
+                    <option value="@{Charisma}+@{CharismaBoost}">Charisma</option> 
+                    <option value="@{Manipulation}+@{ManipulationBoost}">Manipulation</option> 
+                    <option value="@{Appearance}+@{AppearanceBoost}">Appearance</option>
+					<option value="@{Perception}+@{PerceptionBoost}">Perception</option>					
+                    <option value="@{Intelligence}+@{IntelligenceBoost}">Intelligence</option> 
+                    <option value="@{Wits}+@{WitsBoost}">Wits</option> 
+                    
                 </select></td>
             </th>
             <th><select class="sheet-select" style="width:90px" name="attr_weapon_skill-2" value="0" >
@@ -2488,7 +2491,7 @@
                 </div>
             </th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Damage-2" value="0"/></th>
-            <th><input type="checkbox" class="sheet-soakbox" name="attr_weapon_StrengthDamage-2" value="@{Strength}"/><span></span></th>
+            <th><input type="checkbox" class="sheet-soakbox" name="attr_weapon_StrengthDamage-2" value="@{Strength}+@{StrengthBoost}"/><span></span></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-2" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-2" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-2" value="0"/></th>
@@ -2499,15 +2502,16 @@
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-3" value=""/></th>
             <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-3" value="0" >
                     <option value="0" selected></option> 
-                    <option value="@{Strength}">Strength</option> 
-                    <option value="@{Dexterity}">Dexterity</option> 
-                    <option value="@{Stamina}">Stamina</option> 
-                    <option value="@{Charisma}">Charisma</option> 
-                    <option value="@{Manipulation}">Manipulation</option> 
-                    <option value="@{Appearance}">Appearance</option> 
-                    <option value="@{Intelligence}">Intelligence</option> 
-                    <option value="@{Wits}">Wits</option> 
-                    <option value="@{Perception}">Perception</option>
+                    <option value="@{Strength}+@{StrengthBoost}">Strength</option> 
+                    <option value="@{Dexterity}+@{DexterityBoost}">Dexterity</option> 
+                    <option value="@{Stamina}+@{StaminaBoost}">Stamina</option> 
+                    <option value="@{Charisma}+@{CharismaBoost}">Charisma</option> 
+                    <option value="@{Manipulation}+@{ManipulationBoost}">Manipulation</option> 
+                    <option value="@{Appearance}+@{AppearanceBoost}">Appearance</option> 
+					<option value="@{Perception}+@{PerceptionBoost}">Perception</option>
+                    <option value="@{Intelligence}+@{IntelligenceBoost}">Intelligence</option> 
+                    <option value="@{Wits}+@{WitsBoost}">Wits</option> 
+                    
                 </select></td>
             </th>
             <th><select class="sheet-select" style="width:90px" name="attr_weapon_skill-3" value="0" >
@@ -2536,7 +2540,7 @@
                 </div>
             </th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Damage-3" value="0"/></th>
-            <th><input type="checkbox" class="sheet-soakbox" name="attr_weapon_StrengthDamage-3" value="@{Strength}"/><span></span></th>
+            <th><input type="checkbox" class="sheet-soakbox" name="attr_weapon_StrengthDamage-3" value="@{Strength}+@{StrengthBoost}"/><span></span></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-3" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-3" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-3" value="0"/></th>
@@ -2547,15 +2551,16 @@
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-4" value=""/></th>
             <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-4" value="0" >
                     <option value="0" selected></option> 
-                    <option value="@{Strength}">Strength</option> 
-                    <option value="@{Dexterity}">Dexterity</option> 
-                    <option value="@{Stamina}">Stamina</option> 
-                    <option value="@{Charisma}">Charisma</option> 
-                    <option value="@{Manipulation}">Manipulation</option> 
-                    <option value="@{Appearance}">Appearance</option> 
-                    <option value="@{Intelligence}">Intelligence</option> 
-                    <option value="@{Wits}">Wits</option> 
-                    <option value="@{Perception}">Perception</option>
+                    <option value="@{Strength}+@{StrengthBoost}">Strength</option> 
+                    <option value="@{Dexterity}+@{DexterityBoost}">Dexterity</option> 
+                    <option value="@{Stamina}+@{StaminaBoost}">Stamina</option> 
+                    <option value="@{Charisma}+@{CharismaBoost}">Charisma</option> 
+                    <option value="@{Manipulation}+@{ManipulationBoost}">Manipulation</option> 
+                    <option value="@{Appearance}+@{AppearanceBoost}">Appearance</option> 
+					<option value="@{Perception}+@{PerceptionBoost}">Perception</option>
+                    <option value="@{Intelligence}+@{IntelligenceBoost}">Intelligence</option> 
+                    <option value="@{Wits}+@{WitsBoost}">Wits</option> 
+                    
                 </select></td>
             </th>
             <th><select class="sheet-select" style="width:90px" name="attr_weapon_skill-4" value="0" >
@@ -2584,7 +2589,7 @@
                 </div>
             </th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Damage-4" value="0"/></th>
-            <th><input type="checkbox" class="sheet-soakbox" name="attr_weapon_StrengthDamage-4" value="@{Strength}"/><span></span></th>
+            <th><input type="checkbox" class="sheet-soakbox" name="attr_weapon_StrengthDamage-4" value="@{Strength}+@{StrengthBoost}"/><span></span></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-4" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-4" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-4" value="0"/></th>
@@ -2595,15 +2600,16 @@
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-5" value=""/></th>
             <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-5" value="0" >
                     <option value="0" selected></option> 
-                    <option value="@{Strength}">Strength</option> 
-                    <option value="@{Dexterity}">Dexterity</option> 
-                    <option value="@{Stamina}">Stamina</option> 
-                    <option value="@{Charisma}">Charisma</option> 
-                    <option value="@{Manipulation}">Manipulation</option> 
-                    <option value="@{Appearance}">Appearance</option> 
-                    <option value="@{Intelligence}">Intelligence</option> 
-                    <option value="@{Wits}">Wits</option> 
-                    <option value="@{Perception}">Perception</option>
+                    <option value="@{Strength}+@{StrengthBoost}">Strength</option> 
+                    <option value="@{Dexterity}+@{DexterityBoost}">Dexterity</option> 
+                    <option value="@{Stamina}+@{StaminaBoost}">Stamina</option> 
+                    <option value="@{Charisma}+@{CharismaBoost}">Charisma</option> 
+                    <option value="@{Manipulation}+@{ManipulationBoost}">Manipulation</option> 
+                    <option value="@{Appearance}+@{AppearanceBoost}">Appearance</option> 
+					<option value="@{Perception}+@{PerceptionBoost}">Perception</option>
+                    <option value="@{Intelligence}+@{IntelligenceBoost}">Intelligence</option> 
+                    <option value="@{Wits}+@{WitsBoost}">Wits</option> 
+                    
                 </select></td>
             </th>
             <th><select class="sheet-select" style="width:90px" name="attr_weapon_skill-5" value="0" >
@@ -2632,7 +2638,7 @@
                 </div>
             </th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Damage-5" value="0"/></th>
-            <th><input type="checkbox" class="sheet-soakbox" name="attr_weapon_StrengthDamage-5" value="@{Strength}"/><span></span></th>
+            <th><input type="checkbox" class="sheet-soakbox" name="attr_weapon_StrengthDamage-5" value="@{Strength}+@{StrengthBoost}"/><span></span></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-5" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-5" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-5" value="0"/></th>
@@ -2643,15 +2649,16 @@
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-6" value=""/></th>
             <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-6" value="0" >
                     <option value="0" selected></option> 
-                    <option value="@{Strength}">Strength</option> 
-                    <option value="@{Dexterity}">Dexterity</option> 
-                    <option value="@{Stamina}">Stamina</option> 
-                    <option value="@{Charisma}">Charisma</option> 
-                    <option value="@{Manipulation}">Manipulation</option> 
-                    <option value="@{Appearance}">Appearance</option> 
-                    <option value="@{Intelligence}">Intelligence</option> 
-                    <option value="@{Wits}">Wits</option> 
-                    <option value="@{Perception}">Perception</option>
+                    <option value="@{Strength}+@{StrengthBoost}">Strength</option> 
+                    <option value="@{Dexterity}+@{DexterityBoost}">Dexterity</option> 
+                    <option value="@{Stamina}+@{StaminaBoost}">Stamina</option> 
+                    <option value="@{Charisma}+@{CharismaBoost}">Charisma</option> 
+                    <option value="@{Manipulation}+@{ManipulationBoost}">Manipulation</option> 
+                    <option value="@{Appearance}+@{AppearanceBoost}">Appearance</option> 
+					<option value="@{Perception}+@{PerceptionBoost}">Perception</option>
+                    <option value="@{Intelligence}+@{IntelligenceBoost}">Intelligence</option> 
+                    <option value="@{Wits}+@{WitsBoost}">Wits</option> 
+                    
                 </select></td>
             </th>
             <th><select class="sheet-select" style="width:90px" name="attr_weapon_skill-6" value="0" >
@@ -2680,7 +2687,7 @@
                 </div>
             </th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Damage-6" value="0"/></th>
-            <th><input type="checkbox" class="sheet-soakbox" name="attr_weapon_StrengthDamage-6" value="@{Strength}"/><span></span></th>
+            <th><input type="checkbox" class="sheet-soakbox" name="attr_weapon_StrengthDamage-6" value="@{Strength}+@{StrengthBoost}"/><span></span></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-6" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-6" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-6" value="0"/></th>
@@ -2691,15 +2698,16 @@
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-7" value=""/></th>
             <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-7" value="0" >
                     <option value="0" selected></option> 
-                    <option value="@{Strength}">Strength</option> 
-                    <option value="@{Dexterity}">Dexterity</option> 
-                    <option value="@{Stamina}">Stamina</option> 
-                    <option value="@{Charisma}">Charisma</option> 
-                    <option value="@{Manipulation}">Manipulation</option> 
-                    <option value="@{Appearance}">Appearance</option> 
-                    <option value="@{Intelligence}">Intelligence</option> 
-                    <option value="@{Wits}">Wits</option> 
-                    <option value="@{Perception}">Perception</option>
+                    <option value="@{Strength}+@{StrengthBoost}">Strength</option> 
+                    <option value="@{Dexterity}+@{DexterityBoost}">Dexterity</option> 
+                    <option value="@{Stamina}+@{StaminaBoost}">Stamina</option> 
+                    <option value="@{Charisma}+@{CharismaBoost}">Charisma</option> 
+                    <option value="@{Manipulation}+@{ManipulationBoost}">Manipulation</option> 
+                    <option value="@{Appearance}+@{AppearanceBoost}">Appearance</option> 
+					<option value="@{Perception}+@{PerceptionBoost}">Perception</option>
+                    <option value="@{Intelligence}+@{IntelligenceBoost}">Intelligence</option> 
+                    <option value="@{Wits}+@{WitsBoost}">Wits</option> 
+                    
                 </select></td>
             </th>
             <th><select class="sheet-select" style="width:90px" name="attr_weapon_skill-7" value="0" >
@@ -2728,7 +2736,7 @@
                 </div>
             </th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Damage-7" value="0"/></th>
-            <th><input type="checkbox" class="sheet-soakbox" name="attr_weapon_StrengthDamage-7" value="@{Strength}"/><span></span></th>
+            <th><input type="checkbox" class="sheet-soakbox" name="attr_weapon_StrengthDamage-7" value="@{Strength}+@{StrengthBoost}"/><span></span></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-7" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-7" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-7" value="0"/></th>
@@ -2752,7 +2760,7 @@
                 <th>Damage<br>Type</th>
             </tr>
             <tr>
-                <th><button type="roll" class="sheet-adv" name="roll_bite" value="&{template:wod} {{name= @{character_name} }} {{attack= Bite }} {{attr= Dexterity @{Dexterity} }} {{mod= Modifier @{Bite_Mod-Attack} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{Bite_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity} + @{Brawl} + @{Bite_Mod-Attack} + @{injury})d10}>@{Bite_At_Difficulty}f1]] }}">Bite</button></th>
+                <th><button type="roll" class="sheet-adv" name="roll_bite" value="&{template:wod} {{name= @{character_name} }} {{attack= Bite }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{mod= Modifier @{Bite_Mod-Attack} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{Bite_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{Bite_Mod-Attack} + @{injury})d10}>@{Bite_At_Difficulty}f1]] }}">Bite</button></th>
                 <th>Dex + Brawl</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Bite_Mod-Attack" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Bite_At_Diff" value="5"/></th>
@@ -2767,10 +2775,10 @@
                 <th>Strength +1</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Bite_Mod-Damage" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Bite_Difficulty" value="6"/></th>
-                <th><button type="roll" name="roll_damage-Bite" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Bite }} {{attr= Bite [[1 + @{Bite_Mod-Damage}]] }} {{skill= Strength @{Strength} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength} + 1 + @{Bite_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{Bite_Difficulty}]] }} {{type= Aggravated}}">Aggravated</button></th>
+                <th><button type="roll" name="roll_damage-Bite" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Bite }} {{attr= Bite [[1 + @{Bite_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + 1 + @{Bite_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{Bite_Difficulty}]] }} {{type= Aggravated}}">Aggravated</button></th>
             </tr>
             <tr>
-                <th><button type="roll" class="sheet-adv" name="roll_Hispobite" value="&{template:wod} {{name= @{character_name} }} {{attack= Hispo Bite }} {{attr= Dexterity @{Dexterity} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{HispoBite_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity} + @{Brawl} + @{HispoBite_Mod-Attack} + @{injury})d10}>@{HispoBite_At_Difficulty}f1]] }}">HispoBite</button></th>
+                <th><button type="roll" class="sheet-adv" name="roll_Hispobite" value="&{template:wod} {{name= @{character_name} }} {{attack= Hispo Bite }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{HispoBite_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{HispoBite_Mod-Attack} + @{injury})d10}>@{HispoBite_At_Difficulty}f1]] }}">HispoBite</button></th>
                 <th>Dex + Brawl</th>
                 <th><input type="number" class="sheet-textbox" name="attr_HispoBite_Mod-Attack" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_HispoBite_At_Diff" value="5"/></th>
@@ -2785,10 +2793,10 @@
                 <th>Strength +2</th>
                 <th><input type="number" class="sheet-textbox" name="attr_HispoBite_Mod-Damage" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_HispoBite_Difficulty" value="6"/></th>
-                <th><button type="roll" name="roll_damage-HispoBite" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Hispo Bite }} {{attr= HispoBite [[2 + @{HispoBite_Mod-Damage}]] }} {{skill= Strength @{Strength} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength} + 2 + @{HispoBite_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{HispoBite_Difficulty}]] }} {{type= Aggravated}}">Aggravated</button></th>
+                <th><button type="roll" name="roll_damage-HispoBite" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Hispo Bite }} {{attr= HispoBite [[2 + @{HispoBite_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + 2 + @{HispoBite_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{HispoBite_Difficulty}]] }} {{type= Aggravated}}">Aggravated</button></th>
             </tr>
             <tr>
-                <th><button type="roll" class="sheet-adv" name="roll_body_tackle" value="&{template:wod} {{name= @{character_name} }} {{attack= Body Tackle }} {{attr= Dexterity @{Dexterity} }} {{mod= Modifier @{BodyTackle_Mod-Attack} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{BodyTackle_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity} + @{Brawl} + @{BodyTackle_Mod-Attack} + @{injury})d10}>@{BodyTackle_At_Difficulty}f1]] }}">Body Tackle</button></th>
+                <th><button type="roll" class="sheet-adv" name="roll_body_tackle" value="&{template:wod} {{name= @{character_name} }} {{attack= Body Tackle }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{mod= Modifier @{BodyTackle_Mod-Attack} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{BodyTackle_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{BodyTackle_Mod-Attack} + @{injury})d10}>@{BodyTackle_At_Difficulty}f1]] }}">Body Tackle</button></th>
                 <th>Dex + Brawl</th>
                 <th><input type="number" class="sheet-textbox" name="attr_BodyTackle_Mod-Attack" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_BodyTackle_At_Diff" value="7"/></th>
@@ -2803,10 +2811,10 @@
                 <th>Special</th>
                 <th><input type="number" class="sheet-textbox" name="attr_BodyTackle_Mod-Damage" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_BodyTackle_Difficulty" value="6"/></th>
-                <th><button type="roll" name="roll_damage-BodyTackle" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Body Tackle }} {{attr= Body Tackle [[@{BodyTackle_Mod-Damage}]] }} {{skill= Strength @{Strength} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength} + @{BodyTackle_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{BodyTackle_Difficulty}]] }} {{type= Bashing}}">Bashing</button></th>
+                <th><button type="roll" name="roll_damage-BodyTackle" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Body Tackle }} {{attr= Body Tackle [[@{BodyTackle_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + @{BodyTackle_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{BodyTackle_Difficulty}]] }} {{type= Bashing}}">Bashing</button></th>
             </tr>
             <tr>
-                <th><button type="roll" class="sheet-adv" name="roll_Claw" value="&{template:wod} {{name= @{character_name} }} {{attack= Claw }} {{attr= Dexterity @{Dexterity} }} {{mod= Modifier @{Claw_Mod-Attack} }} {{skill= Brawl @{Brawl}}} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity} + @{Brawl} + @{Claw_Mod-Attack} + @{injury})d10}>@{Claw_At_Difficulty}f1]] }}">Claw</button></th>
+                <th><button type="roll" class="sheet-adv" name="roll_Claw" value="&{template:wod} {{name= @{character_name} }} {{attack= Claw }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{mod= Modifier @{Claw_Mod-Attack} }} {{skill= Brawl @{Brawl}}} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{Claw_Mod-Attack} + @{injury})d10}>@{Claw_At_Difficulty}f1]] }}">Claw</button></th>
                 <th>Dex + Brawl</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Claw_Mod-Attack" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Claw_At_Diff" value="6"/></th>
@@ -2821,10 +2829,10 @@
                 <th>Strength +2</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Claw_Mod-Damage" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Claw_Difficulty" value="6"/></th>
-                <th><button type="roll" name="roll_damage-Claw" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Claw }} {{attr= Claw [[2 + @{Claw_Mod-Damage}]] }} {{skill= Strength @{Strength} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength} + 2 + @{Claw_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{Claw_Difficulty}]] }} {{type= Aggravated}}">Aggravated</button></th>
+                <th><button type="roll" name="roll_damage-Claw" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Claw }} {{attr= Claw [[2 + @{Claw_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + 2 + @{Claw_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{Claw_Difficulty}]] }} {{type= Aggravated}}">Aggravated</button></th>
             </tr>
             <tr>
-                <th><button type="roll" class="sheet-adv" name="roll_Grapple" value="&{template:wod} {{name= @{character_name} }} {{attack= Grapple }} {{attr= Dexterity @{Dexterity} }} {{skill= Brawl @{Brawl}}} {{mod= Modifier @{Grapple_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity} + @{Brawl} + @{Grapple_Mod-Attack} + @{injury})d10}>@{Grapple_At_Difficulty}f1]] }}">Grapple</button></th>
+                <th><button type="roll" class="sheet-adv" name="roll_Grapple" value="&{template:wod} {{name= @{character_name} }} {{attack= Grapple }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{skill= Brawl @{Brawl}}} {{mod= Modifier @{Grapple_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{Grapple_Mod-Attack} + @{injury})d10}>@{Grapple_At_Difficulty}f1]] }}">Grapple</button></th>
                 <th>Dex + Brawl</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Grapple_Mod-Attack" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Grapple_At_Diff" value="6"/></th>
@@ -2839,10 +2847,10 @@
                 <th>Strength</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Grapple_Mod-Damage" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Grapple_Difficulty" value="6"/></th>
-                <th><button type="roll" name="roll_damage-Grapple" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Grapple }} {{attr= Grapple [[@{Grapple_Mod-Damage}]] }} {{skill= Strength @{Strength} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength} + @{Grapple_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{Grapple_Difficulty}]] }} {{type= Bashing}}">Bashing</button></th>
+                <th><button type="roll" name="roll_damage-Grapple" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Grapple }} {{attr= Grapple [[@{Grapple_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + @{Grapple_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{Grapple_Difficulty}]] }} {{type= Bashing}}">Bashing</button></th>
             </tr>
             <tr>
-                <th><button type="roll" class="sheet-adv" name="roll_Kick" value="&{template:wod} {{name= @{character_name} }} {{attack= Kick }} {{attr= Dexterity @{Dexterity} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{Kick_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity} + @{Brawl} + @{Kick_Mod-Attack} + @{injury})d10}>@{Kick_At_Difficulty}f1]] }}">Kick</button></th>
+                <th><button type="roll" class="sheet-adv" name="roll_Kick" value="&{template:wod} {{name= @{character_name} }} {{attack= Kick }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{Kick_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{Kick_Mod-Attack} + @{injury})d10}>@{Kick_At_Difficulty}f1]] }}">Kick</button></th>
                 <th>Dex + Brawl</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Kick_Mod-Attack" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Kick_At_Diff" value="7"/></th>
@@ -2857,10 +2865,10 @@
                 <th>Strength +1</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Kick_Mod-Damage" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Kick_Difficulty" value="6"/></th>
-                <th><button type="roll" name="roll_damage-Kick" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Kick }} {{attr= Kick [[1 + @{Kick_Mod-Damage}]] }} {{skill= Strength @{Strength} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength} + 1 + @{Kick_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{Kick_Difficulty}]] }} {{type= Bashing}}">Bashing</button></th>
+                <th><button type="roll" name="roll_damage-Kick" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Kick }} {{attr= Kick [[1 + @{Kick_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + 1 + @{Kick_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{Kick_Difficulty}]] }} {{type= Bashing}}">Bashing</button></th>
             </tr>
             <tr>
-                <th><button type="roll" class="sheet-adv" name="roll_Punch" value="&{template:wod} {{name= @{character_name} }} {{attack= Punch }} {{attr= Dexterity @{Dexterity} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{Punch_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity} + @{Brawl} + @{Punch_Mod-Attack} + @{injury})d10}>@{Punch_At_Difficulty}f1]] }}">Punch</button></th>
+                <th><button type="roll" class="sheet-adv" name="roll_Punch" value="&{template:wod} {{name= @{character_name} }} {{attack= Punch }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{Punch_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{Punch_Mod-Attack} + @{injury})d10}>@{Punch_At_Difficulty}f1]] }}">Punch</button></th>
                 <th>Dex + Brawl</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Punch_Mod-Attack" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Punch_At_Diff" value="6"/></th>
@@ -2875,7 +2883,7 @@
                 <th>Strength</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Punch_Mod-Damage" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Punch_Difficulty" value="6"/></th>
-                <th><button type="roll" name="roll_damage-Punch" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Punch }} {{attr= Punch [[@{Punch_Mod-Damage}]] }} {{skill= Strength @{Strength} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength} +  @{Punch_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{Punch_Difficulty}]] }} {{type= Bashing}}">Bashing</button></th>
+                <th><button type="roll" name="roll_damage-Punch" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Punch }} {{attr= Punch [[@{Punch_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} +  @{Punch_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{Punch_Difficulty}]] }} {{type= Bashing}}">Bashing</button></th>
             </tr>
         </table>
     </div>
@@ -3211,13 +3219,13 @@
                 </tr>
                 <tr>
                     <th><button type='roll' class="sheet-adv" name="attr_soak_Bashing" value="@{Armor_toggle-Bashing}">Bashing</button></th>
-                    <th><input type="number" class="sheet-textbox" name="attr_soak_attribute" value="@{Stamina}" disabled="true"/></th>
+                    <th><input type="number" class="sheet-textbox" name="attr_soak_attribute" value="@{Stamina}+@{StaminaBoost}" disabled="true"/></th>
                     <th><input type="number" class="sheet-textbox" name="attr_Soak_mod-Bashing" value="0" /></th>
                     <th><input type="number" class="sheet-textbox" name="attr_Soak_diff-Bashing" value="6" /></th>
                     <th>
                         <div class="sheet-Query">
-                            <input type="radio" class="sheet-Query sheet-no" name="attr_Armor_toggle-Bashing" value="&{template:wod} {{name= @{character_name} }} {{pool= Bashing Soak}} {{attr= Stamina [[@{Stamina}]] }} {{mod= Modifier [[@{Soak_mod-Bashing}]] }} {{result= [[ {(@{Stamina} + @{Soak_mod-Bashing} )d10}>@{Soak_diff-Bashing}f1 ]] }}" checked="checked" />
-                            <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Bashing" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor-Rating}]] }} {{pool= Bashing Soak}} {{attr= Stamina [[@{Stamina}]] }} {{mod= Modifier [[@{Soak_mod-Bashing}]] }} {{result= [[ {(@{Stamina} + @{Soak_mod-Bashing} + @{armor-Rating})d10}>@{Soak_diff-Bashing}f1 ]] }}" />
+                            <input type="radio" class="sheet-Query sheet-no" name="attr_Armor_toggle-Bashing" value="&{template:wod} {{name= @{character_name} }} {{pool= Bashing Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Bashing}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Bashing} )d10}>@{Soak_diff-Bashing}f1 ]] }}" checked="checked" />
+                            <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Bashing" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor-Rating}]] }} {{pool= Bashing Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Bashing}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Bashing} + @{armor-Rating})d10}>@{Soak_diff-Bashing}f1 ]] }}" />
                             <span class="sheet-Query sheet-yes">Yes</span>
                             <span class="sheet-Query sheet-no">No</span>
                         </div>
@@ -3225,13 +3233,13 @@
                 </tr>
                 <tr>
                     <th><button type='roll' class="sheet-adv" name="attr_soak_Lethal" value="@{Armor_toggle-Lethal}">Lethal</button></th>
-                    <th><input type="number" class="sheet-textbox" name="attr_soak_attribute" value="@{Stamina}" disabled="true"/></th>
+                    <th><input type="number" class="sheet-textbox" name="attr_soak_attribute" value="@{Stamina}+@{StaminaBoost}" disabled="true"/></th>
                     <th><input type="number" class="sheet-textbox" name="attr_Soak_mod-Lethal" value="0" /></th>
                     <th><input type="number" class="sheet-textbox" name="attr_Soak_diff-Lethal" value="6" /></th>
                     <th>
                         <div class="sheet-Query">
-                            <input type="radio" class="sheet-Query sheet-no" name="attr_Armor_toggle-Lethal" value="&{template:wod} {{name= @{character_name} }} {{pool= Lethal Soak}} {{attr= Stamina [[@{Stamina}]] }} {{mod= Modifier [[@{Soak_mod-Lethal}]] }} {{result= [[ {(@{Stamina} + @{Soak_mod-Lethal} )d10}>@{Soak_diff-Lethal}f1 ]] }}" checked="checked" />
-                            <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Lethal" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor-Rating}]] }} {{pool= Lethal Soak}} {{attr= Stamina [[@{Stamina}]] }} {{mod= Modifier [[@{Soak_mod-Lethal}]] }} {{result= [[ {(@{Stamina} + @{Soak_mod-Lethal} + @{armor-Rating})d10}>@{Soak_diff-Lethal}f1 ]] }}" />
+                            <input type="radio" class="sheet-Query sheet-no" name="attr_Armor_toggle-Lethal" value="&{template:wod} {{name= @{character_name} }} {{pool= Lethal Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Lethal}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Lethal} )d10}>@{Soak_diff-Lethal}f1 ]] }}" checked="checked" />
+                            <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Lethal" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor-Rating}]] }} {{pool= Lethal Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Lethal}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Lethal} + @{armor-Rating})d10}>@{Soak_diff-Lethal}f1 ]] }}" />
                             <span class="sheet-Query sheet-yes">Yes</span>
                             <span class="sheet-Query sheet-no">No</span>
                         </div>
@@ -3239,13 +3247,13 @@
                 </tr>
                 <tr>
                     <th><button type='roll' class="sheet-adv" name="attr_soak_Aggravated" value="@{Armor_toggle-Aggravated}">Aggravated</button></th>
-                    <th><input type="number" class="sheet-textbox" name="attr_soak_attribute" value="@{Stamina}" disabled="true"/></th>
+                    <th><input type="number" class="sheet-textbox" name="attr_soak_attribute" value="@{Stamina}+@{StaminaBoost}" disabled="true"/></th>
                     <th><input type="number" class="sheet-textbox" name="attr_Soak_mod-Aggravated" value="0" /></th>
                     <th><input type="number" class="sheet-textbox" name="attr_Soak_diff-Aggravated" value="6" /></th>
                     <th>
                         <div class="sheet-Query">
-                            <input type="radio" class="sheet-Query sheet-no" name="attr_Armor_toggle-Aggravated" value="&{template:wod} {{name= @{character_name} }} {{pool= Aggravated Soak}} {{attr= Stamina [[@{Stamina}]] }} {{mod= Modifier [[@{Soak_mod-Aggravated}]] }} {{result= [[ {(@{Stamina} + @{Soak_mod-Aggravated} )d10}>@{Soak_diff-Aggravated}f1 ]] }}" checked="checked" />
-                            <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Aggravated" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor-Rating}]] }} {{pool= Aggravated Soak}} {{attr= Stamina [[@{Stamina}]] }} {{mod= Modifier [[@{Soak_mod-Aggravated}]] }} {{result= [[ {(@{Stamina} + @{Soak_mod-Aggravated} + @{armor-Rating})d10}>@{Soak_diff-Aggravated}f1 ]] }}" />
+                            <input type="radio" class="sheet-Query sheet-no" name="attr_Armor_toggle-Aggravated" value="&{template:wod} {{name= @{character_name} }} {{pool= Aggravated Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Aggravated}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Aggravated} )d10}>@{Soak_diff-Aggravated}f1 ]] }}" checked="checked" />
+                            <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Aggravated" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor-Rating}]] }} {{pool= Aggravated Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Aggravated}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Aggravated} + @{armor-Rating})d10}>@{Soak_diff-Aggravated}f1 ]] }}" />
                             <span class="sheet-Query sheet-yes">Yes</span>
                             <span class="sheet-Query sheet-no">No</span>
                         </div>
@@ -3818,16 +3826,16 @@
                 <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_Specname-1" value=""/></td>
                 <td style="width:110px">
                     <select name="attr_DPAtt1" style="width:110px"> 
-                        <option value="0" selected></option> 
-                        <option value="@{Strength}">Strength</option> 
-                        <option value="@{Dexterity}">Dexterity</option> 
-                        <option value="@{Stamina}">Stamina</option> 
-                        <option value="@{Charisma}">Charisma</option> 
-                        <option value="@{Manipulation}">Manipulation</option> 
-                        <option value="@{Appearance}">Appearance</option> 
-                        <option value="@{Intelligence}">Intelligence</option> 
-                        <option value="@{Wits}">Wits</option> 
-                        <option value="@{Perception}">Perception</option>
+                            <option value="0" selected></option> 
+							<option value="@{Strength}+@{StrengthBoost}">Strength</option>
+							<option value="@{Dexterity}}+@{DexterityBoost}">Dexterity</option>
+							<option value="@{Stamina}+@{StaminaBoost}">Stamina</option>
+							<option value="@{Charisma}+@{CharismaBoost}">Charisma</option>
+							<option value="@{Manipulation}+@{ManipulationBoost}">Manipulation</option>
+							<option value="@{Appearance}+@{AppearanceBoost}">Appearance</option> 
+							<option value="@{Perception}+@{PerceptionBoost}">Perception</option>
+							<option value="@{Intelligence}+@{IntelligenceBoost}">Intelligence</option>
+							<option value="@{Wits}+@{WitsBoost}">Wits</option>
                     </select>
                 </td>
                 <td style="width:110px">
@@ -3909,16 +3917,16 @@
                 <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_Specname-2" value=""/></td>
                 <td style="width:110px">
                     <select name="attr_DPAtt2" style="width:110px"> 
-                        <option value="0" selected></option> 
-                        <option value="@{Strength}">Strength</option> 
-                        <option value="@{Dexterity}">Dexterity</option> 
-                        <option value="@{Stamina}">Stamina</option> 
-                        <option value="@{Charisma}">Charisma</option> 
-                        <option value="@{Manipulation}">Manipulation</option> 
-                        <option value="@{Appearance}">Appearance</option> 
-                        <option value="@{Intelligence}">Intelligence</option> 
-                        <option value="@{Wits}">Wits</option> 
-                        <option value="@{Perception}">Perception</option>
+                            <option value="0" selected></option> 
+							<option value="@{Strength}+@{StrengthBoost}">Strength</option>
+							<option value="@{Dexterity}+@{DexterityBoost}">Dexterity</option>
+							<option value="@{Stamina}+@{StaminaBoost}">Stamina</option>
+							<option value="@{Charisma}+@{CharismaBoost}">Charisma</option>
+							<option value="@{Manipulation}+@{ManipulationBoost}">Manipulation</option>
+							<option value="@{Appearance}+@{AppearanceBoost}">Appearance</option> 
+							<option value="@{Perception}+@{PerceptionBoost}">Perception</option>
+							<option value="@{Intelligence}+@{IntelligenceBoost}">Intelligence</option>
+							<option value="@{Wits}+@{WitsBoost}">Wits</option>
                     </select>
                 </td>
                 <td style="width:110px">
@@ -3999,16 +4007,16 @@
                 <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_Specname-3" value=""/></td>
                 <td style="width:110px">
                     <select name="attr_DPAtt3" style="width:110px"> 
-                        <option value="0" selected></option> 
-                        <option value="@{Strength}">Strength</option> 
-                        <option value="@{Dexterity}">Dexterity</option> 
-                        <option value="@{Stamina}">Stamina</option> 
-                        <option value="@{Charisma}">Charisma</option> 
-                        <option value="@{Manipulation}">Manipulation</option> 
-                        <option value="@{Appearance}">Appearance</option> 
-                        <option value="@{Intelligence}">Intelligence</option> 
-                        <option value="@{Wits}">Wits</option> 
-                        <option value="@{Perception}">Perception</option>
+                            <option value="0" selected></option> 
+							<option value="@{Strength}+@{StrengthBoost}">Strength</option>
+							<option value="@{Dexterity}+@{DexterityBoost}">Dexterity</option>
+							<option value="@{Stamina}+@{StaminaBoost}">Stamina</option>
+							<option value="@{Charisma}+@{CharismaBoost}">Charisma</option>
+							<option value="@{Manipulation}+@{ManipulationBoost}">Manipulation</option>
+							<option value="@{Appearance}+@{AppearanceBoost}">Appearance</option> 
+							<option value="@{Perception}+@{PerceptionBoost}">Perception</option>
+							<option value="@{Intelligence}+@{IntelligenceBoost}">Intelligence</option>
+							<option value="@{Wits}+@{WitsBoost}">Wits</option>
                     </select>
                 </td>
                 <td style="width:110px">
@@ -4089,16 +4097,16 @@
                 <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_Specname-4" value=""/></td>
                 <td style="width:110px">
                     <select name="attr_DPAtt4" style="width:110px"> 
-                        <option value="0" selected></option> 
-                        <option value="@{Strength}">Strength</option> 
-                        <option value="@{Dexterity}">Dexterity</option> 
-                        <option value="@{Stamina}">Stamina</option> 
-                        <option value="@{Charisma}">Charisma</option> 
-                        <option value="@{Manipulation}">Manipulation</option> 
-                        <option value="@{Appearance}">Appearance</option> 
-                        <option value="@{Intelligence}">Intelligence</option> 
-                        <option value="@{Wits}">Wits</option> 
-                        <option value="@{Perception}">Perception</option>
+                            <option value="0" selected></option> 
+							<option value="@{Strength}+@{StrengthBoost}">Strength</option>
+							<option value="@{Dexterity}+@{DexterityBoost}">Dexterity</option>
+							<option value="@{Stamina}+@{StaminaBoost}">Stamina</option>
+							<option value="@{Charisma}+@{CharismaBoost}">Charisma</option>
+							<option value="@{Manipulation}+@{ManipulationBoost}">Manipulation</option>
+							<option value="@{Appearance}+@{AppearanceBoost}">Appearance</option> 
+							<option value="@{Perception}+@{PerceptionBoost}">Perception</option>
+							<option value="@{Intelligence}+@{IntelligenceBoost}">Intelligence</option>
+							<option value="@{Wits}+@{WitsBoost}">Wits</option>
                     </select>
                 </td>
                 <td style="width:110px">
@@ -4179,16 +4187,16 @@
                 <td style="width:150px"><input type="text" class="sheet-dicepool" name="attr_Specname-5" value=""/></td>
                 <td style="width:110px">
                     <select name="attr_DPAtt5" style="width:110px"> 
-                        <option value="0" selected></option> 
-                        <option value="@{Strength}">Strength</option> 
-                        <option value="@{Dexterity}">Dexterity</option> 
-                        <option value="@{Stamina}">Stamina</option> 
-                        <option value="@{Charisma}">Charisma</option> 
-                        <option value="@{Manipulation}">Manipulation</option> 
-                        <option value="@{Appearance}">Appearance</option> 
-                        <option value="@{Intelligence}">Intelligence</option> 
-                        <option value="@{Wits}">Wits</option> 
-                        <option value="@{Perception}">Perception</option>
+                            <option value="0" selected></option> 
+							<option value="@{Strength}+@{StrengthBoost}">Strength</option>
+							<option value="@{Dexterity}+@{DexterityBoost}">Dexterity</option>
+							<option value="@{Stamina}+@{StaminaBoost}">Stamina</option>
+							<option value="@{Charisma}+@{CharismaBoost}">Charisma</option>
+							<option value="@{Manipulation}+@{ManipulationBoost}">Manipulation</option>
+							<option value="@{Appearance}+@{AppearanceBoost}">Appearance</option> 
+							<option value="@{Perception}+@{PerceptionBoost}">Perception</option>
+							<option value="@{Intelligence}+@{IntelligenceBoost}">Intelligence</option>
+							<option value="@{Wits}+@{WitsBoost}">Wits</option>
                     </select>
                 </td>
                 <td style="width:110px">
@@ -4274,15 +4282,15 @@
                     <td style="width:110px">
                         <select name="attr_DPAtt" style="width:110px"> 
                             <option value="0" selected></option> 
-                            <option value="@{Strength}">Strength</option> 
-                            <option value="@{Dexterity}">Dexterity</option> 
-                            <option value="@{Stamina}">Stamina</option> 
-                            <option value="@{Charisma}">Charisma</option> 
-                            <option value="@{Manipulation}">Manipulation</option> 
-                            <option value="@{Appearance}">Appearance</option> 
-                            <option value="@{Intelligence}">Intelligence</option> 
-                            <option value="@{Wits}">Wits</option> 
-                            <option value="@{Perception}">Perception</option>
+							<option value="@{Strength}+@{StrengthBoost}">Strength</option>
+							<option value="@{Dexterity}+@{DexterityBoost}">Dexterity</option>
+							<option value="@{Stamina}+@{StaminaBoost}">Stamina</option>
+							<option value="@{Charisma}+@{CharismaBoost}">Charisma</option>
+							<option value="@{Manipulation}+@{ManipulationBoost}">Manipulation</option>
+							<option value="@{Appearance}+@{AppearanceBoost}">Appearance</option> 
+							<option value="@{Perception}+@{PerceptionBoost}">Perception</option>
+							<option value="@{Intelligence}+@{IntelligenceBoost}">Intelligence</option>
+							<option value="@{Wits}+@{WitsBoost}">Wits</option>
                         </select>
                     </td>
                     <td style="width:110px">
