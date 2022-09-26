@@ -2444,7 +2444,7 @@
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-1" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-1" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-1" value="0"/></th>>
-            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-1" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-1} }} {{attr= Weapon @{weapon_Damage-1} }} {{skill= Stength @{weapon_StrengthDamage-1} }}  {{mod= Extra ?{Attack Extra Successes|0} }} {{result= [[{(@{weapon_Damage-1} + @{weapon_StrengthDamage-1} + ?{Attack Extra Successes|0})d10}>6}]] }}"></button></th>
+            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-1" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-1} }} {{attr= Weapon @{weapon_Damage-1} }} {{skill= Stength @{weapon_StrengthDamage-1} }} {{result= [[{(@{weapon_Damage-1} + @{weapon_StrengthDamage-1})d10}>6}]] }}"></button></th>
         </tr>
         <tr>
             <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_2" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-2} }} {{attr= Attribute @{weapon_attribute-2} }} {{skill= Skill @{weapon_skill-2}}} {{mod= Weapon @{weapon_Modifier-2} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-2} + @{weapon_skill-2} + @{weapon_Modifier-2} + @{injury})d10}>@{weapon_Diff-2}f1]] }}"></button></th>
@@ -2492,7 +2492,7 @@
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-2" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-2" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-2" value="0"/></th>
-            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-2" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-2} }} {{attr= Weapon @{weapon_Damage-2} }} {{skill= Stength @{weapon_StrengthDamage-2} }}  {{mod= Extra ?{Attack Extra Successes|0} }}  {{result= [[{(@{weapon_Damage-2} + @{weapon_StrengthDamage-2} + ?{Attack Extra Successes|0})d10}>6}]] }}"></button></th>
+            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-2" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-2} }} {{attr= Weapon @{weapon_Damage-2} }} {{skill= Stength @{weapon_StrengthDamage-2} }}  {{result= [[{(@{weapon_Damage-2} + @{weapon_StrengthDamage-2})d10}>6}]] }}"></button></th>
         </tr>
         <tr>
             <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_3" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-3} }} {{attr= Attribute @{weapon_attribute-3} }} {{skill= Skill @{weapon_skill-3}}} {{mod= Weapon @{weapon_Modifier-3} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-3} + @{weapon_skill-3} + @{weapon_Modifier-3} + @{injury})d10}>@{weapon_Diff-3}f1]] }}"></button></th>
@@ -2540,7 +2540,7 @@
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-3" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-3" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-3" value="0"/></th>
-            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-3" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-3} }} {{attr= Weapon @{weapon_Damage-3} }} {{skill= Stength @{weapon_StrengthDamage-3} }}  {{mod= Extra ?{Attack Extra Successes|0} }}  {{result= [[{(@{weapon_Damage-3} + @{weapon_StrengthDamage-3} + ?{Attack Extra Successes|0})d10}>6}]] }}"></button></th>
+            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-3" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-3} }} {{attr= Weapon @{weapon_Damage-3} }} {{skill= Stength @{weapon_StrengthDamage-3} }}  {{result= [[{(@{weapon_Damage-3} + @{weapon_StrengthDamage-3})d10}>6}]] }}"></button></th>
         </tr>
         <tr>
             <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_4" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-4} }} {{attr= Attribute @{weapon_attribute-4} }} {{skill= Skill @{weapon_skill-4}}} {{mod= Weapon @{weapon_Modifier-4} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-4} + @{weapon_skill-4} + @{weapon_Modifier-4} + @{injury})d10}>@{weapon_Diff-4}f1]] }}"></button></th>
@@ -2588,7 +2588,7 @@
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-4" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-4" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-4" value="0"/></th>
-            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-4" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-4} }} {{attr= Weapon @{weapon_Damage-4} }} {{skill= Stength @{weapon_StrengthDamage-4} }}  {{mod= Extra ?{Attack Extra Successes|0} }}  {{result= [[{(@{weapon_Damage-4} + @{weapon_StrengthDamage-4} + ?{Attack Extra Successes|0})d10}>6}]] }}"></button></th>
+            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-4" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-4} }} {{attr= Weapon @{weapon_Damage-4} }} {{skill= Stength @{weapon_StrengthDamage-4} }}  {{result= [[{(@{weapon_Damage-4} + @{weapon_StrengthDamage-4})d10}>6}]] }}"></button></th>
         </tr>
         <tr>
             <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_5" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-5} }} {{attr= Attribute @{weapon_attribute-5} }} {{skill= Skill @{weapon_skill-5}}} {{mod= Weapon @{weapon_Modifier-5} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-5} + @{weapon_skill-5} + @{weapon_Modifier-5} + @{injury})d10}>@{weapon_Diff-5}f1]] }}"></button></th>
@@ -2636,7 +2636,7 @@
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-5" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-5" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-5" value="0"/></th>
-            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-5" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-5} }} {{attr= Weapon @{weapon_Damage-5} }} {{skill= Stength @{weapon_StrengthDamage-5} }}  {{mod= Extra ?{Attack Extra Successes|0} }}  {{result= [[{(@{weapon_Damage-5} + @{weapon_StrengthDamage-5} + ?{Attack Extra Successes|0})d10}>6}]] }}"></button></th>
+            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-5" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-5} }} {{attr= Weapon @{weapon_Damage-5} }} {{skill= Stength @{weapon_StrengthDamage-5} }}  {{result= [[{(@{weapon_Damage-5} + @{weapon_StrengthDamage-5})d10}>6}]] }}"></button></th>
         </tr>
         <tr>
             <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_6" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-6} }} {{attr= Attribute @{weapon_attribute-6} }} {{skill= Skill @{weapon_skill-6}}} {{mod= Weapon @{weapon_Modifier-6} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-6} + @{weapon_skill-6} + @{weapon_Modifier-6} + @{injury})d10}>@{weapon_Diff-6}f1]] }}"></button></th>
@@ -2684,7 +2684,7 @@
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-6" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-6" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-6" value="0"/></th>
-            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-6" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-6} }} {{attr= Weapon @{weapon_Damage-6} }} {{skill= Stength @{weapon_StrengthDamage-6} }}  {{mod= Extra ?{Attack Extra Successes|0} }}  {{result= [[{(@{weapon_Damage-6} + @{weapon_StrengthDamage-6} + ?{Attack Extra Successes|0})d10}>6}]] }}"></button></th>
+            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-6" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-6} }} {{attr= Weapon @{weapon_Damage-6} }} {{skill= Stength @{weapon_StrengthDamage-6} }}  {{result= [[{(@{weapon_Damage-6} + @{weapon_StrengthDamage-6})d10}>6}]] }}"></button></th>
         </tr>
         <tr>
             <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_7" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-7} }} {{attr= Attribute @{weapon_attribute-7} }} {{skill= Skill @{weapon_skill-7}}} {{mod= Weapon @{weapon_Modifier-7} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-7} + @{weapon_skill-7} + @{weapon_Modifier-7} + @{injury})d10}>@{weapon_Diff-7}f1]] }}"></button></th>
@@ -2732,7 +2732,7 @@
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-7" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-7" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-7" value="0"/></th>
-            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-7" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-7} }} {{attr= Weapon @{weapon_Damage-7} }} {{skill= Stength @{weapon_StrengthDamage-7} }}  {{mod= Extra ?{Attack Extra Successes|0} }}  {{result= [[{(@{weapon_Damage-7} + @{weapon_StrengthDamage-7} + ?{Attack Extra Successes|0})d10}>6}]] }}"></button></th>
+            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-7" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-7} }} {{attr= Weapon @{weapon_Damage-7} }} {{skill= Stength @{weapon_StrengthDamage-7}  {{result= [[{(@{weapon_Damage-7} + @{weapon_StrengthDamage-7})d10}>6}]] }}"></button></th>
         </tr>
     </table>
     <br>
