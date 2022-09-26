@@ -2684,7 +2684,7 @@
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-6" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-6" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-6" value="0"/></th>
-            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-6" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-6} }} {{attr= Weapon @{weapon_Damage-6} }} {{skill= Stength @{weapon_StrengthDamage-6} }}  {{result= [[{(@{weapon_Damage-6} + @{weapon_StrengthDamage-6})d10}>6}]] }}"></button></th>
+            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-6" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-6} }} {{attr= Weapon @{weapon_Damage-6} }} {{skill= Stength @{weapon_StrengthDamage-6} }}  {{result= [[{(@{weapon_Damage-6} + @{weapon_StrengthDamage-6} + ?{Attack Extra Successes|0})d10}>6}]] }}"></button></th>
         </tr>
         <tr>
             <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_7" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-7} }} {{attr= Attribute @{weapon_attribute-7} }} {{skill= Skill @{weapon_skill-7}}} {{mod= Weapon @{weapon_Modifier-7} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-7} + @{weapon_skill-7} + @{weapon_Modifier-7} + @{injury})d10}>@{weapon_Diff-7}f1]] }}"></button></th>
@@ -2732,7 +2732,7 @@
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-7" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-7" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-7" value="0"/></th>
-            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-7" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-7} }} {{attr= Weapon @{weapon_Damage-7} }} {{skill= Stength @{weapon_StrengthDamage-7}  {{result= [[{(@{weapon_Damage-7} + @{weapon_StrengthDamage-7})d10}>6}]] }}"></button></th>
+            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-7" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-7} }} {{attr= Weapon @{weapon_Damage-7} }} {{skill= Stength @{weapon_StrengthDamage-7} }}   {{result= [[{(@{weapon_Damage-7} + @{weapon_StrengthDamage-7} )d10}>6}]] }}"></button></th>
         </tr>
     </table>
     <br>
@@ -3349,10 +3349,457 @@
 
 <!-- TAB 8 DICE -->
 <div class="sheet-section-8">
+
     <!--Dice Pools-->
     <div class="sheet-center">
         <h1>Dice Pools</h1>
 		<div class="sheet-line-behind" ></div> 
+		<div>
+        <div class="sheet-colrow" >
+        <div class="sheet-col" style="width:30%">
+			<table style="text-align: center; width:100%">
+				<tr>
+					<td style="width:40%">
+                <h5>Name</h5>
+					</td>
+					<td style="width:30%">
+                <h5>Base</h5>
+					</td>
+					<td style="width:30%">
+                <h5>Boost</h5>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:40%">
+                <h4>Strength</h4>
+					</td>
+					<td style="width:30%">
+                    <select class="sheet-dots" name="attr_Strength">
+                        <option value="0">&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="1" selected>&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                        <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                        <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                        <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                        <option value="6">&#9899; 6</option>
+                        <option value="7">&#9899; 7</option>
+                        <option value="8">&#9899; 8</option>
+                        <option value="9">&#9899; 9</option>
+            		</select>
+					</td>
+					<td style="width:30%">
+                    <select class="sheet-dots" name="attr_StrengthBoost" >
+                        <option value="-10">&#8224; -10</option>
+                        <option value="-9">&#8224; -9</option>
+                        <option value="-8">&#8224; -8</option>
+                        <option value="-7">&#8224; -7</option>
+                        <option value="-6">&#8224; -6</option>
+                        <option value="-5">&#8224; -5</option>
+                        <option value="-4">&#8224; -4</option>
+                        <option value="-3">&#8224; -3</option>
+                        <option value="-2">&#8224; -2</option>
+                        <option value="-1">&#8224; -1</option>
+                        <option value="0" selected>&#9898; 0</option>
+                        <option value="1">&#9899; +1</option>
+                        <option value="2">&#9899; +2</option>
+                        <option value="3">&#9899; +3</option>
+                        <option value="4">&#9899; +4</option>
+                        <option value="5">&#9899; +5</option>
+                        <option value="6">&#9899; +6</option>
+                        <option value="7">&#9899; +7</option>
+                        <option value="8">&#9899; +8</option>
+                        <option value="9">&#9899; +9</option>
+                        <option value="10">&#9899; +10</option>
+            		</select>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:40%">
+                <h4>Dexterity</h4>
+					</td>
+					<td style="width:30%">
+    				<select class="sheet-dots" name="attr_Dexterity">
+                        <option value="0">&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="1" selected>&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                        <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                        <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                        <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                        <option value="6">&#9899; 6</option>
+                        <option value="7">&#9899; 7</option>
+                        <option value="8">&#9899; 8</option>
+                        <option value="9">&#9899; 9</option>
+					</select>
+					</td>
+					<td style="width:30%">
+                    <select class="sheet-dots" name="attr_DexterityBoost" >
+                        <option value="-10">&#8224; -10</option>
+                        <option value="-9">&#8224; -9</option>
+                        <option value="-8">&#8224; -8</option>
+                        <option value="-7">&#8224; -7</option>
+                        <option value="-6">&#8224; -6</option>
+                        <option value="-5">&#8224; -5</option>
+                        <option value="-4">&#8224; -4</option>
+                        <option value="-3">&#8224; -3</option>
+                        <option value="-2">&#8224; -2</option>
+                        <option value="-1">&#8224; -1</option>
+                        <option value="0" selected>&#9898; 0</option>
+                        <option value="1">&#9899; +1</option>
+                        <option value="2">&#9899; +2</option>
+                        <option value="3">&#9899; +3</option>
+                        <option value="4">&#9899; +4</option>
+                        <option value="5">&#9899; +5</option>
+                        <option value="6">&#9899; +6</option>
+                        <option value="7">&#9899; +7</option>
+                        <option value="8">&#9899; +8</option>
+                        <option value="9">&#9899; +9</option>
+                        <option value="10">&#9899; +10</option>
+            		</select>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:40%">
+                <h4>Stamina</h4>
+					</td>
+					<td style="width:30%">
+    				<select class="sheet-dots" name="attr_Stamina">
+                        <option value="0">&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="1" selected>&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                        <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                        <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                        <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                        <option value="6">&#9899; 6</option>
+                        <option value="7">&#9899; 7</option>
+                        <option value="8">&#9899; 8</option>
+                        <option value="9">&#9899; 9</option>
+					</select>
+					</td>
+					<td style="width:30%">
+                    <select class="sheet-dots" name="attr_StaminaBoost" >
+                        <option value="-10">&#8224; -10</option>
+                        <option value="-9">&#8224; -9</option>
+                        <option value="-8">&#8224; -8</option>
+                        <option value="-7">&#8224; -7</option>
+                        <option value="-6">&#8224; -6</option>
+                        <option value="-5">&#8224; -5</option>
+                        <option value="-4">&#8224; -4</option>
+                        <option value="-3">&#8224; -3</option>
+                        <option value="-2">&#8224; -2</option>
+                        <option value="-1">&#8224; -1</option>
+                        <option value="0" selected>&#9898; 0</option>
+                        <option value="1">&#9899; +1</option>
+                        <option value="2">&#9899; +2</option>
+                        <option value="3">&#9899; +3</option>
+                        <option value="4">&#9899; +4</option>
+                        <option value="5">&#9899; +5</option>
+                        <option value="6">&#9899; +6</option>
+                        <option value="7">&#9899; +7</option>
+                        <option value="8">&#9899; +8</option>
+                        <option value="9">&#9899; +9</option>
+                        <option value="10">&#9899; +10</option>
+            		</select>
+					</td>
+				</tr>
+			</table>
+		</div>
+        <div class="sheet-col" style="width:30%">
+			<table style="text-align: center; width:100%">
+				<tr>
+					<td style="width:40%">
+                <h5>Name</h5>
+					</td>
+					<td style="width:30%">
+                <h5>Base</h5>
+					</td>
+					<td style="width:30%">
+                <h5>Boost</h5>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:40%">
+                <h4>Charisma</h4>
+					</td>
+					<td style="width:30%">
+    				<select class="sheet-dots" name="attr_Charisma">
+                        <option value="0">&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="1" selected>&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                        <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                        <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                        <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                        <option value="6">&#9899; 6</option>
+                        <option value="7">&#9899; 7</option>
+                        <option value="8">&#9899; 8</option>
+                        <option value="9">&#9899; 9</option>
+					</select>
+					</td>
+					<td style="width:30%">
+                    <select class="sheet-dots" name="attr_CharismaBoost" >
+                        <option value="-10">&#8224; -10</option>
+                        <option value="-9">&#8224; -9</option>
+                        <option value="-8">&#8224; -8</option>
+                        <option value="-7">&#8224; -7</option>
+                        <option value="-6">&#8224; -6</option>
+                        <option value="-5">&#8224; -5</option>
+                        <option value="-4">&#8224; -4</option>
+                        <option value="-3">&#8224; -3</option>
+                        <option value="-2">&#8224; -2</option>
+                        <option value="-1">&#8224; -1</option>
+                        <option value="0" selected>&#9898; 0</option>
+                        <option value="1">&#9899; +1</option>
+                        <option value="2">&#9899; +2</option>
+                        <option value="3">&#9899; +3</option>
+                        <option value="4">&#9899; +4</option>
+                        <option value="5">&#9899; +5</option>
+                        <option value="6">&#9899; +6</option>
+                        <option value="7">&#9899; +7</option>
+                        <option value="8">&#9899; +8</option>
+                        <option value="9">&#9899; +9</option>
+                        <option value="10">&#9899; +10</option>
+            		</select>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:40%">
+                <h4>Manipulation</h4>
+					</td>
+					<td style="width:30%">
+    				<select class="sheet-dots" name="attr_Manipulation">
+                        <option value="0">&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="1" selected>&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                        <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                        <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                        <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                        <option value="6">&#9899; 6</option>
+                        <option value="7">&#9899; 7</option>
+                        <option value="8">&#9899; 8</option>
+                        <option value="9">&#9899; 9</option>
+					</select>
+					</td>
+					<td style="width:30%">
+                    <select class="sheet-dots" name="attr_ManipulationBoost" >
+                        <option value="-10">&#8224; -10</option>
+                        <option value="-9">&#8224; -9</option>
+                        <option value="-8">&#8224; -8</option>
+                        <option value="-7">&#8224; -7</option>
+                        <option value="-6">&#8224; -6</option>
+                        <option value="-5">&#8224; -5</option>
+                        <option value="-4">&#8224; -4</option>
+                        <option value="-3">&#8224; -3</option>
+                        <option value="-2">&#8224; -2</option>
+                        <option value="-1">&#8224; -1</option>
+                        <option value="0" selected>&#9898; 0</option>
+                        <option value="1">&#9899; +1</option>
+                        <option value="2">&#9899; +2</option>
+                        <option value="3">&#9899; +3</option>
+                        <option value="4">&#9899; +4</option>
+                        <option value="5">&#9899; +5</option>
+                        <option value="6">&#9899; +6</option>
+                        <option value="7">&#9899; +7</option>
+                        <option value="8">&#9899; +8</option>
+                        <option value="9">&#9899; +9</option>
+                        <option value="10">&#9899; +10</option>
+            		</select>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:40%">
+                <h4>Appearance</h4>
+					</td>
+					<td style="width:30%">
+    				<select class="sheet-dots" name="attr_Appearance">
+                        <option value="0">&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="1" selected>&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                        <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                        <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                        <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                        <option value="6">&#9899; 6</option>
+                        <option value="7">&#9899; 7</option>
+                        <option value="8">&#9899; 8</option>
+                        <option value="9">&#9899; 9</option>
+					</select>
+					</td>
+					<td style="width:30%">
+                    <select class="sheet-dots" name="attr_AppearanceBoost" >
+                        <option value="-10">&#8224; -10</option>
+                        <option value="-9">&#8224; -9</option>
+                        <option value="-8">&#8224; -8</option>
+                        <option value="-7">&#8224; -7</option>
+                        <option value="-6">&#8224; -6</option>
+                        <option value="-5">&#8224; -5</option>
+                        <option value="-4">&#8224; -4</option>
+                        <option value="-3">&#8224; -3</option>
+                        <option value="-2">&#8224; -2</option>
+                        <option value="-1">&#8224; -1</option>
+                        <option value="0" selected>&#9898; 0</option>
+                        <option value="1">&#9899; +1</option>
+                        <option value="2">&#9899; +2</option>
+                        <option value="3">&#9899; +3</option>
+                        <option value="4">&#9899; +4</option>
+                        <option value="5">&#9899; +5</option>
+                        <option value="6">&#9899; +6</option>
+                        <option value="7">&#9899; +7</option>
+                        <option value="8">&#9899; +8</option>
+                        <option value="9">&#9899; +9</option>
+                        <option value="10">&#9899; +10</option>
+            		</select>
+					</td>
+				</tr>
+			</table>
+		</div>
+        <div class="sheet-col" style="width:30%">
+			<table style="text-align: center; width:100%">
+				<tr>
+					<td style="width:40%">
+                <h5>Name</h5>
+					</td>
+					<td style="width:30%">
+                <h5>Base</h5>
+					</td>
+					<td style="width:30%">
+                <h5>Boost</h5>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:40%">
+                <h4>Perception</h4>
+					</td>
+					<td style="width:30%">
+    				<select class="sheet-dots" name="attr_Perception">
+                        <option value="0">&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="1" selected>&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                        <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                        <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                        <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                        <option value="6">&#9899; 6</option>
+                        <option value="7">&#9899; 7</option>
+                        <option value="8">&#9899; 8</option>
+                        <option value="9">&#9899; 9</option>
+					</select>
+					</td>
+					<td style="width:30%">
+                    <select class="sheet-dots" name="attr_PerceptionBoost" >
+                        <option value="-10">&#8224; -10</option>
+                        <option value="-9">&#8224; -9</option>
+                        <option value="-8">&#8224; -8</option>
+                        <option value="-7">&#8224; -7</option>
+                        <option value="-6">&#8224; -6</option>
+                        <option value="-5">&#8224; -5</option>
+                        <option value="-4">&#8224; -4</option>
+                        <option value="-3">&#8224; -3</option>
+                        <option value="-2">&#8224; -2</option>
+                        <option value="-1">&#8224; -1</option>
+                        <option value="0" selected>&#9898; 0</option>
+                        <option value="1">&#9899; +1</option>
+                        <option value="2">&#9899; +2</option>
+                        <option value="3">&#9899; +3</option>
+                        <option value="4">&#9899; +4</option>
+                        <option value="5">&#9899; +5</option>
+                        <option value="6">&#9899; +6</option>
+                        <option value="7">&#9899; +7</option>
+                        <option value="8">&#9899; +8</option>
+                        <option value="9">&#9899; +9</option>
+                        <option value="10">&#9899; +10</option>
+            		</select>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:40%">
+                <h4>Intelligence</h4>
+					</td>
+					<td style="width:30%">
+    				<select class="sheet-dots" name="attr_Intelligence">
+                        <option value="0">&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="1" selected>&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                        <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                        <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                        <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                        <option value="6">&#9899; 6</option>
+                        <option value="7">&#9899; 7</option>
+                        <option value="8">&#9899; 8</option>
+                        <option value="9">&#9899; 9</option>
+					</select>
+					</td>
+					<td style="width:30%">
+                    <select class="sheet-dots" name="attr_IntelligenceBoost" >
+                        <option value="-10">&#8224; -10</option>
+                        <option value="-9">&#8224; -9</option>
+                        <option value="-8">&#8224; -8</option>
+                        <option value="-7">&#8224; -7</option>
+                        <option value="-6">&#8224; -6</option>
+                        <option value="-5">&#8224; -5</option>
+                        <option value="-4">&#8224; -4</option>
+                        <option value="-3">&#8224; -3</option>
+                        <option value="-2">&#8224; -2</option>
+                        <option value="-1">&#8224; -1</option>
+                        <option value="0" selected>&#9898; 0</option>
+                        <option value="1">&#9899; +1</option>
+                        <option value="2">&#9899; +2</option>
+                        <option value="3">&#9899; +3</option>
+                        <option value="4">&#9899; +4</option>
+                        <option value="5">&#9899; +5</option>
+                        <option value="6">&#9899; +6</option>
+                        <option value="7">&#9899; +7</option>
+                        <option value="8">&#9899; +8</option>
+                        <option value="9">&#9899; +9</option>
+                        <option value="10">&#9899; +10</option>
+            		</select>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:40%">
+                <h4>Wits</h4>
+					</td>
+					<td style="width:30%">
+    				<select class="sheet-dots" name="attr_Wits">
+                        <option value="0">&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="1" selected>&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                        <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                        <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                        <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                        <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                        <option value="6">&#9899; 6</option>
+                        <option value="7">&#9899; 7</option>
+                        <option value="8">&#9899; 8</option>
+                        <option value="9">&#9899; 9</option>
+					</select>
+					</td>
+					<td style="width:30%">
+                    <select class="sheet-dots" name="attr_WitsBoost" >
+                        <option value="-10">&#8224; -10</option>
+                        <option value="-9">&#8224; -9</option>
+                        <option value="-8">&#8224; -8</option>
+                        <option value="-7">&#8224; -7</option>
+                        <option value="-6">&#8224; -6</option>
+                        <option value="-5">&#8224; -5</option>
+                        <option value="-4">&#8224; -4</option>
+                        <option value="-3">&#8224; -3</option>
+                        <option value="-2">&#8224; -2</option>
+                        <option value="-1">&#8224; -1</option>
+                        <option value="0" selected>&#9898; 0</option>
+                        <option value="1">&#9899; +1</option>
+                        <option value="2">&#9899; +2</option>
+                        <option value="3">&#9899; +3</option>
+                        <option value="4">&#9899; +4</option>
+                        <option value="5">&#9899; +5</option>
+                        <option value="6">&#9899; +6</option>
+                        <option value="7">&#9899; +7</option>
+                        <option value="8">&#9899; +8</option>
+                        <option value="9">&#9899; +9</option>
+                        <option value="10">&#9899; +10</option>
+            		</select>
+					</td>
+				</tr>
+			</table>
+		</div>
+        </div>
+    </div>
+	<br/>
         <table class="sheet-table" style="width:820px">
             <tr>
                 <td style="width:60px">Roll</td>
@@ -3817,7 +4264,7 @@
                 </th>
             </tr>
         </table>
-        <hr>
+
         <fieldset class="repeating_dicepool">
             <table style="width:810px">
                 <tr>
