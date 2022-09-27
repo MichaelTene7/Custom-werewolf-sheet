@@ -1381,7 +1381,7 @@
 			
         </div>
         <div class="sheet-col" style="width:30%" align="center">
-            <button type="roll" class="sheet-adv" name="roll_Rage" value="&{template:wod} {{name= @{character_name} }} {{pool= Rage }} {{attr= Dice @{Rage} }} {{result= [[{(@{Rage}+?{Pool Mod|0})d10}>?{Difficulty|6}f1]] }}">Rage</button>
+            <button type="roll" class="sheet-adv" name="roll_Rage" value="&{template:wod} {{name= @{character_name} }} {{pool= Rage }} {{attr= Dice @{Rage} }} {{result= [[{(@{Rage}+?{Pool Mod|0})d10!sd}>?{Difficulty|6}f1]] }}">Rage</button>
             <br>
             <div align="center" style="margin:0px 0px 0px 9px"> 
                 <input type="radio" class="sheet-normal" name="attr_Rage" value="1" checked /><span></span>
@@ -1410,7 +1410,7 @@
                 <input type="radio" class="sheet-box" name="attr_Rage_Used" value="10" class=" used" /><span></span>
             </div>
             <br><br>
-            <button type="roll" class="sheet-adv" name="roll_Gnosis" value="&{template:wod} {{name= @{character_name} }} {{pool= Gnosis }} {{attr= Dice @{Gnosis} }} {{result= [[{(@{Gnosis}+?{Pool Mod|0})d10}>?{Difficulty|6}f1]] }}">Gnosis</button>
+            <button type="roll" class="sheet-adv" name="roll_Gnosis" value="&{template:wod} {{name= @{character_name} }} {{pool= Gnosis }} {{attr= Dice @{Gnosis} }} {{result= [[{(@{Gnosis}+?{Pool Mod|0})d10!sd}>?{Difficulty|6}f1]] }}">Gnosis</button>
             <div align="center" style="margin:0px 0px 0px 9px">
                 <input type="radio" class="sheet-normal" name="attr_Gnosis" value="1" checked /><span></span>
                 <input type="radio" class="sheet-normal" name="attr_Gnosis" value="2" /><span></span>
@@ -1437,7 +1437,7 @@
                 <input type="radio" class="sheet-box" name="attr_Gnosis_Used" value="10" class=" used"/><span></span>
             </div>
             <br><br>
-            <button type="roll" class="sheet-adv" name="roll_Willpower" value="&{template:wod} {{name= @{character_name} }} {{pool= Willpower }} {{attr= Dice @{Willpower} }} {{result= [[{(@{Willpower}+?{Pool Mod|0})d10}>?{Difficulty|6}f1]] }}">Willpower</button>
+            <button type="roll" class="sheet-adv" name="roll_Willpower" value="&{template:wod} {{name= @{character_name} }} {{pool= Willpower }} {{attr= Dice @{Willpower} }} {{result= [[{(@{Willpower}+?{Pool Mod|0})d10!sd}>?{Difficulty|6}f1]] }}">Willpower</button>
             <div align="center" style="margin:0px 0px 0px 9px">
                 <input type="radio" class="sheet-normal" name="attr_Willpower" value="1" checked/><span></span> 
                 <input type="radio" class="sheet-normal" name="attr_Willpower" value="2" /><span></span> 
@@ -2400,7 +2400,7 @@
             <th>Damage</th>
         </tr>
         <tr>
-            <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_1" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-1} }} {{attr= Attribute @{weapon_attribute-1} }} {{skill= Skill @{weapon_skill-1}}} {{mod= Weapon @{weapon_Modifier-1} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-1} + @{weapon_skill-1} + @{weapon_Modifier-1} + @{injury})d10}>@{weapon_Diff-1}f1]] }}"></button></th>
+            <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_1" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-1} }} {{attr= Attribute @{weapon_attribute-1} }} {{skill= Skill @{weapon_skill-1}}} {{mod= Weapon @{weapon_Modifier-1} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-1} + @{weapon_skill-1} + @{weapon_Modifier-1} + @{injury})d10!sd}>@{weapon_Diff-1}f1]] }}"></button></th>
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-1" value=""/></th>
             <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-1" value="0" >
                     <option value="0" selected></option> 
@@ -2446,10 +2446,10 @@
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-1" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-1" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-1" value="0"/></th>>
-            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-1" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-1} }} {{attr= Weapon @{weapon_Damage-1} }} {{skill= Stength @{weapon_StrengthDamage-1} }} {{result= [[{(@{weapon_Damage-1} + @{weapon_StrengthDamage-1})d10}>6}]] }}"></button></th>
+            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-1" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-1} }} {{attr= Weapon @{weapon_Damage-1} }} {{skill= Stength @{weapon_StrengthDamage-1} }} {{result= [[{(@{weapon_Damage-1} + @{weapon_StrengthDamage-1})d10!sd}>6}]] }}"></button></th>
         </tr>
         <tr>
-            <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_2" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-2} }} {{attr= Attribute @{weapon_attribute-2} }} {{skill= Skill @{weapon_skill-2}}} {{mod= Weapon @{weapon_Modifier-2} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-2} + @{weapon_skill-2} + @{weapon_Modifier-2} + @{injury})d10}>@{weapon_Diff-2}f1]] }}"></button></th>
+            <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_2" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-2} }} {{attr= Attribute @{weapon_attribute-2} }} {{skill= Skill @{weapon_skill-2}}} {{mod= Weapon @{weapon_Modifier-2} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-2} + @{weapon_skill-2} + @{weapon_Modifier-2} + @{injury})d10!sd}>@{weapon_Diff-2}f1]] }}"></button></th>
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-2" value=""/></th>
             <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-2" value="0" >
                     <option value="0" selected></option> 
@@ -2495,10 +2495,10 @@
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-2" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-2" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-2" value="0"/></th>
-            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-2" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-2} }} {{attr= Weapon @{weapon_Damage-2} }} {{skill= Stength @{weapon_StrengthDamage-2} }}  {{result= [[{(@{weapon_Damage-2} + @{weapon_StrengthDamage-2})d10}>6}]] }}"></button></th>
+            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-2" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-2} }} {{attr= Weapon @{weapon_Damage-2} }} {{skill= Stength @{weapon_StrengthDamage-2} }}  {{result= [[{(@{weapon_Damage-2} + @{weapon_StrengthDamage-2})d10!sd}>6}]] }}"></button></th>
         </tr>
         <tr>
-            <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_3" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-3} }} {{attr= Attribute @{weapon_attribute-3} }} {{skill= Skill @{weapon_skill-3}}} {{mod= Weapon @{weapon_Modifier-3} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-3} + @{weapon_skill-3} + @{weapon_Modifier-3} + @{injury})d10}>@{weapon_Diff-3}f1]] }}"></button></th>
+            <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_3" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-3} }} {{attr= Attribute @{weapon_attribute-3} }} {{skill= Skill @{weapon_skill-3}}} {{mod= Weapon @{weapon_Modifier-3} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-3} + @{weapon_skill-3} + @{weapon_Modifier-3} + @{injury})d10!sd}>@{weapon_Diff-3}f1]] }}"></button></th>
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-3" value=""/></th>
             <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-3" value="0" >
                     <option value="0" selected></option> 
@@ -2544,10 +2544,10 @@
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-3" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-3" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-3" value="0"/></th>
-            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-3" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-3} }} {{attr= Weapon @{weapon_Damage-3} }} {{skill= Stength @{weapon_StrengthDamage-3} }}  {{result= [[{(@{weapon_Damage-3} + @{weapon_StrengthDamage-3})d10}>6}]] }}"></button></th>
+            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-3" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-3} }} {{attr= Weapon @{weapon_Damage-3} }} {{skill= Stength @{weapon_StrengthDamage-3} }}  {{result= [[{(@{weapon_Damage-3} + @{weapon_StrengthDamage-3})d10!sd}>6}]] }}"></button></th>
         </tr>
         <tr>
-            <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_4" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-4} }} {{attr= Attribute @{weapon_attribute-4} }} {{skill= Skill @{weapon_skill-4}}} {{mod= Weapon @{weapon_Modifier-4} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-4} + @{weapon_skill-4} + @{weapon_Modifier-4} + @{injury})d10}>@{weapon_Diff-4}f1]] }}"></button></th>
+            <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_4" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-4} }} {{attr= Attribute @{weapon_attribute-4} }} {{skill= Skill @{weapon_skill-4}}} {{mod= Weapon @{weapon_Modifier-4} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-4} + @{weapon_skill-4} + @{weapon_Modifier-4} + @{injury})d10!sd}>@{weapon_Diff-4}f1]] }}"></button></th>
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-4" value=""/></th>
             <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-4" value="0" >
                     <option value="0" selected></option> 
@@ -2593,10 +2593,10 @@
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-4" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-4" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-4" value="0"/></th>
-            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-4" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-4} }} {{attr= Weapon @{weapon_Damage-4} }} {{skill= Stength @{weapon_StrengthDamage-4} }}  {{result= [[{(@{weapon_Damage-4} + @{weapon_StrengthDamage-4})d10}>6}]] }}"></button></th>
+            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-4" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-4} }} {{attr= Weapon @{weapon_Damage-4} }} {{skill= Stength @{weapon_StrengthDamage-4} }}  {{result= [[{(@{weapon_Damage-4} + @{weapon_StrengthDamage-4})d10!sd}>6}]] }}"></button></th>
         </tr>
         <tr>
-            <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_5" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-5} }} {{attr= Attribute @{weapon_attribute-5} }} {{skill= Skill @{weapon_skill-5}}} {{mod= Weapon @{weapon_Modifier-5} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-5} + @{weapon_skill-5} + @{weapon_Modifier-5} + @{injury})d10}>@{weapon_Diff-5}f1]] }}"></button></th>
+            <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_5" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-5} }} {{attr= Attribute @{weapon_attribute-5} }} {{skill= Skill @{weapon_skill-5}}} {{mod= Weapon @{weapon_Modifier-5} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-5} + @{weapon_skill-5} + @{weapon_Modifier-5} + @{injury})d10!sd}>@{weapon_Diff-5}f1]] }}"></button></th>
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-5" value=""/></th>
             <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-5" value="0" >
                     <option value="0" selected></option> 
@@ -2642,10 +2642,10 @@
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-5" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-5" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-5" value="0"/></th>
-            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-5" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-5} }} {{attr= Weapon @{weapon_Damage-5} }} {{skill= Stength @{weapon_StrengthDamage-5} }}  {{result= [[{(@{weapon_Damage-5} + @{weapon_StrengthDamage-5})d10}>6}]] }}"></button></th>
+            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-5" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-5} }} {{attr= Weapon @{weapon_Damage-5} }} {{skill= Stength @{weapon_StrengthDamage-5} }}  {{result= [[{(@{weapon_Damage-5} + @{weapon_StrengthDamage-5})d10!sd}>6}]] }}"></button></th>
         </tr>
         <tr>
-            <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_6" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-6} }} {{attr= Attribute @{weapon_attribute-6} }} {{skill= Skill @{weapon_skill-6}}} {{mod= Weapon @{weapon_Modifier-6} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-6} + @{weapon_skill-6} + @{weapon_Modifier-6} + @{injury})d10}>@{weapon_Diff-6}f1]] }}"></button></th>
+            <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_6" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-6} }} {{attr= Attribute @{weapon_attribute-6} }} {{skill= Skill @{weapon_skill-6}}} {{mod= Weapon @{weapon_Modifier-6} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-6} + @{weapon_skill-6} + @{weapon_Modifier-6} + @{injury})d10!sd}>@{weapon_Diff-6}f1]] }}"></button></th>
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-6" value=""/></th>
             <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-6" value="0" >
                     <option value="0" selected></option> 
@@ -2691,10 +2691,10 @@
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-6" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-6" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-6" value="0"/></th>
-            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-6" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-6} }} {{attr= Weapon @{weapon_Damage-6} }} {{skill= Stength @{weapon_StrengthDamage-6} }}  {{result= [[{(@{weapon_Damage-6} + @{weapon_StrengthDamage-6} + ?{Attack Extra Successes|0})d10}>6}]] }}"></button></th>
+            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-6" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-6} }} {{attr= Weapon @{weapon_Damage-6} }} {{skill= Stength @{weapon_StrengthDamage-6} }}  {{result= [[{(@{weapon_Damage-6} + @{weapon_StrengthDamage-6} + ?{Attack Extra Successes|0})d10!sd}>6}]] }}"></button></th>
         </tr>
         <tr>
-            <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_7" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-7} }} {{attr= Attribute @{weapon_attribute-7} }} {{skill= Skill @{weapon_skill-7}}} {{mod= Weapon @{weapon_Modifier-7} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-7} + @{weapon_skill-7} + @{weapon_Modifier-7} + @{injury})d10}>@{weapon_Diff-7}f1]] }}"></button></th>
+            <th><button type="roll" class="sheet-weaponroll" name="roll_weapon_7" value="&{template:wod} {{name= @{character_name} }} {{attack= @{weapon_name-7} }} {{attr= Attribute @{weapon_attribute-7} }} {{skill= Skill @{weapon_skill-7}}} {{mod= Weapon @{weapon_Modifier-7} }} {{wound= Wound @{injury} }} {{result= [[{(@{weapon_attribute-7} + @{weapon_skill-7} + @{weapon_Modifier-7} + @{injury})d10!sd}>@{weapon_Diff-7}f1]] }}"></button></th>
             <th><input type="text" class="sheet-textbox" name="attr_weapon_name-7" value=""/></th>
             <th><select class="sheet-select" style="width:100px" name="attr_weapon_attribute-7" value="0" >
                     <option value="0" selected></option> 
@@ -2740,7 +2740,7 @@
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Range-7" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Rate-7" value="0"/></th>
             <th><input type="number" class="sheet-textbox" name="attr_weapon_Clip-7" value="0"/></th>
-            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-7" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-7} }} {{attr= Weapon @{weapon_Damage-7} }} {{skill= Stength @{weapon_StrengthDamage-7} }}   {{result= [[{(@{weapon_Damage-7} + @{weapon_StrengthDamage-7} )d10}>6}]] }}"></button></th>
+            <th><button type="roll" class="sheet-damageroll" name="roll_weapon_damage-7" value="&{template:wod} {{name= @{character_name} }} {{damage= @{weapon_name-7} }} {{attr= Weapon @{weapon_Damage-7} }} {{skill= Stength @{weapon_StrengthDamage-7} }}   {{result= [[{(@{weapon_Damage-7} + @{weapon_StrengthDamage-7} )d10!sd}>6}]] }}"></button></th>
         </tr>
     </table>
     <br>
@@ -2760,7 +2760,7 @@
                 <th>Damage<br>Type</th>
             </tr>
             <tr>
-                <th><button type="roll" class="sheet-adv" name="roll_bite" value="&{template:wod} {{name= @{character_name} }} {{attack= Bite }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{mod= Modifier @{Bite_Mod-Attack} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{Bite_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{Bite_Mod-Attack} + @{injury})d10}>@{Bite_At_Difficulty}f1]] }}">Bite</button></th>
+                <th><button type="roll" class="sheet-adv" name="roll_bite" value="&{template:wod} {{name= @{character_name} }} {{attack= Bite }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{mod= Modifier @{Bite_Mod-Attack} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{Bite_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{Bite_Mod-Attack} + @{injury})d10!sd}>@{Bite_At_Difficulty}f1]] }}">Bite</button></th>
                 <th>Dex + Brawl</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Bite_Mod-Attack" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Bite_At_Diff" value="5"/></th>
@@ -2775,10 +2775,10 @@
                 <th>Strength +1</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Bite_Mod-Damage" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Bite_Difficulty" value="6"/></th>
-                <th><button type="roll" name="roll_damage-Bite" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Bite }} {{attr= Bite [[1 + @{Bite_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + 1 + @{Bite_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{Bite_Difficulty}]] }} {{type= Aggravated}}">Aggravated</button></th>
+                <th><button type="roll" name="roll_damage-Bite" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Bite }} {{attr= Bite [[1 + @{Bite_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + 1 + @{Bite_Mod-Damage} + ?{Attack Extra Successes|0})d10!sd}>@{Bite_Difficulty}]] }} {{type= Aggravated}}">Aggravated</button></th>
             </tr>
             <tr>
-                <th><button type="roll" class="sheet-adv" name="roll_Hispobite" value="&{template:wod} {{name= @{character_name} }} {{attack= Hispo Bite }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{HispoBite_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{HispoBite_Mod-Attack} + @{injury})d10}>@{HispoBite_At_Difficulty}f1]] }}">HispoBite</button></th>
+                <th><button type="roll" class="sheet-adv" name="roll_Hispobite" value="&{template:wod} {{name= @{character_name} }} {{attack= Hispo Bite }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{HispoBite_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{HispoBite_Mod-Attack} + @{injury})d10!sd}>@{HispoBite_At_Difficulty}f1]] }}">HispoBite</button></th>
                 <th>Dex + Brawl</th>
                 <th><input type="number" class="sheet-textbox" name="attr_HispoBite_Mod-Attack" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_HispoBite_At_Diff" value="5"/></th>
@@ -2793,10 +2793,10 @@
                 <th>Strength +2</th>
                 <th><input type="number" class="sheet-textbox" name="attr_HispoBite_Mod-Damage" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_HispoBite_Difficulty" value="6"/></th>
-                <th><button type="roll" name="roll_damage-HispoBite" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Hispo Bite }} {{attr= HispoBite [[2 + @{HispoBite_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + 2 + @{HispoBite_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{HispoBite_Difficulty}]] }} {{type= Aggravated}}">Aggravated</button></th>
+                <th><button type="roll" name="roll_damage-HispoBite" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Hispo Bite }} {{attr= HispoBite [[2 + @{HispoBite_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + 2 + @{HispoBite_Mod-Damage} + ?{Attack Extra Successes|0})d10!sd}>@{HispoBite_Difficulty}]] }} {{type= Aggravated}}">Aggravated</button></th>
             </tr>
             <tr>
-                <th><button type="roll" class="sheet-adv" name="roll_body_tackle" value="&{template:wod} {{name= @{character_name} }} {{attack= Body Tackle }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{mod= Modifier @{BodyTackle_Mod-Attack} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{BodyTackle_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{BodyTackle_Mod-Attack} + @{injury})d10}>@{BodyTackle_At_Difficulty}f1]] }}">Body Tackle</button></th>
+                <th><button type="roll" class="sheet-adv" name="roll_body_tackle" value="&{template:wod} {{name= @{character_name} }} {{attack= Body Tackle }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{mod= Modifier @{BodyTackle_Mod-Attack} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{BodyTackle_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{BodyTackle_Mod-Attack} + @{injury})d10!sd}>@{BodyTackle_At_Difficulty}f1]] }}">Body Tackle</button></th>
                 <th>Dex + Brawl</th>
                 <th><input type="number" class="sheet-textbox" name="attr_BodyTackle_Mod-Attack" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_BodyTackle_At_Diff" value="7"/></th>
@@ -2811,10 +2811,10 @@
                 <th>Special</th>
                 <th><input type="number" class="sheet-textbox" name="attr_BodyTackle_Mod-Damage" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_BodyTackle_Difficulty" value="6"/></th>
-                <th><button type="roll" name="roll_damage-BodyTackle" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Body Tackle }} {{attr= Body Tackle [[@{BodyTackle_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + @{BodyTackle_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{BodyTackle_Difficulty}]] }} {{type= Bashing}}">Bashing</button></th>
+                <th><button type="roll" name="roll_damage-BodyTackle" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Body Tackle }} {{attr= Body Tackle [[@{BodyTackle_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + @{BodyTackle_Mod-Damage} + ?{Attack Extra Successes|0})d10!sd}>@{BodyTackle_Difficulty}]] }} {{type= Bashing}}">Bashing</button></th>
             </tr>
             <tr>
-                <th><button type="roll" class="sheet-adv" name="roll_Claw" value="&{template:wod} {{name= @{character_name} }} {{attack= Claw }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{mod= Modifier @{Claw_Mod-Attack} }} {{skill= Brawl @{Brawl}}} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{Claw_Mod-Attack} + @{injury})d10}>@{Claw_At_Difficulty}f1]] }}">Claw</button></th>
+                <th><button type="roll" class="sheet-adv" name="roll_Claw" value="&{template:wod} {{name= @{character_name} }} {{attack= Claw }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{mod= Modifier @{Claw_Mod-Attack} }} {{skill= Brawl @{Brawl}}} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{Claw_Mod-Attack} + @{injury})d10!sd}>@{Claw_At_Difficulty}f1]] }}">Claw</button></th>
                 <th>Dex + Brawl</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Claw_Mod-Attack" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Claw_At_Diff" value="6"/></th>
@@ -2829,10 +2829,10 @@
                 <th>Strength +2</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Claw_Mod-Damage" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Claw_Difficulty" value="6"/></th>
-                <th><button type="roll" name="roll_damage-Claw" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Claw }} {{attr= Claw [[2 + @{Claw_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + 2 + @{Claw_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{Claw_Difficulty}]] }} {{type= Aggravated}}">Aggravated</button></th>
+                <th><button type="roll" name="roll_damage-Claw" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Claw }} {{attr= Claw [[2 + @{Claw_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + 2 + @{Claw_Mod-Damage} + ?{Attack Extra Successes|0})d10!sd}>@{Claw_Difficulty}]] }} {{type= Aggravated}}">Aggravated</button></th>
             </tr>
             <tr>
-                <th><button type="roll" class="sheet-adv" name="roll_Grapple" value="&{template:wod} {{name= @{character_name} }} {{attack= Grapple }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{skill= Brawl @{Brawl}}} {{mod= Modifier @{Grapple_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{Grapple_Mod-Attack} + @{injury})d10}>@{Grapple_At_Difficulty}f1]] }}">Grapple</button></th>
+                <th><button type="roll" class="sheet-adv" name="roll_Grapple" value="&{template:wod} {{name= @{character_name} }} {{attack= Grapple }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{skill= Brawl @{Brawl}}} {{mod= Modifier @{Grapple_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{Grapple_Mod-Attack} + @{injury})d10!sd}>@{Grapple_At_Difficulty}f1]] }}">Grapple</button></th>
                 <th>Dex + Brawl</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Grapple_Mod-Attack" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Grapple_At_Diff" value="6"/></th>
@@ -2847,10 +2847,10 @@
                 <th>Strength</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Grapple_Mod-Damage" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Grapple_Difficulty" value="6"/></th>
-                <th><button type="roll" name="roll_damage-Grapple" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Grapple }} {{attr= Grapple [[@{Grapple_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + @{Grapple_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{Grapple_Difficulty}]] }} {{type= Bashing}}">Bashing</button></th>
+                <th><button type="roll" name="roll_damage-Grapple" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Grapple }} {{attr= Grapple [[@{Grapple_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + @{Grapple_Mod-Damage} + ?{Attack Extra Successes|0})d10!sd}>@{Grapple_Difficulty}]] }} {{type= Bashing}}">Bashing</button></th>
             </tr>
             <tr>
-                <th><button type="roll" class="sheet-adv" name="roll_Kick" value="&{template:wod} {{name= @{character_name} }} {{attack= Kick }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{Kick_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{Kick_Mod-Attack} + @{injury})d10}>@{Kick_At_Difficulty}f1]] }}">Kick</button></th>
+                <th><button type="roll" class="sheet-adv" name="roll_Kick" value="&{template:wod} {{name= @{character_name} }} {{attack= Kick }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{Kick_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{Kick_Mod-Attack} + @{injury})d10!sd}>@{Kick_At_Difficulty}f1]] }}">Kick</button></th>
                 <th>Dex + Brawl</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Kick_Mod-Attack" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Kick_At_Diff" value="7"/></th>
@@ -2865,10 +2865,10 @@
                 <th>Strength +1</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Kick_Mod-Damage" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Kick_Difficulty" value="6"/></th>
-                <th><button type="roll" name="roll_damage-Kick" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Kick }} {{attr= Kick [[1 + @{Kick_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + 1 + @{Kick_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{Kick_Difficulty}]] }} {{type= Bashing}}">Bashing</button></th>
+                <th><button type="roll" name="roll_damage-Kick" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Kick }} {{attr= Kick [[1 + @{Kick_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} + 1 + @{Kick_Mod-Damage} + ?{Attack Extra Successes|0})d10!sd}>@{Kick_Difficulty}]] }} {{type= Bashing}}">Bashing</button></th>
             </tr>
             <tr>
-                <th><button type="roll" class="sheet-adv" name="roll_Punch" value="&{template:wod} {{name= @{character_name} }} {{attack= Punch }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{Punch_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{Punch_Mod-Attack} + @{injury})d10}>@{Punch_At_Difficulty}f1]] }}">Punch</button></th>
+                <th><button type="roll" class="sheet-adv" name="roll_Punch" value="&{template:wod} {{name= @{character_name} }} {{attack= Punch }} {{attr= Dexterity @{Dexterity}+@{DexterityBoost} }} {{skill= Brawl @{Brawl}}} {{mod= Weapon @{Punch_Mod-Attack} }} {{wound= Wound @{injury} }} {{result= [[{(@{Dexterity}+@{DexterityBoost} + @{Brawl} + @{Punch_Mod-Attack} + @{injury})d10!sd}>@{Punch_At_Difficulty}f1]] }}">Punch</button></th>
                 <th>Dex + Brawl</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Punch_Mod-Attack" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Punch_At_Diff" value="6"/></th>
@@ -2883,7 +2883,7 @@
                 <th>Strength</th>
                 <th><input type="number" class="sheet-textbox" name="attr_Punch_Mod-Damage" value="0"/></th>
                 <th><input type="number" class="sheet-textbox" name="attr_Punch_Difficulty" value="6"/></th>
-                <th><button type="roll" name="roll_damage-Punch" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Punch }} {{attr= Punch [[@{Punch_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} +  @{Punch_Mod-Damage} + ?{Attack Extra Successes|0})d10}>@{Punch_Difficulty}]] }} {{type= Bashing}}">Bashing</button></th>
+                <th><button type="roll" name="roll_damage-Punch" class="sheet-adv" value="&{template:wod} {{name= @{character_name} }} {{damage= Punch }} {{attr= Punch [[@{Punch_Mod-Damage}]] }} {{skill= Strength @{Strength}+@{StrengthBoost} }} {{mod= Successes ?{Attack Extra Successes|0} }}  {{result= [[{(@{Strength}+@{StrengthBoost} +  @{Punch_Mod-Damage} + ?{Attack Extra Successes|0})d10!sd}>@{Punch_Difficulty}]] }} {{type= Bashing}}">Bashing</button></th>
             </tr>
         </table>
     </div>
@@ -3224,8 +3224,8 @@
                     <th><input type="number" class="sheet-textbox" name="attr_Soak_diff-Bashing" value="6" /></th>
                     <th>
                         <div class="sheet-Query">
-                            <input type="radio" class="sheet-Query sheet-no" name="attr_Armor_toggle-Bashing" value="&{template:wod} {{name= @{character_name} }} {{pool= Bashing Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Bashing}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Bashing} )d10}>@{Soak_diff-Bashing}f1 ]] }}" checked="checked" />
-                            <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Bashing" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor-Rating}]] }} {{pool= Bashing Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Bashing}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Bashing} + @{armor-Rating})d10}>@{Soak_diff-Bashing}f1 ]] }}" />
+                            <input type="radio" class="sheet-Query sheet-no" name="attr_Armor_toggle-Bashing" value="&{template:wod} {{name= @{character_name} }} {{pool= Bashing Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Bashing}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Bashing} )d10!sd}>@{Soak_diff-Bashing}f1 ]] }}" checked="checked" />
+                            <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Bashing" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor-Rating}]] }} {{pool= Bashing Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Bashing}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Bashing} + @{armor-Rating})d10!sd}>@{Soak_diff-Bashing}f1 ]] }}" />
                             <span class="sheet-Query sheet-yes">Yes</span>
                             <span class="sheet-Query sheet-no">No</span>
                         </div>
@@ -3238,8 +3238,8 @@
                     <th><input type="number" class="sheet-textbox" name="attr_Soak_diff-Lethal" value="6" /></th>
                     <th>
                         <div class="sheet-Query">
-                            <input type="radio" class="sheet-Query sheet-no" name="attr_Armor_toggle-Lethal" value="&{template:wod} {{name= @{character_name} }} {{pool= Lethal Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Lethal}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Lethal} )d10}>@{Soak_diff-Lethal}f1 ]] }}" checked="checked" />
-                            <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Lethal" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor-Rating}]] }} {{pool= Lethal Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Lethal}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Lethal} + @{armor-Rating})d10}>@{Soak_diff-Lethal}f1 ]] }}" />
+                            <input type="radio" class="sheet-Query sheet-no" name="attr_Armor_toggle-Lethal" value="&{template:wod} {{name= @{character_name} }} {{pool= Lethal Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Lethal}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Lethal} )d10!sd}>@{Soak_diff-Lethal}f1 ]] }}" checked="checked" />
+                            <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Lethal" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor-Rating}]] }} {{pool= Lethal Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Lethal}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Lethal} + @{armor-Rating})d10!sd}>@{Soak_diff-Lethal}f1 ]] }}" />
                             <span class="sheet-Query sheet-yes">Yes</span>
                             <span class="sheet-Query sheet-no">No</span>
                         </div>
@@ -3252,15 +3252,15 @@
                     <th><input type="number" class="sheet-textbox" name="attr_Soak_diff-Aggravated" value="6" /></th>
                     <th>
                         <div class="sheet-Query">
-                            <input type="radio" class="sheet-Query sheet-no" name="attr_Armor_toggle-Aggravated" value="&{template:wod} {{name= @{character_name} }} {{pool= Aggravated Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Aggravated}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Aggravated} )d10}>@{Soak_diff-Aggravated}f1 ]] }}" checked="checked" />
-                            <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Aggravated" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor-Rating}]] }} {{pool= Aggravated Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Aggravated}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Aggravated} + @{armor-Rating})d10}>@{Soak_diff-Aggravated}f1 ]] }}" />
+                            <input type="radio" class="sheet-Query sheet-no" name="attr_Armor_toggle-Aggravated" value="&{template:wod} {{name= @{character_name} }} {{pool= Aggravated Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Aggravated}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Aggravated} )d10!sd}>@{Soak_diff-Aggravated}f1 ]] }}" checked="checked" />
+                            <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Aggravated" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor-Rating}]] }} {{pool= Aggravated Soak}} {{attr= Stamina [[@{Stamina}+@{StaminaBoost}]] }} {{mod= Modifier [[@{Soak_mod-Aggravated}]] }} {{result= [[ {(@{Stamina}+@{StaminaBoost} + @{Soak_mod-Aggravated} + @{armor-Rating})d10!sd}>@{Soak_diff-Aggravated}f1 ]] }}" />
                             <span class="sheet-Query sheet-yes">Yes</span>
                             <span class="sheet-Query sheet-no">No</span>
                         </div>
                     </th>
                 </tr>
                 <tr>
-                    <th><button type='roll' class="sheet-adv" name="attr_soak_armor" value="&{template:wod} {{name= @{character_name} }} {{pool= Armor Only Soak}} {{attr= Armor [[@{armor-Rating}]] }} {{result= [[ {(@{armor-Rating})d10}>@{Soak_diff-armor}f1 ]]}} ">Armor Only</button></th>
+                    <th><button type='roll' class="sheet-adv" name="attr_soak_armor" value="&{template:wod} {{name= @{character_name} }} {{pool= Armor Only Soak}} {{attr= Armor [[@{armor-Rating}]] }} {{result= [[ {(@{armor-Rating})d10!sd}>@{Soak_diff-armor}f1 ]]}} ">Armor Only</button></th>
                     <th><input type="number" class="sheet-textbox" name="attr_soak_attribute" value="@{armor-Rating}" disabled="true"/></th>
                     <th><input type="number" class="sheet-textbox" name="attr_Soak_mod-armor" value="0" /></th>
                     <th><input type="number" class="sheet-textbox" name="attr_Soak_diff-armor" value="6" /></th>
@@ -3895,8 +3895,8 @@
                 <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff-1' value='6'/></td>
                 <th style="width:80px">
                     <div class="sheet-Query">
-                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-1" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-1} }} {{spec= : @{Specname-1} }} {{attr= Attribute @{DPAtt1} }} {{skill= Ability @{DPAbi1} }} {{mod= Modifier @{DicePoolMod-1} }} {{wound= Wound @{injury}}} {{result= [[{(@{DPAtt1}+@{DPAbi1}+@{DicePoolMod-1} + @{injury})d10@{DicePoolspec-1}s}>@{DicePoolDiff-1}f1]] }}" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-1" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-1} }} {{spec= : @{Specname-1} }} {{attr= Attribute @{DPAtt1} }} {{skill= Ability @{DPAbi1} }} {{mod= Modifier @{DicePoolMod-1} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt1}+@{DPAbi1}+@{DicePoolMod-1} + @{injury})d10@{DicePoolspec-1}s}>?{Difficulty|6}f1]] }}"/> 
+                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-1" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-1} }} {{spec= : @{Specname-1} }} {{attr= Attribute @{DPAtt1} }} {{skill= Ability @{DPAbi1} }} {{mod= Modifier @{DicePoolMod-1} }} {{wound= Wound @{injury}}} {{result= [[{(@{DPAtt1}+@{DPAbi1}+@{DicePoolMod-1} + @{injury})d10!sd@{DicePoolspec-1}s}>@{DicePoolDiff-1}f1]] }}" checked="checked" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-1" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-1} }} {{spec= : @{Specname-1} }} {{attr= Attribute @{DPAtt1} }} {{skill= Ability @{DPAbi1} }} {{mod= Modifier @{DicePoolMod-1} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt1}+@{DPAbi1}+@{DicePoolMod-1} + @{injury})d10!sd@{DicePoolspec-1}s}>?{Difficulty|6}f1]] }}"/> 
                         <span class="sheet-Query sheet-no">No</span>
                         <span class="sheet-Query sheet-yes">Yes</span>
                     </div>
@@ -3986,8 +3986,8 @@
                 <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff-2' value='6'/></td>
                 <th style="width:80px">
                     <div class="sheet-Query">
-                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-2" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-2} }} {{attr= Attribute @{DPAtt2} }} {{skill= Ability @{DPAbi2} }} {{mod= Modifier @{DicePoolMod-2} }} {{wound= Wound @{injury}}} {{result= [[{(@{DPAtt2}+@{DPAbi2}+@{DicePoolMod-2} + @{injury})d10@{DicePoolspec-2}s}>@{DicePoolDiff-2}f1]] }}" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-2" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-2} }} {{spec= : @{Specname-2} }} {{attr= Attribute @{DPAtt2} }} {{skill= Ability @{DPAbi2} }} {{mod= Modifier @{DicePoolMod-2} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt2}+@{DPAbi2}+@{DicePoolMod-2} + @{injury})d10@{DicePoolspec-2}s}>?{Difficulty|6}f1]] }}"/> 
+                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-2" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-2} }} {{attr= Attribute @{DPAtt2} }} {{skill= Ability @{DPAbi2} }} {{mod= Modifier @{DicePoolMod-2} }} {{wound= Wound @{injury}}} {{result= [[{(@{DPAtt2}+@{DPAbi2}+@{DicePoolMod-2} + @{injury})d10!sd@{DicePoolspec-2}s}>@{DicePoolDiff-2}f1]] }}" checked="checked" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-2" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-2} }} {{spec= : @{Specname-2} }} {{attr= Attribute @{DPAtt2} }} {{skill= Ability @{DPAbi2} }} {{mod= Modifier @{DicePoolMod-2} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt2}+@{DPAbi2}+@{DicePoolMod-2} + @{injury})d10!sd@{DicePoolspec-2}s}>?{Difficulty|6}f1]] }}"/> 
                         <span class="sheet-Query sheet-no">No</span>
                         <span class="sheet-Query sheet-yes">Yes</span>
                     </div>
@@ -4076,8 +4076,8 @@
                 <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff-3' value='6'/></td>
                 <th style="width:80px">
                     <div class="sheet-Query">
-                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-3" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-3} }} {{attr= Attribute @{DPAtt3} }} {{skill= Ability @{DPAbi3} }} {{mod= Modifier @{DicePoolMod-3} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt3}+@{DPAbi3}+@{DicePoolMod-3} + @{injury})d10@{DicePoolspec-3}s}>@{DicePoolDiff-3}f1]] }}" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-3" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-3} }} {{spec= : @{Specname-3} }} {{attr= Attribute @{DPAtt3} }} {{skill= Ability @{DPAbi3} }} {{mod= Modifier @{DicePoolMod-3} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt3}+@{DPAbi3}+@{DicePoolMod-3} + @{injury})d10@{DicePoolspec-3}s}>?{Difficulty|6}f1]] }}"/> 
+                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-3" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-3} }} {{attr= Attribute @{DPAtt3} }} {{skill= Ability @{DPAbi3} }} {{mod= Modifier @{DicePoolMod-3} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt3}+@{DPAbi3}+@{DicePoolMod-3} + @{injury})d10!sd@{DicePoolspec-3}s}>@{DicePoolDiff-3}f1]] }}" checked="checked" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-3" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-3} }} {{spec= : @{Specname-3} }} {{attr= Attribute @{DPAtt3} }} {{skill= Ability @{DPAbi3} }} {{mod= Modifier @{DicePoolMod-3} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt3}+@{DPAbi3}+@{DicePoolMod-3} + @{injury})d10!sd@{DicePoolspec-3}s}>?{Difficulty|6}f1]] }}"/> 
                         <span class="sheet-Query sheet-no">No</span>
                         <span class="sheet-Query sheet-yes">Yes</span>
                     </div>
@@ -4166,8 +4166,8 @@
                 <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff-4' value='6'/></td>
                 <th style="width:80px">
                     <div class="sheet-Query">
-                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-4" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-4} }} {{attr= Attribute @{DPAtt4} }} {{skill= Ability @{DPAbi4} }} {{mod= Modifier @{DicePoolMod-4} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt4}+@{DPAbi4}+@{DicePoolMod-4} + @{injury})d10@{DicePoolspec-4}s}>@{DicePoolDiff-4}f1]] }}" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-4" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-4} }} {{spec= : @{Specname-4} }} {{attr= Attribute @{DPAtt4} }} {{skill= Ability @{DPAbi4} }} {{mod= Modifier @{DicePoolMod-4} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt4}+@{DPAbi4}+@{DicePoolMod-4} + @{injury})d10@{DicePoolspec-4}s}>?{Difficulty|6}f1]] }}"/> 
+                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-4" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-4} }} {{attr= Attribute @{DPAtt4} }} {{skill= Ability @{DPAbi4} }} {{mod= Modifier @{DicePoolMod-4} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt4}+@{DPAbi4}+@{DicePoolMod-4} + @{injury})d10!sd@{DicePoolspec-4}s}>@{DicePoolDiff-4}f1]] }}" checked="checked" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-4" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-4} }} {{spec= : @{Specname-4} }} {{attr= Attribute @{DPAtt4} }} {{skill= Ability @{DPAbi4} }} {{mod= Modifier @{DicePoolMod-4} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt4}+@{DPAbi4}+@{DicePoolMod-4} + @{injury})d10!sd@{DicePoolspec-4}s}>?{Difficulty|6}f1]] }}"/> 
                         <span class="sheet-Query sheet-no">No</span>
                         <span class="sheet-Query sheet-yes">Yes</span>
                     </div>
@@ -4256,8 +4256,8 @@
                 <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff-5' value='6'/></td>
                 <th style="width:80px">
                     <div class="sheet-Query">
-                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-5" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-5} }} {{attr= Attribute @{DPAtt5} }} {{skill= Ability @{DPAbi5} }} {{mod= Modifier @{DicePoolMod-5} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt5}+@{DPAbi5}+@{DicePoolMod-5} + @{injury})d10@{DicePoolspec-5}s}>@{DicePoolDiff-5}f1]] }}" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-5" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-5} }} {{spec= : @{Specname-5} }} {{attr= Attribute @{DPAtt5} }} {{skill= Ability @{DPAbi5} }} {{mod= Modifier @{DicePoolMod-5} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt5}+@{DPAbi5}+@{DicePoolMod-5} + @{injury})d10@{DicePoolspec-5}s}>?{Difficulty|6}f1]] }}"/> 
+                        <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll-5" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-5} }} {{attr= Attribute @{DPAtt5} }} {{skill= Ability @{DPAbi5} }} {{mod= Modifier @{DicePoolMod-5} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt5}+@{DPAbi5}+@{DicePoolMod-5} + @{injury})d10!sd@{DicePoolspec-5}s}>@{DicePoolDiff-5}f1]] }}" checked="checked" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll-5" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname-5} }} {{spec= : @{Specname-5} }} {{attr= Attribute @{DPAtt5} }} {{skill= Ability @{DPAbi5} }} {{mod= Modifier @{DicePoolMod-5} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt5}+@{DPAbi5}+@{DicePoolMod-5} + @{injury})d10!sd@{DicePoolspec-5}s}>?{Difficulty|6}f1]] }}"/> 
                         <span class="sheet-Query sheet-no">No</span>
                         <span class="sheet-Query sheet-yes">Yes</span>
                     </div>
@@ -4350,8 +4350,8 @@
                     <td style="width:60px"><input type='number' class="sheet-dicepool" name='attr_DicePoolDiff' value='6'/></td>
                     <th style="width:80px">
                         <div class="sheet-Query">
-                            <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname} }} {{attr= Attribute @{DPAtt} }} {{skill= Ability @{DPAbi} }} {{mod= Modifier @{DicePoolMod} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt}+@{DPAbi}+@{DicePoolMod} + @{injury})d10@{DicePoolspec}s}>@{DicePoolDiff}f1]] }}" checked="checked" />
-                            <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname} }} {{spec= : @{Specname} }} {{attr= Attribute @{DPAtt} }} {{skill= Ability @{DPAbi} }} {{mod= Modifier @{DicePoolMod} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt}+@{DPAbi}+@{DicePoolMod} + @{injury})d10@{DicePoolspec}s}>?{Difficulty|6}f1]] }}"/> 
+                            <input type="radio" class="sheet-Query sheet-no" name="attr_DicePoolroll" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname} }} {{attr= Attribute @{DPAtt} }} {{skill= Ability @{DPAbi} }} {{mod= Modifier @{DicePoolMod} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt}+@{DPAbi}+@{DicePoolMod} + @{injury})d10!sd@{DicePoolspec}s}>@{DicePoolDiff}f1]] }}" checked="checked" />
+                            <input type="radio" class="sheet-Query sheet-yes" name="attr_DicePoolroll" value="&{template:wod} {{name= @{character_name} }} {{pool= @{DicePoolname} }} {{spec= : @{Specname} }} {{attr= Attribute @{DPAtt} }} {{skill= Ability @{DPAbi} }} {{mod= Modifier @{DicePoolMod} }} {{wound= Wound @{injury} }} {{result= [[{(@{DPAtt}+@{DPAbi}+@{DicePoolMod} + @{injury})d10!sd@{DicePoolspec}s}>?{Difficulty|6}f1]] }}"/> 
                             <span class="sheet-Query sheet-no">No</span>
                             <span class="sheet-Query sheet-yes">Yes</span>
                         </div>
